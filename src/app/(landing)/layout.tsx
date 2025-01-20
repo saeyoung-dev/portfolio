@@ -3,11 +3,11 @@ import Footer from './_view/Footer';
 import Header from './_view/Header';
 
 export const metadata: Metadata = {
-  title: 'Saeyoung Choi',
-  description: 'UI Developer | Saeyoung Choi',
+  title: 'Saeyoung Choi | UI Developer',
+  description: 'Saeyoung Choi | UI Developer',
   openGraph: {
-    title: 'Saeyoung Choi',
-    description: 'UI Developer | Saeyoung Choi',
+    title: 'Saeyoung Choi | UI Developer',
+    description: 'Saeyoung Choi | UI Developer',
   },
 };
 

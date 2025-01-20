@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+*,
+*::before,
+*::after {
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
   outline: none;
   box-sizing: border-box;
 }
@@ -15,19 +20,15 @@ html {
 html,
 body,
 #__next {
-  background-color: '#FFFEFC';
+  background-color: theme('colors.beige');
   height: 100%;
   margin: 0;
   padding: 0;
   line-height: 1;
-  user-select: none;
   font-family: 'Wanted Sans Variable', 'Wanted Sans', -apple-system,
     BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo',
     'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-touch-callout: none;
@@ -154,4 +155,62 @@ textarea {
     BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo',
     'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', sans-serif;
+}
+
+body {
+  font-family: var(--font-wanted);
+}
+
+.font-title {
+  font-family: var(--font-walsheim);
+  font-weight: 900;
+  font-style: italic;
+}
+
+.font-title-medium {
+  font-family: var(--font-walsheim);
+  font-weight: 500;
+}
+
+.nav__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  top: -0.5rem;
+  z-index: -1;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background: rgba(255, 254, 252, 0.9);
+  mask-image: linear-gradient(0deg, transparent, #fffefc 40%);
+  -webkit-mask-image: linear-gradient(0deg, transparent, #fffefc 40%);
+  transition: background-color 0.5s ease-out;
+}
+
+.mask-gradient {
+  mask-image: linear-gradient(0deg, transparent, #fffefc 40%);
+  -webkit-mask-image: linear-gradient(0deg, transparent, #fffefc 40%);
+}
+
+::selection {
+  color: rgb(255, 133, 81);
+}
+
+::-moz-selection {
+  color: rgb(255, 133, 81);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div {
+  cursor: text;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
 }
