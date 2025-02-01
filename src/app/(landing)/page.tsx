@@ -4,15 +4,16 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
 import Image from 'next/image';
+import JobSummary from './_view/JobSummary';
 
 export default function Home() {
   const sloganRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const slogans = [
-      '+ Pixels > perfection',
-      '+ Design meets development',
-      '+ Majored in design, fell for code',
+      '+ From concept to product',
+      '+ Design roots, Dev vision',
+      '+ User-first thinking, system-first execution',
     ];
 
     let currentIndex = 0;
@@ -49,13 +50,48 @@ export default function Home() {
       <section className="pt-[5rem] pb-10 px-32 min-h-screen container flex items-center text-green-900">
         <div className=" flex flex-col gap-8 justify-center">
           <h1 className="text-[6.25rem] font-title">Saeyoung Choi.</h1>
-          <p className="text-3xl leading-[2.75rem]">
-            A UI developer with a design foundation, focused on <br />
-            delivering meaningful and impactful experiences.
+          <p className="text-3xl leading-[3.25rem] tracking-tight text-neutral-700">
+            <span className="flex items-center">
+              From creativity to development, building user-centric
+              <Image
+                className="w-10 h-10"
+                src="/images/icon/intro-01.png"
+                alt="heroImage01"
+                width={40}
+                height={40}
+              />
+              experiences
+            </span>
+            <span className="flex items-center gap-1">
+              that balance aesthetics
+              <Image
+                className="w-10 h-10"
+                src="/images/icon/intro-02.png"
+                alt="heroImage02"
+                width={40}
+                height={40}
+              />
+              , functionality
+              <Image
+                className="w-10 h-10"
+                src="/images/icon/intro-03.png"
+                alt="heroImage03"
+                width={40}
+                height={40}
+              />
+              , and performance
+              <Image
+                className="w-10 h-10"
+                src="/images/icon/intro-04.png"
+                alt="heroImage04"
+                width={40}
+                height={40}
+              />
+            </span>
           </p>
-          <div className="h-[40px] overflow-hidden">
+          <div className="h-[40px] mt-2 overflow-hidden">
             <p ref={sloganRef} className="text-3xl font-semibold">
-              {'+ Pixels > perfection'}
+              {'+ From concept to product.'}
             </p>
           </div>
         </div>
@@ -85,25 +121,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-      {/* Currently & Previously Section */}
-      <section className="px-32 pb-16 w-full container text-green-900 ">
-        <div className="border-t-2 border-green-900 pt-16" />
-        <div className="flex gap-32">
-          <div className="flex-1">
-            <h2 className="text-xl font-semibold mb-4">CURRENTLY:</h2>
-            <p className="text-lg">
-              Seeking a frontend developer position in the world.
-            </p>
-          </div>
-          <div className="flex-1">
-            <h2 className="text-xl font-semibold mb-4">PREVIOUSLY:</h2>
-            <p className="text-lg">
-              Working as a UI developer at a startup company in Seoul.
-            </p>
-          </div>
-        </div>
-      </section>
+      <JobSummary />
     </main>
   );
 }

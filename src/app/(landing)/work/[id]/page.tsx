@@ -1,9 +1,20 @@
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 export default function WorkDetail() {
   return (
-    <main className="flex w-full flex-col items-center pt-32">
-      {/* TODO Hero Section */}
+    <main className="flex w-full flex-col items-center">
+      {/* Main Image */}
+      <section className="w-full">
+        <Image
+          src="/images/work-1.png"
+          alt="Project Main"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-full h-auto border border-green-900"
+        />
+      </section>
       <section className="w-full container px-32 pb-32">
         <div className="flex flex-col gap-8">
           <h1 className="text-6xl text-green-900">Bread & Butter</h1>
@@ -21,26 +32,28 @@ export default function WorkDetail() {
               <div className="flex flex-col gap-6 text-sm text-green-900/70">
                 <div>
                   <h3 className="font-semibold mb-1">ROLE:</h3>
-                  <p>Backend Developer & Project Manager</p>
+                  <p className="text-base">
+                    Backend Developer & Project Manager
+                  </p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">TEAM:</h3>
-                  <p>6 members (3 FE, 3 BE)</p>
+                  <p className="text-base">6 members (3 FE, 3 BE)</p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">TYPE:</h3>
-                  <p>Team Project</p>
+                  <p className="text-base">Team Project</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-2 text-sm text-green-900/70">
-            <span>Skip ↓</span>
-            <button className="hover:text-green-900">to Key Features</button>
+          <div className="flex gap-4">
+            <Button variant="navigation">Preview ↗</Button>
+            <Button variant="default">Skip to Key Features</Button>
           </div>
         </div>
       </section>
-
+      ↗️
       {/* Main Image */}
       <section className="w-full container px-32 pb-32">
         <Image
@@ -52,7 +65,6 @@ export default function WorkDetail() {
           className="w-full h-auto rounded-3xl border border-green-900"
         />
       </section>
-
       {/* Challenge Section */}
       <section className="w-full container px-32 pb-32">
         <div className="flex flex-col gap-8 max-w-3xl">
@@ -70,7 +82,6 @@ export default function WorkDetail() {
           </p>
         </div>
       </section>
-
       {/* Tech Stack Section */}
       <section className="w-full container px-32 pb-32">
         <div className="flex flex-col gap-12">
@@ -101,7 +112,6 @@ export default function WorkDetail() {
           </div>
         </div>
       </section>
-
       {/* Key Features Section */}
       <section className="w-full container px-32 pb-32" id="key-features">
         <div className="flex flex-col gap-12">
