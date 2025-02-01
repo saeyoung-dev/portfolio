@@ -45,8 +45,18 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex w-full flex-col items-center">
+    <main className='flex w-full flex-col items-center'>
       {/* Hero Section */}
+      <section className='pt-[5rem] pb-10 px-32 min-h-screen container flex items-center text-green-900'>
+        <div className=' flex flex-col gap-8 justify-center'>
+          <h1 className='text-[6.25rem] font-title'>Saeyoung Choi.</h1>
+          <p className='text-3xl leading-[2.75rem]'>
+            A UI developer with a design foundation, focused on <br />
+            delivering meaningful and impactful experiences.
+          </p>
+          <div className='h-[40px] overflow-hidden'>
+            <p ref={sloganRef} className='text-3xl font-semibold'>
+              {'+ Pixels > perfection'}
       <section className="pt-[5rem] pb-10 px-32 min-h-screen container flex items-center text-green-900">
         <div className=" flex flex-col gap-8 justify-center">
           <h1 className="text-[6.25rem] font-title">Saeyoung Choi.</h1>
@@ -98,26 +108,31 @@ export default function Home() {
       </section>
 
       {/* Work Section */}
-      <section className="px-32 pb-16 pt-32 w-full container text-green-900">
-        <h2 className="text-3xl font-semibold mb-10">Selected Work</h2>
-        <div className="flex flex-col gap-10">
-          <Link href="/work/1" className="group flex flex-col gap-4">
-            <div className="cursor-pointer relative overflow-hidden rounded-3xl border border-green-900 ">
+      <section className='px-32 pb-16 pt-32 w-full container text-green-900'>
+        <h2 className='text-3xl font-semibold mb-10'>Selected Work</h2>
+        <div className='flex flex-col gap-10'>
+          <Link href='/work/1' className='group flex flex-col gap-4'>
+            <div className='cursor-pointer relative overflow-hidden rounded-3xl border border-green-900 '>
               <Image
-                src="/images/work-1.png"
-                alt="Work 2"
+                src='/images/work-1.png'
+                alt='Work 2'
                 width={0}
                 height={448}
-                className="w-full group-hover:scale-105 group-hover:opacity-90 transition-transform duration-500"
-                sizes="100vw"
+                className='w-full group-hover:scale-105 group-hover:opacity-90 transition-transform duration-500'
+                sizes='100vw'
               />
-              <p className="text-green-900 size-14 flex justify-center items-center rounded-full bg-white absolute text-3xl top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+              <p className='text-green-900 size-14 flex justify-center items-center rounded-full bg-white absolute text-3xl top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100'>
                 ↗
               </p>
             </div>
-            <p className="text-xl font-medium group-hover:opacity-50 transition-opacity">
-              Bread & Butter {'↗'}
-            </p>
+            <div className='relative overflow-hidden group'>
+              <p className='text-xl font-medium block cursor-pointer transition-transform duration-300 group-hover:-translate-y-10'>
+                Bread & Butter {'↗'}
+              </p>
+              <p className='absolute top-0 left-0 text-xl font-medium cursor-pointer w-full opacity-0  text-gray-900 translate-y-10 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0'>
+                Culinary Book Online Shop {'↗'}
+              </p>
+            </div>
           </Link>
         </div>
       </section>
