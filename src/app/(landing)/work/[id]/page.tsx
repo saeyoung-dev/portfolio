@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { getWorkById } from '@/data/works';
 import { notFound } from 'next/navigation';
 import { useCallback } from 'react';

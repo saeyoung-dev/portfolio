@@ -50,57 +50,47 @@ export default function Home() {
       <section className='pt-[5rem] pb-10 px-32 min-h-screen container flex items-center text-green-900'>
         <div className=' flex flex-col gap-8 justify-center'>
           <h1 className='text-[6.25rem] font-title'>Saeyoung Choi.</h1>
-          <p className='text-3xl leading-[2.75rem]'>
-            A UI developer with a design foundation, focused on <br />
-            delivering meaningful and impactful experiences.
-          </p>
-          <div className='h-[40px] overflow-hidden'>
-            <p ref={sloganRef} className='text-3xl font-semibold'>
-              {'+ Pixels > perfection'}
-      <section className="pt-[5rem] pb-10 px-32 min-h-screen container flex items-center text-green-900">
-        <div className=" flex flex-col gap-8 justify-center">
-          <h1 className="text-[6.25rem] font-title">Saeyoung Choi.</h1>
-          <p className="text-3xl leading-[3.25rem] tracking-tight text-neutral-700">
-            <span className="flex items-center">
+          <p className='text-3xl leading-[3.25rem] tracking-tight text-neutral-700'>
+            <span className='flex items-center'>
               From creativity to development, building user-centric
               <Image
-                className="w-10 h-10"
-                src="/images/icon/intro-01.png"
-                alt="heroImage01"
+                className='w-10 h-10'
+                src='/images/icon/intro-01.png'
+                alt='heroImage01'
                 width={40}
                 height={40}
               />
               experiences
             </span>
-            <span className="flex items-center gap-1">
+            <span className='flex items-center gap-1'>
               that balance aesthetics
               <Image
-                className="w-10 h-10"
-                src="/images/icon/intro-02.png"
-                alt="heroImage02"
+                className='w-10 h-10'
+                src='/images/icon/intro-02.png'
+                alt='heroImage02'
                 width={40}
                 height={40}
               />
               , functionality
               <Image
-                className="w-10 h-10"
-                src="/images/icon/intro-03.png"
-                alt="heroImage03"
+                className='w-10 h-10'
+                src='/images/icon/intro-03.png'
+                alt='heroImage03'
                 width={40}
                 height={40}
               />
               , and performance
               <Image
-                className="w-10 h-10"
-                src="/images/icon/intro-04.png"
-                alt="heroImage04"
+                className='w-10 h-10'
+                src='/images/icon/intro-04.png'
+                alt='heroImage04'
                 width={40}
                 height={40}
               />
             </span>
           </p>
-          <div className="h-[40px] mt-2 overflow-hidden">
-            <p ref={sloganRef} className="text-3xl font-semibold">
+          <div className='h-[40px] mt-2 overflow-hidden'>
+            <p ref={sloganRef} className='text-3xl font-semibold'>
               {'+ From concept to product.'}
             </p>
           </div>
