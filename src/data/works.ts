@@ -2,13 +2,14 @@ export interface Work {
   id: string;
   title: string;
   subtitle: string;
-  description: string;
+  description: string[];
   role: string;
   team: string;
   type: string;
+  link?: string;
   challenge: {
     question: string;
-    description: string;
+    description: string[];
   };
   techStack: {
     backend: string[];
@@ -28,16 +29,21 @@ export const works: Work[] = [
     id: 'bread-and-butter',
     title: 'Bread & Butter',
     subtitle: '요리 서적 전문 쇼핑몰 | Culinary Book Online Shop',
-    description:
-      'Bread & Butter is a specialized e-commerce platform dedicated to culinary enthusiasts, offering a curated collection of cookbooks and culinary literature. As the backend developer and project manager, I led the development of core features including user authentication, shopping cart functionality, and a comprehensive admin dashboard for efficient inventory management.',
+    description: [
+      'Bread & Butter is a specialized e-commerce platform dedicated to culinary enthusiasts, offering a curated collection of cookbooks and culinary literature.',
+      'As the backend developer and project manager, I led the development of core features including user authentication, shopping cart functionality, and a comprehensive admin dashboard for efficient inventory management.',
+    ],
     role: 'Backend Developer & Project Manager',
     team: '6 members (3 FE, 3 BE)',
     type: 'Team Project',
+    link: 'https://bread-and-butter-silk.vercel.app/',
     challenge: {
       question:
         'How can we create a specialized e-commerce platform focused on culinary books while ensuring a seamless shopping experience?',
-      description:
+      description: [
         'Our goal was to develop an intuitive and efficient online bookstore that caters specifically to cooking enthusiasts. We focused on creating a robust backend system that could handle complex e-commerce operations while maintaining a user-friendly interface for both customers and administrators.',
+        'We also aimed to implement a comprehensive admin dashboard for efficient inventory management, allowing administrators to easily add, update, and remove products from the platform.',
+      ],
     },
     techStack: {
       backend: ['Node.js', 'Express', 'MongoDB', 'JWT Authentication'],
@@ -72,22 +78,26 @@ export const works: Work[] = [
   {
     id: 'veganro',
     title: 'Veganro',
-    subtitle: '비건 장소 지도 | Vegan Place Map Service',
-    description:
-      '건강한 삶과 지속 가능한 라이프스타일을 추구하는 현대인들을 위한 비건 장소 지도 서비스입니다. 프론트엔드 개발자로서 회원정보 등록, 식당 상세페이지, 리뷰 시스템, 마이페이지 등 핵심 기능을 구현했습니다.',
+    subtitle: '비건 레스토랑 지도 | Vegan Place Map Service',
+    description: [
+      '건강한 삶과 지속 가능한 라이프스타일을 추구하는 현대인들을 위한 비건 장소 지도 서비스입니다.',
+      '프론트엔드 개발자로서 회원 정보 등록,검색, 식당 상세 페이지 등 핵심 기능을 구현했습니다.',
+    ],
     role: 'Frontend Developer',
     team: '6 members (3 FE, 3 BE)',
     type: 'Team Project',
     challenge: {
       question:
         'How can we help people find and share vegan-friendly places while promoting a sustainable lifestyle?',
-      description:
+      description: [
         '건강과 헬스 관련 키워드가 트렌드로 떠오르는 시점에서, 개개인이 자신에게 맞는 건강한 식습관을 찾고 지속 가능한 삶을 영위할 수 있도록 돕는 서비스를 구현하고자 했습니다.',
+        '또한, 비건 장소를 제보하고 리뷰를 작성하여 커뮤니티를 활성화하고, 사용자들이 서로 소통하고 정보를 공유할 수 있도록 하는 기능을 구현하였습니다.',
+      ],
     },
     techStack: {
       backend: ['Node.js', 'Express', 'MongoDB'],
       frontend: ['React', 'TypeScript', 'Tailwind CSS'],
-      deployment: ['AWS'],
+      deployment: ['Vercel'],
     },
     keyFeatures: [
       {

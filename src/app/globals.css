@@ -208,7 +208,6 @@ h5,
 h6,
 span,
 div {
-  cursor: text;
   user-select: text;
   -webkit-user-select: text;
   -moz-user-select: text;
@@ -271,13 +270,6 @@ div {
   }
   body {
     @apply bg-beige text-green-900;
-  }
-}
-
-@layer components {
-  .nav__bg {
-    background: rgba(255, 254, 252, 0.8);
-    backdrop-filter: blur(8px);
   }
 }
 
