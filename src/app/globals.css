@@ -217,8 +217,8 @@ div {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    --background: #fffefc;
+    --foreground: #1c3829;
     --card: 0 0% 100%;
     --card-foreground: 224 71.4% 4.1%;
     --popover: 0 0% 100%;
@@ -269,13 +269,20 @@ div {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  body {
+    @apply bg-beige text-green-900;
+  }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer components {
+  .nav__bg {
+    background: rgba(255, 254, 252, 0.8);
+    backdrop-filter: blur(8px);
   }
-  body {
-    @apply bg-background text-foreground;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }

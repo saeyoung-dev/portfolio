@@ -6,7 +6,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className='w-full container px-32 pb-32'>
         <div className='flex flex-col gap-8'>
-          <h1 className='text-6xl text-green-900 leading-snug'>
+          <h1 className='text-6xl font-semibold text-green-900 leading-tight'>
             A UI developer
             <br />
             with a design foundation
@@ -85,8 +85,8 @@ export default function AboutPage() {
 
       {/* Instagram Grid Section */}
       <section className='w-full container px-32 pb-32'>
-        <h2 className='text-2xl font-medium text-green-900 mb-16'>
-          saeyoung in the wild ˙✧˖°📷 ༘ ⋆｡ ˚
+        <h2 className='text-3xl font-semibold text-green-900 mb-12'>
+          Code by day, cook by night
         </h2>
         <div className='grid grid-cols-3 gap-6'>
           {[1, 2, 3, 4, 5, 6].map((index) => (
@@ -109,7 +109,7 @@ export default function AboutPage() {
 
       {/* Interests Section */}
       <section className='w-full container px-32 pb-32'>
-        <h2 className='text-2xl font-medium text-green-900 mb-16'>
+        <h2 className='text-3xl font-semibold text-green-900 mb-12'>
           Core Values
         </h2>
         <div className='grid grid-cols-3 gap-16'>

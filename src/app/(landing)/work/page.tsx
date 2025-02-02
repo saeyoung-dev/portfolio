@@ -1,15 +1,35 @@
+'use client';
+
+// import { useState } from 'react';
+import { works } from '@/data/works';
+import { Button } from '@/components/ui/button';
+import WorkCard from './_view/WorkCard';
+
 export default function WorkPage() {
+  // const [selectedCategory, setSelectedCategory] = useState('all');
+
   return (
-    <main className='flex w-full flex-col items-center overflow-x-hidden'>
-      <section className='mt-[80px] w-full container text-green-900 h-[calc(100vh-80px)]]'>
-        <h1 className='text-[100px]'>Work</h1>
-        <p>
-          A UI developer with a design foundation, focused on <br />
-          delivering meaningful and impactful experiences
-        </p>
+    <main className='flex w-full flex-col items-center pt-32 gap-16'>
+      <section className='w-full container px-32 pb-32 text-green-900'>
+        <h1 className='text-6xl font-semibold'>Work</h1>
+        <menu className='flex gap-2 mt-8'>
+          <li>
+            <Button variant='navigation'>All</Button>
+          </li>
+          <li>
+            <Button variant='navigation'>Design</Button>
+          </li>
+          <li>
+            <Button variant='navigation'>Development</Button>
+          </li>
+        </menu>
       </section>
-      <section className='mt-[80px] w-full container text-green-900 h-[calc(100vh-80px)]]'>
-        <h2 className='text-3xl font-semibold'>Selected Work</h2>
+      <section className='w-full container px-32 pb-32 text-green-900'>
+        <div className='grid grid-cols-2 gap-8'>
+          {works.map((work) => (
+            <WorkCard key={work.id} work={work} />
+          ))}
+        </div>
       </section>
     </main>
   );

@@ -3,16 +3,17 @@
 import Image from 'next/image';
 import { getWorkById } from '@/data/works';
 import { notFound } from 'next/navigation';
-import { useCallback } from 'react';
+import { useCallback, use } from 'react';
 
 interface Props {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default function WorkDetail({ params }: Props) {
-  const work = getWorkById(params.id);
+  const { id } = use(params);
+  const work = getWorkById(id);
 
   if (!work) {
     notFound();
