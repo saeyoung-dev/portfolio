@@ -12,6 +12,10 @@ const config: Config = {
       colors: {
         beige: '#FFFEFC',
       },
+      boxShadow: {
+        DEFAULT: '6px 8px 30px rgba(20, 83, 45, 0.125)',
+        light: '0px 0px 10px rgba(20, 83, 45, 0.125)',
+      },
       animation: {
         'slide-up': 'slideUp 0.3s ease-in-out forwards',
         'slide-down': 'slideDown 0.3s ease-in-out forwards',

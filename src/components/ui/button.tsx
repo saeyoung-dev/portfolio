@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full duration-300 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
@@ -11,9 +11,9 @@ const buttonVariants = cva(
       variant: {
         default: 'bg-primary text-primary-foreground hover:bg-primary/90',
         primary:
-          'bg-green-900 text-beige hover:scale-105 border border-green-900 ',
+          'bg-green-900 text-beige hover:scale-105 border border-green-900',
         outline:
-          'bg-transparent text-green-900 border border-green-900/20 hover:bg-green-900/40',
+          'bg-transparent text-green-900 border-green-900/20 border hover:border-green-900/40 hover:bg-green-900/10 focus:border-green-900/60 focus:shadow-light focus:bg-green-900/10',
         secondary: 'bg-green-900/10 text-green-900 hover:bg-green-900/20',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',

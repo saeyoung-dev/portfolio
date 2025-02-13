@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 const badgeVariants = cva(
   'inline-flex items-center w-fit rounded-md border px-2 py-1.5 text-sm font-semibold transition-colors',
@@ -13,7 +13,7 @@ const badgeVariants = cva(
           'border-transparent bg-green-900 text-beige hover:bg-green-900/80',
         secondary:
           'border-transparent bg-green-900/10 text-green-900 hover:bg-green-900/40',
-        outline: 'text-green-900 border border-green-900/10 shadow-sm',
+        outline: 'text-green-900 border border-green-900/10 shadow-light',
       },
       rounded: {
         full: 'rounded-full',

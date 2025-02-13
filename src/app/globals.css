@@ -172,31 +172,12 @@ body {
   font-weight: 500;
 }
 
-.nav__bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  top: -0.5rem;
-  z-index: -1;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  background: rgba(255, 254, 252, 0.9);
-  mask-image: linear-gradient(0deg, transparent, #fffefc 40%);
-  -webkit-mask-image: linear-gradient(0deg, transparent, #fffefc 40%);
-  transition: background-color 0.5s ease-out;
-}
-
-.mask-gradient {
-  mask-image: linear-gradient(0deg, transparent, #fffefc 40%);
-  -webkit-mask-image: linear-gradient(0deg, transparent, #fffefc 40%);
-}
-
 ::selection {
-  color: rgb(255, 133, 81);
+  color: rgb(255, 94, 45);
 }
 
 ::-moz-selection {
-  color: rgb(255, 133, 81);
+  color: rgb(255, 94, 45);
 }
 
 p,
@@ -277,4 +258,14 @@ div {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.mask-gradient-60 {
+  mask-image: linear-gradient(0deg, transparent, #fffefc 60%);
+  -webkit-mask-image: linear-gradient(0deg, transparent, #fffefc 60%);
+}
+
+.mask-gradient-100 {
+  mask-image: linear-gradient(0deg, transparent, #fffefc 100%);
+  -webkit-mask-image: linear-gradient(0deg, transparent, #fffefc 100%);
 }
