@@ -1,5 +1,6 @@
 import localFont from 'next/font/local';
 import '@/app/globals.css';
+import { LanguageProvider } from '@/hooks/useLanguage';
 
 const wantedSans = localFont({
   src: '/fonts/WantedSansVariable.woff2',
@@ -28,11 +29,11 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default async function RootLayout({ children }: Props) {
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="ko">
       <body className={`${wantedSans.variable} ${walsheimGT.variable}`}>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

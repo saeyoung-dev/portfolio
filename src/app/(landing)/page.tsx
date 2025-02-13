@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import Link from 'next/link';
 import Image from 'next/image';
 import JobSummary from './_view/JobSummary';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function Home() {
   const sloganRef = useRef<HTMLDivElement>(null);
@@ -113,24 +114,24 @@ export default function Home() {
         </h2>
         <div className="flex flex-col gap-10">
           <Link href="/work/veganro" className="group flex flex-col gap-4">
-            <div className=" relative overflow-hidden rounded-3xl border border-green-900 ">
+            <div className="relative overflow-hidden rounded-3xl border border-green-900/10">
               <Image
-                src="/images/work-1.png"
+                src="/images/work/veganro-main-01.png"
                 alt="Veganro"
                 width={0}
                 height={448}
-                className="w-full group-hover:scale-105 group-hover:opacity-90 transition-transform duration-500"
+                className="w-full group-hover:scale-105 group-hover:brightness-95 transition-transform duration-500"
                 sizes="100vw"
               />
-              <p className="text-green-900 size-14 flex justify-center items-center rounded-full bg-beige absolute text-3xl top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
-                ↗
+              <p className="text-green-900 size-14 flex justify-center items-center shadow rounded-full bg-beige absolute text-3xl top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                <ArrowUpRight className="group-hover:rotate-45 duration-300" />
               </p>
             </div>
             <div className="relative overflow-hidden group">
               <p className="text-xl font-medium block transition-transform duration-300 group-hover:-translate-y-10">
                 Vegranro {'↗'}
               </p>
-              <p className="absolute top-0 left-0 text-xl font-medium w-full opacity-0  text-neutral-600 translate-y-10 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+              <p className="absolute top-0 left-0 text-xl font-medium w-full opacity-0 text-neutral-600 translate-y-10 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                 Vegan Place Map Service {'↗'}
               </p>
             </div>
@@ -139,17 +140,17 @@ export default function Home() {
             href="/work/bread-and-butter"
             className="group flex flex-col gap-4"
           >
-            <div className=" relative overflow-hidden rounded-3xl border border-green-900 ">
+            <div className="relative overflow-hidden rounded-3xl border border-green-900/10">
               <Image
-                src="/images/work/work-1.png"
+                src="/images/work/bab-main-01.png"
                 alt="Bread & Butter"
                 width={0}
                 height={448}
-                className="w-full group-hover:scale-105 group-hover:opacity-90 transition-transform duration-500"
+                className="w-full group-hover:scale-105 group-hover:brightness-95 transition-transform duration-500"
                 sizes="100vw"
               />
-              <p className="text-green-900 size-14 flex justify-center items-center rounded-full bg-beige absolute text-3xl top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
-                ↗
+              <p className="text-green-900 size-14 flex justify-center items-center shadow rounded-full bg-beige absolute text-3xl top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                <ArrowUpRight className="group-hover:rotate-45 duration-300" />
               </p>
             </div>
             <div className="relative overflow-hidden group">
