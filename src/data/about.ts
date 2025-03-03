@@ -3,21 +3,21 @@ import { AboutContent } from '@/types/about';
 export const aboutContent: AboutContent = {
   hero: {
     title: {
-      ko: 'A UI developer\nwith a design foundation',
-      en: 'A UI developer\nwith a design foundation',
+      ko: 'A Product Designer\nbridging design & development',
+      en: 'A Product Designer\nbridging design & development',
     },
     description: {
-      ko: '안녕하세요, 다양한 디자인 경험을 가진 UI 개발자 최세영입니다. 서울에서 일하고 있으며, 디자인에서 개발로 이어진 여정을 통해 두 분야에 대한 이해를 깊게 하며 의미 있고 영향력 있는 디지털 경험을 만들어내고 있습니다.',
-      en: "I'm Saeyoung, a UI developer with a design background, currently working in Seoul. My journey from design to development has deepened my understanding of both worlds, allowing me to create thoughtful and impactful digital experiences.",
+      ko: '안녕하세요, 디자인 사고를 바탕으로 사용자를 위한 의미 있는 경험을 설계하는 **프로덕트 디자이너 최세영**입니다. 제품 기획부터 디자인, 개발까지 전체적인 흐름을 이해하고 실행할 수 있는 역량을 갖추고 있습니다.',
+      en: "I'm Saeyoung, **a Product Designer** crafting meaningful experiences through strategy, design, and technology. With a deep understanding of product planning, UX/UI, and frontend development, I bring comprehensive solutions that bridge user needs and business goals.",
     },
     status: {
       current: {
-        ko: 'Seeking a frontend developer position in the world.', //TODO 수정
-        en: 'Seeking a frontend developer position in the world.',
+        ko: '사용자의 관점을 제품 전략으로 구체화하여 개발 과정에 반영합니다. 현재 **프로덕트 디자인 및 기획 역할**을 찾고 있으며, 디자인과 기획을 바탕으로 제품 성장을 이끌고자 합니다.',
+        en: 'Currently seeking **a product design and planning role** where I can bridge design, strategy, and execution to drive product growth.',
       },
       previous: {
-        ko: 'Working as a UI developer at a startup company in Seoul.', //TODO 수정
-        en: 'Working as a UI developer at a startup company in Seoul.',
+        ko: '디자인을 전공하고, 스타트업에서 UI 디자인과 마크업 개발을 담당했습니다. 이후, **프론트엔드 개발을 심화 학습**하며 **디지털 프로덕트 제작에 대한 이해**를 더욱 넓혔습니다.',
+        en: 'Worked as a **UI developer at startups**. Later, I learned **frontend development** to broaden my understanding of digital product creation.',
       },
     },
   },
@@ -29,154 +29,154 @@ export const aboutContent: AboutContent = {
     items: [
       {
         title: {
-          ko: 'Always learning',
-          en: 'Always learning',
+          ko: 'Always Learning',
+          en: 'Always Learning',
         },
         description: {
-          ko: '저는 지속적으로 새로운 기술과 디자인 트렌드를 탐구하며 성장합니다. 코드와 디자인 모두에서 영감을 얻으며, 이 두 세계를 연결하는 방법을 항상 고민합니다 ⋆˙⟡',
-          en: 'I constantly explore new technologies and design trends to fuel my growth. I find inspiration in both code and design, always seeking ways to bridge these two worlds ⋆˙⟡',
+          ko: '디자인, 기술, 사용자 경험을 지속적으로 탐구하며 더 나은 제품을 만들기 위해 노력합니다. 창의적인 해결책을 찾기 위해 **다양한 도구와 접근 방식을 실험**하는 것을 즐깁니다.',
+          en: 'I constantly explore design, technology, and user experience to create better products. I enjoy **experimenting with different tools and approaches** to find innovative solutions.',
         },
       },
       {
         title: {
-          ko: 'How I work',
-          en: 'How I work',
+          en: 'How I Work',
+          ko: 'How I Work',
         },
         description: {
-          ko: '디자인 배경을 바탕으로 사용자 경험과 시각적 미학에 중점을 두고 개발에 접근합니다. 모든 코드는 목적과 관심을 가지고 작성됩니다.',
-          en: 'Rooted in my design background, I approach development with a focus on user experience and visual aesthetics. Every line of code is written with purpose and care.',
+          ko: '문제 정의에서부터 프로토타이핑, 개발 협업까지 제품의 전 과정을 주도적으로 이끌어나갑니다. **사용자 중심의 문제 해결을 목표**로 실행 가능한 솔루션을 구현합니다.',
+          en: 'I engage in the full process from defining user problems to prototyping and collaborating on development. My focus is on bridging design and technology **to deliver actionable solutions.**',
         },
       },
       {
         title: {
-          ko: 'Outside of office',
-          en: 'Outside of office',
+          en: 'Building Together',
+          ko: 'Building Together',
         },
         description: {
-          ko: '완벽한 라떼를 찾아 카페를 탐험하거나 집에서 요리를 합니다. 새로운 레시피를 시도하지 않을 때는 수달 영상을 보거나 야외에서 시간을 보내는 것을 즐깁니다.',
-          en: "You'll find me exploring cafes for the perfect latte or cooking at home. When I'm not trying new recipes, I enjoy watching otter videos and spending time outdoors.",
+          ko: '다양한 팀과 긴밀하게 협력하여 제품 비전을 설정하고 실행합니다. 기획, 디자인, 개발을 아우르는 **커뮤니케이션 역량**을 통해 프로젝트를 원활하게 리드합니다.',
+          en: 'I work closely with diverse teams to define and execute product vision. **With strong communication** across planning, design, and development, I ensure a smooth and effective workflow.',
         },
       },
     ],
   },
   life: {
     title: {
-      ko: 'Code by day, cook by night',
-      en: 'Code by day, cook by night',
+      ko: 'Outside of Work',
+      en: 'Outside of Work',
     },
     images: [
       {
         description: {
-          ko: '나의 최애 카페',
-          en: 'My Favorite Cafe',
+          ko: '새로운 장소로 여행하기 🌎',
+          en: 'Traveling to new places 🌎',
         },
       },
       {
         description: {
-          ko: '친구들과 함께',
-          en: 'Chill with friends',
+          ko: '피크닉 🍎',
+          en: 'Picnic 🍎',
         },
       },
       {
         description: {
-          ko: '산 전망',
-          en: 'Mountain View',
+          ko: '산에서 컵라면 먹기 🍜',
+          en: 'Eating instant noodles in the mountains 🍜',
         },
       },
       {
         description: {
-          ko: '맛있는 음식',
-          en: 'Good Food',
+          ko: '새로운 레시피 도전하기 🍳',
+          en: 'Trying out new cooking recipes 🍳',
         },
       },
       {
         description: {
-          ko: '좋은 커피',
-          en: 'Good Coffee',
+          ko: '카페 탐방하기 ☕️',
+          en: 'Exploring cafes for the perfect coffee ☕️',
         },
       },
     ],
   },
   core: {
     title: {
-      ko: 'Core Values',
-      en: 'Core Values',
+      ko: 'Core Strengths',
+      en: 'Core Strengths',
     },
     sections: [
       {
         title: {
-          ko: 'Design',
-          en: 'Design',
+          ko: 'Product Strategy',
+          en: 'Product Strategy',
         },
         items: [
           {
             text: {
-              ko: '사용자 중심 인터페이스 디자인',
+              ko: '비즈니스 목표를 고려한 UX 기획',
+              en: 'UX planning aligned with business goals',
+            },
+          },
+          {
+            text: {
+              ko: '사용자 리서치 및 데이터 기반 설계',
+              en: 'User research & data-driven design',
+            },
+          },
+          {
+            text: {
+              ko: '시장 분석을 통한 제품 방향성 설정',
+              en: 'Market analysis for strategic product direction',
+            },
+          },
+        ],
+      },
+      {
+        title: {
+          ko: 'UX/UI Design',
+          en: 'UX/UI Design',
+        },
+        items: [
+          {
+            text: {
+              ko: '사용자 중심 인터페이스 설계',
               en: 'User-centered interface design',
             },
           },
           {
             text: {
-              ko: 'Figma를 활용한 빠른 프로토타이핑',
-              en: 'Rapid prototyping with Figma',
+              ko: 'Figma 및 디자인 시스템 활용',
+              en: 'Design system & Figma expertise',
             },
           },
           {
             text: {
-              ko: '인터랙션을 위한 모션 디자인',
-              en: 'Motion design for interactions',
-            },
-          },
-        ],
-      },
-      {
-        title: {
-          ko: 'Development',
-          en: 'Development',
-        },
-        items: [
-          {
-            text: {
-              ko: 'Next.js 성능 최적화',
-              en: 'Next.js performance optimization',
-            },
-          },
-          {
-            text: {
-              ko: '클린 TypeScript 아키텍처',
-              en: 'Clean TypeScript architecture',
-            },
-          },
-          {
-            text: {
-              ko: '확장 가능한 컴포넌트 시스템',
-              en: 'Scalable component systems',
+              ko: '모션 디자인 및 인터랙션 강화',
+              en: 'Motion design & enhanced interactions',
             },
           },
         ],
       },
       {
         title: {
-          ko: 'Soft Skills',
-          en: 'Soft Skills',
+          ko: 'Development Skills',
+          en: 'Development Skills',
         },
         items: [
           {
             text: {
-              ko: '팀 협업과 커뮤니케이션',
-              en: 'Team collaboration & communication',
+              ko: '다양한 개발 언어 활용',
+              en: 'Proficient in multiple programming languages',
             },
           },
           {
             text: {
-              ko: '문제 해결과 비판적 사고',
-              en: 'Problem-solving & critical thinking',
+              ko: '디자인과 개발 간 원활한 협업 리드',
+              en: 'Bridging design and development collaboration',
             },
           },
           {
             text: {
-              ko: '애자일 프로젝트 관리',
-              en: 'Agile project management',
+              ko: '컴포넌트 기반 UI 시스템 설계',
+              en: 'Scalable component-based UI design',
             },
           },
         ],

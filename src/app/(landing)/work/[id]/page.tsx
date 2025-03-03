@@ -4,10 +4,9 @@ import { useCallback, use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLocale } from '@/hooks/useLocale';
 import { renderText } from '@/utils/renderText';
 import { Button } from '@/components/ui/button';
-import { YouTube } from '@/components/ui/youtube';
 import { getWorkById } from '@/data/works';
 import {
   WireframeSection,
@@ -17,9 +16,12 @@ import {
   TechStackSection,
   ChallengeSection,
   KeyFeatureSection,
+  RestropectiveSection,
+  YoutubeSection,
 } from './_view/index';
 import { ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Fragment } from 'react';
 
 interface Props {
   params: Promise<{
@@ -28,15 +30,15 @@ interface Props {
 }
 
 const SECTION_COMPONENTS = {
-  wireframe: WireframeSection,
-  taskFlow: TaskFlowSection,
   informationArchitecture: InformationArchitectureSection,
+  taskFlow: TaskFlowSection,
+  wireframe: WireframeSection,
 } as const;
 
 export default function WorkDetail({ params }: Props) {
   const { id } = use(params);
   const work = getWorkById(id);
-  const { language } = useLanguage();
+  const { language } = useLocale();
 
   if (!work) {
     notFound();
@@ -52,7 +54,7 @@ export default function WorkDetail({ params }: Props) {
   }, []);
 
   return (
-    <main className="flex w-full flex-col items-center relative gap-24">
+    <main className="flex w-full flex-col items-center relative gap-28">
       {/* Main Image */}
       <section className="w-screen overflow-hidden">
         <Image
@@ -67,14 +69,14 @@ export default function WorkDetail({ params }: Props) {
       {/* Description Section */}
       <section className="w-full container px-48">
         <div className="flex flex-col gap-6">
-          <h1 className="text-6xl text-green-900 font-semibold tracking-tighter">
+          <h1 className="text-6xl font-semibold tracking-tighter leading-tight text-green-900">
             {work.title}
           </h1>
-          <h2 className="text-2xl font-medium text-green-900">
-            {work.subtitle[language]}
-          </h2>
           <div className="flex w-full justify-between gap-16">
-            <div className="flex flex-col gap-10 w-3/4">
+            <div className="flex flex-col gap-6 w-3/4">
+              <h2 className="text-2xl font-medium text-green-900">
+                {work.subtitle[language]}
+              </h2>
               <p
                 className={cn(
                   'text-lg text-neutral-600 max-w-3xl text-balance flex flex-col gap-4 ',
@@ -87,7 +89,7 @@ export default function WorkDetail({ params }: Props) {
                   </span>
                 ))}
               </p>
-              <div className="flex items-center gap-4 text-sm text-green-900/70">
+              <div className="flex items-center gap-4 text-sm mt-4 text-green-900/70">
                 {work.link && (
                   <Button variant="primary" className="group">
                     <Link
@@ -111,6 +113,28 @@ export default function WorkDetail({ params }: Props) {
                   <h3 className="font-bold mb-1">TIMELINE</h3>
                   <p className="font-medium text-balance">{work.timeline}</p>
                 </div>
+                {work.type && (
+                  <div>
+                    <h3 className="font-bold mb-1">TYPE</h3>
+                    <p className="font-medium text-balance">{work.type}</p>
+                  </div>
+                )}
+                {work.client && (
+                  <div>
+                    <h3 className="font-bold mb-1">CLIENT</h3>
+                    <p className="font-medium text-balance">
+                      {work.client[language]}
+                    </p>
+                  </div>
+                )}
+                {work.team && (
+                  <div>
+                    <h3 className="font-bold mb-1">TEAM</h3>
+                    <p className="font-medium text-balance">
+                      {renderText(work.team)}
+                    </p>
+                  </div>
+                )}
                 {work.role && (
                   <div>
                     <h3 className="font-bold mb-1">ROLE</h3>
@@ -128,18 +152,6 @@ export default function WorkDetail({ params }: Props) {
                         </p>
                       ))}
                     </div>
-                  </div>
-                )}
-                {work.team && (
-                  <div>
-                    <h3 className="font-bold mb-1">TEAM</h3>
-                    <p className="font-medium text-balance">{work.team}</p>
-                  </div>
-                )}
-                {work.type && (
-                  <div>
-                    <h3 className="font-bold mb-1">TYPE</h3>
-                    <p className="font-medium text-balance">{work.type}</p>
                   </div>
                 )}
               </div>
@@ -160,7 +172,7 @@ export default function WorkDetail({ params }: Props) {
       {/* Video Section */}
       {work.video && (
         <section className="w-full container px-48">
-          <YouTube
+          <YoutubeSection
             videoId={work.video.videoId}
             title={work.video.title[language]}
           />
@@ -171,12 +183,15 @@ export default function WorkDetail({ params }: Props) {
       {work.sections.map((section, index) => {
         const SectionComponent = SECTION_COMPONENTS[section.type];
         return (
-          <SectionComponent
-            key={`${section.type}-${index}`}
-            data={section.data}
-          />
+          <Fragment key={`${section.type}-${index}`}>
+            <SectionComponent data={section.data} />
+          </Fragment>
         );
       })}
+
+      {work.retrospective && (
+        <RestropectiveSection restropective={work.retrospective} />
+      )}
 
       <div className="w-full h-6" />
     </main>

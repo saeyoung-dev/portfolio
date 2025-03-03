@@ -1,6 +1,12 @@
 import { cn } from '@/lib/utils';
+import { aboutContent } from '@/data/about';
+import { useLocale } from '@/hooks/useLocale';
+import { renderText } from '@/utils/renderText';
 
 export default function JobSummary({ className }: { className?: string }) {
+  const { hero } = aboutContent;
+  const { language } = useLocale();
+
   return (
     <section
       className={cn(
@@ -12,14 +18,14 @@ export default function JobSummary({ className }: { className?: string }) {
       <div className="flex gap-32">
         <div className="flex-1">
           <h2 className="text-xl font-semibold mb-4">CURRENTLY:</h2>
-          <p className="text-lg text-balance">
-            Seeking a frontend developer position in the world.
+          <p className="text-lg text-pretty break-keep font-medium leading-relaxed text-green-900/80">
+            {renderText(hero.status.current[language])}
           </p>
         </div>
         <div className="flex-1">
           <h2 className="text-xl font-semibold mb-4">PREVIOUSLY:</h2>
-          <p className="text-lg">
-            Working as a UI developer at a startup company in Seoul.
+          <p className="text-lg text-pretty break-keep font-medium leading-relaxed text-green-900/80">
+            {renderText(hero.status.previous[language])}
           </p>
         </div>
       </div>

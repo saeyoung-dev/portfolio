@@ -11,7 +11,9 @@ export default function WorkPage() {
   return (
     <main className="flex w-full flex-col items-center pt-32 pb-16 gap-8">
       <section className="w-full container px-32 text-green-900">
-        <h1 className="text-6xl font-semibold tracking-tighter">Work</h1>
+        <h1 className="text-6xl font-semibold tracking-tighter leading-tight">
+          Work
+        </h1>
         <menu className="flex gap-2 mt-8">
           <li>
             <Button variant="outline">All</Button>
@@ -25,7 +27,7 @@ export default function WorkPage() {
         </menu>
       </section>
       <section className="w-full container px-32 text-green-900">
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-10">
           {Object.values(works).map((work) => (
             <WorkCard key={work.id} work={work} />
           ))}

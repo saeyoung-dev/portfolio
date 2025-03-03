@@ -1,6 +1,6 @@
 import localFont from 'next/font/local';
 import '@/app/globals.css';
-import { LanguageProvider } from '@/hooks/useLanguage';
+import { LanguageProvider } from '@/hooks/useLocale';
 
 const wantedSans = localFont({
   src: '/fonts/WantedSansVariable.woff2',

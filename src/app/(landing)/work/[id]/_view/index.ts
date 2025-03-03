@@ -5,3 +5,5 @@ export { default as SolutionSection } from './SolutionSection';
 export { default as TechStackSection } from './TechStackSection';
 export { default as ChallengeSection } from './ChallengeSection';
 export { default as KeyFeatureSection } from './KeyFeatureSection';
+export { default as YoutubeSection } from './YoutubeSection';
+export { default as RestropectiveSection } from './RestropectiveSection';

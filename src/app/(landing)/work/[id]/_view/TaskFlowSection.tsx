@@ -1,6 +1,7 @@
-import Image from 'next/image';
+import { ImageViewer } from '@/components/ui/image-viewer';
 import { Badge } from '@/components/ui/badge';
 import { SectionProps, TaskFlowData } from '../../../../../types/work';
+import { renderText } from '@/utils/renderText';
 
 export default function TaskFlowSection({ data }: SectionProps<TaskFlowData>) {
   return (
@@ -10,17 +11,14 @@ export default function TaskFlowSection({ data }: SectionProps<TaskFlowData>) {
           <Badge>TASK FLOW</Badge>
           {data.description && (
             <p className="mt-4 text-base font-medium text-neutral-600">
-              {data.description}
+              {renderText(data.description)}
             </p>
           )}
         </div>
-        <Image
+        <ImageViewer
           src={data.image}
           alt="Task Flow"
-          width={0}
-          height={0}
-          sizes="100vw"
-          className="w-full h-auto"
+          className="w-full h-full object-cover"
         />
       </div>
     </section>

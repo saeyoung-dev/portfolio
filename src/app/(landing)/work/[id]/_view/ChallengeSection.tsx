@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLocale } from '@/hooks/useLocale';
 import { Badge } from '@/components/ui/badge';
 import { ChallengeData } from '@/types/work';
 import { renderText } from '@/utils/renderText';
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function ChallengeSection({ challenge }: Props) {
-  const { language } = useLanguage();
+  const { language } = useLocale();
 
   return (
     <section className="w-full container px-48 flex flex-col gap-8">

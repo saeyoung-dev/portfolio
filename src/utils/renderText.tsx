@@ -2,8 +2,11 @@
 
 import React, { ReactNode } from 'react';
 
-function renderBold(text: string): ReactNode[] {
-  return text.split(/(\*\*.*?\*\*)/).map((part, index) => {
+export function renderText(text: string): ReactNode[] {
+  const regex = /(\*\*.*?\*\*|\/\/.*?\/\/|\[\[.*?\]\]\(.*?\))/g;
+
+  return text.split(regex).map((part, index) => {
+    // bold 체크
     if (part.startsWith('**') && part.endsWith('**')) {
       return (
         <b key={index} className="font-bold">
@@ -11,12 +14,13 @@ function renderBold(text: string): ReactNode[] {
         </b>
       );
     }
-    return <span key={index}>{part}</span>;
-  });
-}
 
-function renderLink(text: string): ReactNode[] {
-  return text.split(/(\[\[.*?\]\]\(.*?\))/).map((part, index) => {
+    // small 체크
+    if (part.startsWith('//') && part.endsWith('//')) {
+      return <small key={index}>{part.slice(2, -2)}</small>;
+    }
+
+    // url 체크
     const linkMatch = part.match(/\[\[(.*?)\]\]\((.*?)\)/);
     if (linkMatch) {
       const [, text, url] = linkMatch;
@@ -32,18 +36,7 @@ function renderLink(text: string): ReactNode[] {
         </a>
       );
     }
+
     return <span key={index}>{part}</span>;
   });
-}
-
-export function renderText(text: string): ReactNode[] {
-  const boldResult = renderBold(text);
-  return boldResult
-    .map((node) => {
-      if (typeof node === 'string') {
-        return renderLink(node);
-      }
-      return node;
-    })
-    .flat();
 }

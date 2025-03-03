@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLocale } from '@/hooks/useLocale';
 import { cn } from '@/lib/utils';
 
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
   const isWorkDetail = pathname.includes('/work/') && pathname !== '/work';
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const { language, toggleLanguage } = useLanguage();
+  const { language, toggleLanguage } = useLocale();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,13 +48,18 @@ export default function Header() {
           />
         </div>
         <div className="flex w-full max-w-[1400px] items-center justify-between px-10 py-5 relative">
-          <Link href="/" className="relative">
+          <Link
+            href="/"
+            className="relative flex group items-center hover:scale-110 transition-transform duration-200 ease-in h-14 w-14 bg-[url('/images/icon/main-01.png')] bg-cover bg-center"
+          >
             <Image
-              src="/images/logo/header-logo.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="w-10 h-10"
+              src="/images/icon/main-02.png"
+              alt="main-logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-auto h-14 group-hover:rotate-180 transition-transform duration-300 ease-out"
+              priority
             />
           </Link>
           <nav className="flex gap-8 font-semibold items-center text-green-900">

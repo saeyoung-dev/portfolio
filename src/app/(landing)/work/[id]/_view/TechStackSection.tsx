@@ -1,5 +1,6 @@
 import { TechStackData } from '@/types/work';
 import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 
 interface Props {
   techStack: TechStackData;
@@ -17,6 +18,7 @@ export default function TechStackSection({ techStack }: Props) {
   const sideStack = (
     frontendItems.length >= backendItems.length ? 'backend' : 'frontend'
   ) as StackKey;
+  console.log(Object.keys(techStack).length);
 
   return (
     <section className="w-full container px-48">
@@ -24,7 +26,12 @@ export default function TechStackSection({ techStack }: Props) {
         <Badge>TECH STACK</Badge>
         <div className="flex justify-between gap-12 items-start text-center bg-white py-8 px-12 rounded-2xl shadow border border-neutral-100">
           {techStack[sideStack] && (
-            <div className="flex flex-col gap-4 w-1/4">
+            <div
+              className={cn(
+                'flex flex-col gap-4',
+                Object.keys(techStack).length === 2 ? 'w-1/3' : 'w-1/4'
+              )}
+            >
               <h4 className="text-2xl font-medium text-green-900">
                 {sideStack === 'frontend' ? 'Frontend' : 'Backend'}
               </h4>
@@ -34,7 +41,12 @@ export default function TechStackSection({ techStack }: Props) {
             </div>
           )}
           {techStack[centerStack] && (
-            <div className="flex flex-col gap-4 w-2/4">
+            <div
+              className={cn(
+                'flex flex-col gap-4',
+                Object.keys(techStack).length === 2 ? 'w-2/3' : 'w-2/4'
+              )}
+            >
               <h4 className="text-2xl font-medium text-green-900">
                 {centerStack === 'frontend' ? 'Frontend' : 'Backend'}
               </h4>
@@ -44,7 +56,12 @@ export default function TechStackSection({ techStack }: Props) {
             </div>
           )}
           {techStack.tools && (
-            <div className="flex flex-col gap-4 w-1/4">
+            <div
+              className={cn(
+                'flex flex-col gap-4',
+                Object.keys(techStack).length === 2 ? 'w-1/3' : 'w-1/4'
+              )}
+            >
               <h4 className="text-2xl font-medium text-green-900">
                 {techStack.tools.label}
               </h4>

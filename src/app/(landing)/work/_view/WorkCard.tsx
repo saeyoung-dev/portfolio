@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLocale } from '@/hooks/useLocale';
 import { Work } from '@/types/work';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function WorkCard({ work }: Props) {
-  const { language } = useLanguage();
+  const { language } = useLocale();
 
   return (
     <Link href={`/work/${work.id}`} className="block">
