@@ -1,10 +1,13 @@
 import Image from 'next/image';
 import { SectionProps, WireframeData } from '@/types/work';
 import { Badge } from '@/components/ui/badge';
-
+import { renderText } from '@/utils/renderText';
+import { useLocale } from '@/hooks/useLocale';
 export default function WireframeSection({
   data,
 }: SectionProps<WireframeData>) {
+  const { language } = useLocale();
+
   return (
     <section className="w-full">
       <div className="flex flex-col gap-6">
@@ -12,7 +15,7 @@ export default function WireframeSection({
           <Badge>WIREFRAME</Badge>
           {data.description && (
             <p className="mt-4 text-base font-medium text-neutral-600">
-              {data.description}
+              {renderText(data.description[language])}
             </p>
           )}
         </div>
