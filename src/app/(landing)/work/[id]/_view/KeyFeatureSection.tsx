@@ -34,6 +34,7 @@ export default function KeyFeatureSection({ features }: Props) {
                   src={feature.image}
                   alt={feature.title[language]}
                   fill
+                  sizes="100vw"
                   className={cn(
                     'rounded-md',
                     isLandscape(feature) ? 'object-cover' : 'object-contain'

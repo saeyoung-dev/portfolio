@@ -1,23 +1,154 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLocale } from '@/hooks/useLocale';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { works } from '@/data/works';
 import JobSummary from './_view/JobSummary';
 import HeroSection from './_view/HeroSection';
 import { ArrowUpRight } from 'lucide-react';
-import { works } from '@/data/works';
-import { useLocale } from '@/hooks/useLocale';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const { language } = useLocale();
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const worksSectionRef = useRef<HTMLElement>(null);
+  const worksHeaderRef = useRef<HTMLHeadingElement>(null);
+  const worksContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ delay: 0.2 });
+
+    tl.fromTo(
+      titleRef.current,
+      {
+        opacity: 0,
+        y: 100,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+      }
+    ).fromTo(
+      subtitleRef.current,
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: 'power2.out',
+      },
+      '-=0.4'
+    );
+
+    const worksSection = worksSectionRef.current;
+    const worksHeader = worksHeaderRef.current;
+    const worksItems = worksContainerRef.current?.children;
+
+    if (worksSection && worksHeader && worksItems) {
+      gsap.fromTo(
+        worksHeader,
+        {
+          opacity: 0,
+          y: 40,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: worksSection,
+            start: 'top center+=100',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+
+      gsap.fromTo(
+        worksItems,
+        {
+          opacity: 0,
+          y: 60,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: worksSection,
+            start: 'top center+=100',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    const heroAnimation = gsap.fromTo(
+      '.hero-content',
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: 'power3.out',
+      }
+    );
+
+    const worksAnimation = gsap.fromTo(
+      '.works-item',
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.works-section',
+          start: 'top center+=100',
+          once: true,
+        },
+      }
+    );
+
+    return () => {
+      heroAnimation.kill();
+      worksAnimation.scrollTrigger?.kill();
+    };
+  }, []);
 
   return (
     <main className="flex w-full flex-col items-center">
       <section className="pt-[5rem] pb-10 px-32 min-h-screen container flex items-center text-green-900 2xl:gap-10 2xl:flex-col 2xl:justify-evenly">
         <div className="2xl:h-full 2xl:flex-1 2xl:flex 2xl:flex-col 2xl:justify-center">
           <div className="flex flex-col gap-8 justify-center">
-            <h1 className="text-[6.25rem] font-title">Saeyoung Choi.</h1>
-            <p className="text-3xl leading-[3.25rem] tracking-tight text-neutral-600">
+            <h1 ref={titleRef} className="text-[6.25rem] font-title">
+              Saeyoung Choi.
+            </h1>
+            <p
+              ref={subtitleRef}
+              className="text-3xl leading-[3.25rem] tracking-tight text-neutral-600"
+            >
               <span className="flex items-center">
                 From creativity to development, building user-centric
                 <Image
@@ -63,8 +194,14 @@ export default function Home() {
       </section>
 
       {/* Work Section */}
-      <section className="px-32 pb-16 pt-32 w-full container text-green-900">
-        <h2 className="text-3xl font-semibold mb-10 flex items-center gap-1">
+      <section
+        ref={worksSectionRef}
+        className="px-32 pb-16 pt-32 w-full container text-green-900"
+      >
+        <h2
+          ref={worksHeaderRef}
+          className="text-3xl font-semibold mb-10 flex items-center gap-1"
+        >
           <Image
             src="/images/icon/work-01.png"
             alt="work"
@@ -73,7 +210,7 @@ export default function Home() {
           />
           Selected Work
         </h2>
-        <div className="flex flex-col gap-10">
+        <div ref={worksContainerRef} className="flex flex-col gap-10">
           <Link href="/work/veganro" className="group flex flex-col gap-4">
             <div className="relative overflow-hidden rounded-3xl border border-green-900/10">
               <Image

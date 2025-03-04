@@ -3,8 +3,8 @@ import { AboutContent } from '@/types/about';
 export const aboutContent: AboutContent = {
   hero: {
     title: {
-      ko: 'A Product Designer\nbridging design & development',
-      en: 'A Product Designer\nbridging design & development',
+      ko: 'A Product Designer bridging design & development',
+      en: 'A Product Designer bridging design & development',
     },
     description: {
       ko: '안녕하세요, 디자인 사고를 바탕으로 사용자를 위한 의미 있는 경험을 설계하는 **프로덕트 디자이너 최세영**입니다. 제품 기획부터 디자인, 개발까지 전체적인 흐름을 이해하고 실행할 수 있는 역량을 갖추고 있습니다.',

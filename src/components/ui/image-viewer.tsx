@@ -56,6 +56,7 @@ export function ImageViewer({ src, alt, className }: Props) {
               src={src}
               alt={alt}
               fill
+              sizes="100vw"
               className="object-contain"
               priority
             />

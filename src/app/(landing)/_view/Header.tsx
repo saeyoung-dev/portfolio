@@ -2,41 +2,54 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { useLocale } from '@/hooks/useLocale';
+import { Switch } from '@/components/ui/switch';
 import { cn } from '@/lib/utils';
+import gsap from 'gsap';
 
 export default function Header() {
   const pathname = usePathname();
   const isWorkDetail = pathname.includes('/work/') && pathname !== '/work';
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const { language, toggleLanguage } = useLocale();
+  const { language, setLanguage } = useLocale();
+  const headerRef = useRef<HTMLElement>(null);
+  const lastScrollY = useRef(0);
+  const tl = useRef<gsap.core.Timeline | null>(null);
 
   useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+
+    tl.current = gsap.timeline({ paused: true }).to(header, {
+      y: '-100%',
+      duration: 0.2,
+      ease: 'power3.inOut',
+    });
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const isScrollingUp = currentScrollY < lastScrollY.current;
 
-      if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
-      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
+      if (isScrollingUp) {
+        tl.current?.reverse();
+      } else if (currentScrollY > 100) {
+        tl.current?.timeScale(1.5).play();
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <header
-      className={cn(
-        'fixed z-30 flex w-full justify-center transform transition-transform duration-300',
-        !isVisible && '-translate-y-full'
-      )}
+      ref={headerRef}
+      className="fixed top-0 left-0 z-30 flex w-full justify-center transition-transform duration-200"
     >
       <div className="w-full relative flex items-center justify-center">
         <div className="absolute w-full inset-0 transition-colors duration-300 ease-out">
@@ -63,12 +76,14 @@ export default function Header() {
             />
           </Link>
           <nav className="flex gap-8 font-semibold items-center text-green-900">
-            <button
-              onClick={toggleLanguage}
-              className="px-2 py-1 rounded text-sm font-medium hover:bg-green-900/10"
-            >
-              {language === 'ko' ? 'EN' : 'KO'}
-            </button>
+            <div className="flex items-center gap-4">
+              <Switch
+                checked={language === 'en'}
+                onCheckedChange={(checked) =>
+                  setLanguage(checked ? 'en' : 'ko')
+                }
+              />
+            </div>
             <div className="relative overflow-hidden group">
               <Link href="/work" className="block relative">
                 <span className="nav-text block relative transition-transform duration-300 group-hover:-translate-y-5">

@@ -18,7 +18,6 @@ export default function TechStackSection({ techStack }: Props) {
   const sideStack = (
     frontendItems.length >= backendItems.length ? 'backend' : 'frontend'
   ) as StackKey;
-  console.log(Object.keys(techStack).length);
 
   return (
     <section className="w-full container px-48">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, use } from 'react';
+import { useCallback, use, Fragment, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -18,10 +18,11 @@ import {
   KeyFeatureSection,
   RestropectiveSection,
   YoutubeSection,
+  AchievementSection,
 } from './_view/index';
 import { ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Fragment } from 'react';
+import gsap from 'gsap';
 
 interface Props {
   params: Promise<{
@@ -51,6 +52,32 @@ export default function WorkDetail({ params }: Props) {
   const scrollToFeatures = useCallback(() => {
     const featuresSection = document.getElementById('key-features');
     featuresSection?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
+  useEffect(() => {
+    const workAnimation = gsap.fromTo(
+      '.work-content',
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.work-content',
+          start: 'top center+=100',
+          once: true,
+        },
+      }
+    );
+
+    return () => {
+      workAnimation.scrollTrigger?.kill();
+    };
   }, []);
 
   return (
@@ -160,9 +187,7 @@ export default function WorkDetail({ params }: Props) {
         </div>
       </section>
 
-      {/* Tech Stack Section */}
       {work.techStack && <TechStackSection techStack={work.techStack} />}
-      {/* Challenge Section */}
       {work.challenge && <ChallengeSection challenge={work.challenge} />}
       {work.solution && <SolutionSection solution={work.solution} />}
       {/* Key Features Section */}
@@ -188,11 +213,12 @@ export default function WorkDetail({ params }: Props) {
           </Fragment>
         );
       })}
-
+      {work.achievements && (
+        <AchievementSection achievements={work.achievements} />
+      )}
       {work.retrospective && (
         <RestropectiveSection restropective={work.retrospective} />
       )}
-
       <div className="w-full h-6" />
     </main>
   );

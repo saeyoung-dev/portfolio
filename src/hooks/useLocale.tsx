@@ -1,27 +1,22 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode } from 'react';
-
-type Language = 'ko' | 'en';
+import { createContext, useContext, useState } from 'react';
 
 interface LanguageContextType {
-  language: Language;
-  toggleLanguage: () => void;
+  language: 'ko' | 'en';
+  setLanguage: (language: 'ko' | 'en') => void;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
-);
+const LanguageContext = createContext<LanguageContextType>({
+  language: 'ko',
+  setLanguage: () => {},
+});
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('ko');
-
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'ko' ? 'en' : 'ko'));
-  };
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const [language, setLanguage] = useState<'ko' | 'en'>('ko');
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -29,7 +24,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
 export function useLocale() {
   const context = useContext(LanguageContext);
-  if (!context)
-    throw new Error('useLocale must be used within LanguageProvider');
+  if (!context) {
+    throw new Error('useLocale must be used within a LanguageProvider');
+  }
   return context;
 }

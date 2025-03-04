@@ -1,6 +1,7 @@
 import localFont from 'next/font/local';
 import '@/app/globals.css';
 import { LanguageProvider } from '@/hooks/useLocale';
+import CustomCursor from '@/components/ui/custom-cursor';
 
 const wantedSans = localFont({
   src: '/fonts/WantedSansVariable.woff2',
@@ -33,7 +34,10 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="ko">
       <body className={`${wantedSans.variable} ${walsheimGT.variable}`}>
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <CustomCursor />
+        </LanguageProvider>
       </body>
     </html>
   );

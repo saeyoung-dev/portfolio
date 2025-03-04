@@ -7,3 +7,4 @@ export { default as ChallengeSection } from './ChallengeSection';
 export { default as KeyFeatureSection } from './KeyFeatureSection';
 export { default as YoutubeSection } from './YoutubeSection';
 export { default as RestropectiveSection } from './RestropectiveSection';
+export { default as AchievementSection } from './AchievementSection';

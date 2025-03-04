@@ -12,7 +12,7 @@ export interface LocalizedArray {
 
 // Section Base Types
 export interface BaseSection {
-  description?: string;
+  description?: LocalizedContent;
   image?: string;
 }
 
@@ -29,12 +29,9 @@ export interface InformationArchitectureData extends BaseSection {
   image: string;
 }
 
-export interface AchievementData extends BaseSection {
-  image: string;
-  highlights: {
-    ko: string;
-    en: string;
-  }[];
+export interface AchievementData {
+  highlights: LocalizedContent[];
+  image?: string;
 }
 
 export interface RetrospectiveData {
@@ -92,9 +89,16 @@ export interface SectionProps<T> {
   data: T;
 }
 
-// Main Work Type
+export type WorkCategory =
+  // | 'Web App'
+  // | 'Platform'
+  // | 'E-Commerce'
+  // | 'Mobile App'
+  'Development' | 'Design';
+
 export interface Work {
   id: string;
+  category: WorkCategory;
   logo?: string;
   title: string;
   subtitle: LocalizedContent;
@@ -126,11 +130,6 @@ export interface Work {
     title: LocalizedContent;
     videoId: string;
   };
-  achievements?: {
-    highlights: {
-      ko: string;
-      en: string;
-    }[];
-  };
+  achievements?: AchievementData;
   retrospective?: RetrospectiveData[];
 }

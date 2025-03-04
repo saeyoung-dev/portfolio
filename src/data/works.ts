@@ -1,8 +1,9 @@
-import type { Work } from '@/types/work';
+import type { Work, WorkCategory } from '@/types/work';
 
 export const works: Record<string, Work> = {
   veganro: {
     id: 'veganro',
+    category: 'Development',
     logo: '/images/logo/veganro.png',
     title: 'Veganro',
     subtitle: {
@@ -41,7 +42,7 @@ export const works: Record<string, Work> = {
           'Veganro는 이러한 문제를 해결하기 위해 개발되었습니다. **현 위치 기반 검색과 세부 필터 기능을 제공**하여 사용자가 자신의 **식단 선호도에 맞는 비건 친화적인 장소**를 쉽고 빠르게 찾을 수 있도록 도왔습니다.',
         ],
         en: [
-          'People who follow a vegan diet often struggle to find suitable restaurants when dining out. Existing restaurant search services do not clearly differentiate vegan-friendly options, and reliable user-generated reviews are often lacking.',
+          'People who follow a vegan diet often struggle to find suitable restaurants when dining out. Existing restaurant search services **do not clearly differentiate vegan-friendly options, and reliable user-generated reviews are often lacking.**',
           'Veganro was developed to address this issue. By providing location-based search and detailed filtering options, users can quickly and easily find places that **match their dietary preferences.**',
         ],
       },
@@ -64,11 +65,11 @@ export const works: Record<string, Work> = {
     solution: {
       title: {
         ko: '현 위치 기반, 주변 비건 장소 검색 및 다양한 필터 기능을 통해 사용자의 선호도에 맞는 장소를 쉽게 찾을 수 있도록 최적화했습니다.',
-        en: 'Solution',
+        en: 'Optimized for easy vegan place search based on current location and various filtering options.',
       },
       description: {
-        ko: ' Veganro의 지도 기능은 사용자의 **현재 위치와 필터 옵션**을 반영하여 **맞춤형 검색 결과**를 제공합니다. 또한, 사용자는 **비건 장소를 제보하고 리뷰를 공유**하며 정보를 교류할 수 있습니다. 이를 통해 단순한 검색을 넘어 **비건 문화를 확산하고 지속 가능한 라이프스타일을 실천할 수 있는 환경을 조성**하였습니다.',
-        en: '',
+        ko: 'Veganro의 지도 기능은 사용자의 **현재 위치와 필터 옵션**을 반영하여 **맞춤형 검색 결과**를 제공합니다. 또한, 사용자는 **비건 장소를 제보하고 리뷰를 공유**하며 정보를 교류할 수 있습니다. 이를 통해 단순한 검색을 넘어 **비건 문화를 확산하고 지속 가능한 라이프스타일을 실천할 수 있는 환경을 조성**하였습니다.',
+        en: "Veganro's map feature provides **customized search results** based on the user's **current location and filter options**. Users can also **report and share vegan places** and exchange information. Through this, we have created an environment that not only simplifies searching but also promotes **vegan culture and sustainable lifestyle practices.**",
       },
     },
     keyFeatures: {
@@ -83,8 +84,8 @@ export const works: Record<string, Work> = {
             en: 'Non-member Login and Email Login Support',
           },
           description: {
-            ko: '**카카오 및 이메일 로그인**과 **비회원 이용**이 가능하며, 회원가입 시 **비건 유형**을 선택할 수 있습니다. 비건 유형에 따라 **맞춤형 프로필 이미지**가 제공됩니다. (비회원은 마이페이지 접속, 장소 제보, 북마크, 리뷰 작성 등의 기능은 제한됩니다.)',
-            en: 'KakaoTalk, Email login and non-member access are possible, and you can select a vegan type when signing up. A personalized profile image is provided according to the vegan type. (*Non-members are limited to accessing the My Page, reporting places, bookmarking, and writing reviews.)',
+            ko: '**카카오 및 이메일 로그인**과 **비회원 이용**이 가능하며, 회원가입 시 **비건 유형**을 선택할 수 있습니다. 비건 유형에 따라 **맞춤형 프로필 이미지**가 제공됩니다. //(*비회원은 마이페이지 접속, 장소 제보, 북마크, 리뷰 작성 등의 기능은 제한됩니다.)//',
+            en: '**KakaoTalk, Email login and non-member access** are possible, and you can **select a vegan type when signing up. A personalized profile image is provided according to the vegan type. //(*Non-members are limited to accessing the My Page, reporting places, bookmarking, and writing reviews.)//',
           },
           image: '/images/work/veganro/feature-01.gif',
           imageType: 'portrait',
@@ -162,6 +163,10 @@ export const works: Record<string, Work> = {
         type: 'informationArchitecture',
         data: {
           image: '/images/work/veganro/information-architecture.png',
+          description: {
+            ko: '페르소나의 이용 목표를 정의하고, 청사진에 맞게 메뉴 구조도를 구성했습니다.',
+            en: 'Defined the user goal and configured the menu structure diagram according to the blueprint.',
+          },
         },
       },
       {
@@ -182,11 +187,14 @@ export const works: Record<string, Work> = {
     retrospective: [
       {
         question: {
-          ko: '프로젝트 초기 설계 과정에서 어떤 어려움이 있었나요?',
+          ko: '사용자 중심의 정보 구조 설계',
           en: 'What challenges did you face during the initial design phase of the project?',
         },
         answer: {
-          ko: ['프로젝트 초기 설계 과정에서 어떤 어려움이 있었나요?'],
+          ko: [
+            '비건로 프로젝트에서는 다양한 비건 식당 정보를 효율적으로 제공하는 것이 핵심이었습니다. 이를 위해 정보의 계층 구조와 네비게이션 UX를 설계하는 과정에서 사용자의 탐색 동선을 분석하고, 직관적인 카테고리 및 필터링 시스템을 구축하는 방법을 배웠습니다.',
+            '특히, 비건 친화도를 기반으로 한 필터링 기능을 구현하며 데이터 구조 설계와 UI/UX의 균형을 맞추는 것이 중요하다는 점을 깨달았습니다.',
+          ],
           en: [
             'What challenges did you face during the initial design phase of the project?',
           ],
@@ -194,13 +202,17 @@ export const works: Record<string, Work> = {
       },
       {
         question: {
-          ko: '프로젝트 초기 설계 과정에서 어떤 어려움이 있었나요?',
+          ko: '디자인과 개발 간의 원활한 협업',
           en: 'What challenges did you face during the initial design phase of the project?',
         },
         answer: {
-          ko: ['프로젝트 초기 설계 과정에서 어떤 어려움이 있었나요?'],
+          ko: [
+            '프로젝트 진행 과정에서 디자인 시안과 실제 개발 결과물 간의 차이를 최소화하기 위해 디자인 시스템과 컴포넌트 기반 UI 개발 방식을 도입했습니다.',
+            '디자인 시스템을 통해 디자인 요소를 재사용 가능하게 하고, 컴포넌트 기반 UI 개발 방식을 통해 디자인 일관성을 유지하며 개발 효율성을 향상시켰습니다.',
+          ],
           en: [
-            'What challenges did you face during the initial design phase of the project?',
+            'To minimize the gap between design mockups and actual development results, we introduced a design system and component-based UI development approach.',
+            'Through the design system, we made design elements reusable, maintained design consistency, and improved development efficiency.',
           ],
         },
       },
@@ -208,6 +220,7 @@ export const works: Record<string, Work> = {
   },
   'bread-and-butter': {
     id: 'bread-and-butter',
+    category: 'Development',
     logo: '/images/logo/bab.png',
     title: 'Bread & Butter',
     subtitle: {
@@ -349,17 +362,11 @@ export const works: Record<string, Work> = {
     },
     mainImage: '/images/work/bab/main.png',
     featureImage: '/images/work/bab/feature.png',
-    sections: [
-      {
-        type: 'wireframe',
-        data: {
-          image: '/images/work/bab/wireframe.png',
-        },
-      },
-    ],
+    sections: [],
   },
   'omo-omo': {
     id: 'omo-omo',
+    category: 'Design',
     title: 'OmoOmo',
     subtitle: {
       ko: '메타버스 기반 반려동물 커뮤니티 플랫폼',
@@ -369,7 +376,7 @@ export const works: Record<string, Work> = {
       ko: [
         '오모오모는 삼성화재에서 운영하는 **메타버스 기반 반려동물 커뮤니티 플랫폼**으로, 출시 6개월 만에 가입자 10만 명을 돌파하며 큰 호응을 얻었습니다.',
         '사용자는 **펫 캐릭터를 커스터마이징**하고, 가상 공간에서 다른 사용자들과 소통하며 **미니게임**을 즐길 수 있습니다.',
-        '**2차 오픈** 이후, 3D 기반의 캐릭터 활동 공간을 **웹(2D)으로 전환**하고, 게시판 카테고리를 세분화하여 정보 접근성을 높이는 리뉴얼을 진행하였습니다.',
+        '2차 오픈 이후, 3D 기반의 캐릭터 활동 공간을 **웹(2D)으로 전환**하고, 게시판 카테고리를 세분화하여 정보 접근성을 높이는 리뉴얼을 진행하였습니다.',
         '또한, 활동량에 따른 **보상 시스템**을 도입하여 사용자들이 다양한 아이템을 획득하고, 펫 캐릭터 및 마이홈을 꾸미는 등의 재미 요소를 강화하였습니다.',
       ],
       en: [
@@ -534,6 +541,7 @@ export const works: Record<string, Work> = {
   },
   officener: {
     id: 'officener',
+    category: 'Development',
     title: 'Officener',
     subtitle: {
       ko: '오피스 관리 웹 통합 플랫폼',
@@ -669,6 +677,7 @@ export const works: Record<string, Work> = {
   },
   'virtual-seoul-platform': {
     id: 'virtual-seoul-platform',
+    category: 'Design',
     title: 'Virtual Seoul Platform',
     subtitle: {
       ko: '서울 관광 가상 체험 및 온라인 컨퍼런스 플랫폼',
@@ -830,12 +839,12 @@ export const works: Record<string, Work> = {
     achievements: {
       highlights: [
         {
-          ko: '서울 관광재단과 협업하여 진행된 프로젝트로, 글로벌 사용자를 위한 새로운 관광 및 컨퍼런스 경험을 제공하였습니다.',
-          en: 'A collaborative project with the Seoul Tourism Organization, offering a novel tourism and conference experience for global users.',
+          ko: '‘2021 버추얼 마이스 쇼’에서 8개국 81개 기업 및 26개 국내 기업이 참여하여 1:1 화상 비즈니스 상담을 진행했습니다.',
+          en: "Participated in the '2021 Virtual Myeongdong Show' with 81 companies from 8 countries and 26 domestic companies, conducting 1:1 video business consultations.",
         },
         {
-          ko: 'WebGL을 활용한 3D 환경과 반응형 UI를 설계하여 다양한 디바이스에서 원활한 사용자 경험을 제공하였습니다.',
-          en: 'Designed a WebGL-powered 3D environment and responsive UI to ensure a smooth user experience across multiple devices.',
+          ko: "'제66회 국제약학대학생연합 온라인 세계총회'에서는 92개국 2,000여 명의 약학대학생이 참여하여 다양한 프로그램을 운영하며 글로벌 가상 이벤트 플랫폼으로서의 가능성을 입증했습니다.",
+          en: "Participated in the '66th International Pharmaceutical Student Conference' with 2,000 participants from 92 countries, proving the potential of a global virtual event platform.",
         },
       ],
     },
@@ -857,6 +866,8 @@ export const works: Record<string, Work> = {
     ],
   },
 };
+
+export const WORK_CATEGORIES: WorkCategory[] = ['Design', 'Development'];
 
 export function getWorkById(id: string): Work | undefined {
   return works[id];

@@ -13,7 +13,9 @@ const buttonVariants = cva(
         primary:
           'bg-green-900 text-beige hover:scale-105 border border-green-900',
         outline:
-          'bg-transparent text-green-900 border-green-900/20 border hover:border-green-900/40 hover:bg-green-900/10 focus:border-green-900/60 focus:shadow-light focus:bg-green-900/10',
+          'bg-transparent text-green-900 border-green-900/20 border hover:border-green-900/40 hover:bg-green-900/10 focus:border-green-900/60 hover:shadow-light focus:ing-offset-background focus:bg-green-900/10',
+        filtered:
+          'text-green-900 border border-green-900/40 shadow bg-green-900/10',
         secondary: 'bg-green-900/10 text-green-900 hover:bg-green-900/20',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',

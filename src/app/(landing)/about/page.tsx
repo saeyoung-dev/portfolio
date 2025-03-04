@@ -1,25 +1,189 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useLocale } from '@/hooks/useLocale';
 import { renderText } from '@/utils/renderText';
-import { aboutContent } from '@/data/about';
 import { ImageViewer } from '@/components/ui/image-viewer';
-// import { cn } from '@/lib/utils';
+import { aboutContent } from '@/data/about';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutPage() {
   const { language } = useLocale();
   const content = aboutContent;
 
+  // Hero Section Refs
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descriptionRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  // Values Section Refs
+  const valuesSectionRef = useRef<HTMLElement>(null);
+  const valuesNumbersRef = useRef<HTMLDivElement>(null);
+
+  // Life Section Refs
+  const lifeSectionRef = useRef<HTMLElement>(null);
+  const lifeHeaderRef = useRef<HTMLHeadingElement>(null);
+  const lifeImagesRef = useRef<HTMLDivElement>(null);
+
+  // Core Values Section Refs
+  const coreSectionRef = useRef<HTMLElement>(null);
+  const coreNumbersRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (titleRef.current) {
+      const text = titleRef.current.textContent || '';
+      titleRef.current.textContent = '';
+
+      const words = text.split(' ').map((word, i) => {
+        const wordSpan = document.createElement('span');
+        wordSpan.style.display = 'inline-block';
+        wordSpan.style.marginRight = '0.3em';
+        wordSpan.style.whiteSpace = 'nowrap';
+
+        const chars = word.split('').map((char) => {
+          const span = document.createElement('span');
+          span.textContent = char;
+          span.style.display = 'inline-block';
+          wordSpan.appendChild(span);
+          return span;
+        });
+
+        if (i !== text.split(' ').length - 1) {
+          wordSpan.appendChild(document.createTextNode(' '));
+        }
+
+        titleRef.current?.appendChild(wordSpan);
+        return chars;
+      });
+
+      const chars = words.flat();
+      let valuesAnimation: gsap.core.Tween;
+      let coreAnimation: gsap.core.Tween;
+      let lifeTimeline: gsap.core.Timeline;
+
+      const titleAnimation = gsap.fromTo(
+        chars,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.02,
+          ease: 'power2.out',
+        }
+      );
+
+      const contentAnimation = gsap.fromTo(
+        [descriptionRef.current, imageRef.current],
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power3.in',
+          stagger: 0.3,
+        }
+      );
+
+      if (valuesSectionRef.current && valuesNumbersRef.current) {
+        valuesAnimation = gsap.fromTo(
+          '.values-number',
+          {
+            opacity: 0,
+            y: 40,
+            scale: 0.9,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.5,
+            stagger: 0.2,
+            ease: 'back.out(1.5)',
+            scrollTrigger: {
+              trigger: valuesSectionRef.current,
+              start: 'top center+=100',
+              once: true,
+            },
+          }
+        );
+      }
+
+      if (lifeSectionRef.current) {
+        lifeTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: lifeSectionRef.current,
+            start: 'top center+=100',
+            once: true,
+          },
+        });
+
+        lifeTimeline
+          .fromTo(
+            lifeHeaderRef.current,
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, duration: 0.5 }
+          )
+          .fromTo(
+            lifeImagesRef.current,
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, duration: 0.6 },
+            '-=0.2'
+          );
+      }
+
+      if (coreSectionRef.current) {
+        coreAnimation = gsap.fromTo(
+          '.core-number',
+          {
+            opacity: 0,
+            y: 40,
+            scale: 0.9,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.5,
+            stagger: 0.2,
+            ease: 'back.out(1.5)',
+            scrollTrigger: {
+              trigger: coreSectionRef.current,
+              start: 'top center+=100',
+              once: true,
+            },
+          }
+        );
+      }
+
+      // Cleanup
+      return () => {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        titleAnimation.kill();
+        contentAnimation.kill();
+        valuesAnimation?.kill();
+        coreAnimation?.kill();
+        lifeTimeline?.kill();
+      };
+    }
+  }, []);
+
   return (
     <main className="flex w-full flex-col items-center pt-32">
       {/* Hero Section */}
       <section className="w-full container px-32 flex justify-between gap-12">
-        <div className="flex flex-col gap-8">
-          <h1 className="text-6xl font-semibold tracking-tighter leading-tight text-green-900">
+        <div className="flex flex-col gap-8 w-3/5">
+          <h1
+            ref={titleRef}
+            className="text-6xl font-semibold tracking-tighter leading-tight text-green-900"
+          >
             {content.hero.title[language]}
           </h1>
-          <div className="flex flex-col gap-6">
+          <div ref={descriptionRef} className="flex flex-col gap-6">
             <p className="text-green-900 leading-relaxed max-w-3xl text-balance text-lg break-keep">
               {renderText(content.hero.description[language])}
             </p>
@@ -40,21 +204,25 @@ export default function AboutPage() {
           </div>
         </div>
         <Image
+          ref={imageRef}
           src={'/images/about/profile.png'}
           alt="About Image"
           width={0}
           height={0}
           sizes="100vw"
-          className="cursor-pointer h-auto w-96 object-cover hover:brightness-90 transition-all duration-300"
+          className="cursor-pointer opacity-0 h-auto w-2/5 object-cover hover:brightness-90 transition-all duration-300"
         />
       </section>
 
       {/* Values Section */}
-      <section className="w-full container px-32 py-24">
-        <div className="grid grid-cols-3 gap-8 border-y-2 border-green-900 py-24">
+      <section ref={valuesSectionRef} className="w-full container px-32 py-24">
+        <div
+          ref={valuesNumbersRef}
+          className="grid grid-cols-3 gap-8 border-y-2 border-green-900 py-24"
+        >
           {content.values.items.map((item, index) => (
             <div key={index} className="flex gap-6">
-              <h2 className="text-4xl font-semibold text-green-900/70">
+              <h2 className="values-number text-4xl font-semibold text-green-900/70">
                 {String(index + 1).padStart(2, '0')}
               </h2>
               <div className="flex flex-col gap-4 pt-1">
@@ -71,8 +239,11 @@ export default function AboutPage() {
       </section>
 
       {/* Image Section */}
-      <section className="w-full container px-32 pb-24">
-        <h2 className="text-3xl font-semibold text-green-900 mb-12 flex items-center gap-2">
+      <section ref={lifeSectionRef} className="w-full container px-32 pb-24">
+        <h2
+          ref={lifeHeaderRef}
+          className="text-3xl font-semibold text-green-900 mb-12 flex items-center gap-2"
+        >
           <Image
             src={'/images/icon/about-01.png'}
             alt="coffee"
@@ -83,7 +254,10 @@ export default function AboutPage() {
           />
           {content.life.title[language]}
         </h2>
-        <div className="grid grid-cols-5 gap-2 pb-24 border-b-2 border-green-900">
+        <div
+          ref={lifeImagesRef}
+          className="grid grid-cols-5 gap-2 pb-24 border-b-2 border-green-900"
+        >
           {content.life.images.map((image, index) => (
             <div
               key={index}
@@ -103,11 +277,11 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="w-full container px-32 pb-32">
-        <div className="grid grid-cols-3 gap-8">
+      <section ref={coreSectionRef} className="w-full container px-32 pb-32">
+        <div ref={coreNumbersRef} className="grid grid-cols-3 gap-8">
           {content.core.sections.map((item, index) => (
             <div key={index} className="flex gap-4">
-              <h2 className="text-4xl font-semibold text-green-900/70">
+              <h2 className="core-number text-4xl font-semibold text-green-900/70">
                 {String(index + 1).padStart(2, '0')}
               </h2>
               <div className="flex flex-col gap-6 pt-1">
