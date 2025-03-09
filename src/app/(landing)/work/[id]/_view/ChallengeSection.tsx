@@ -5,14 +5,17 @@ import { renderText } from '@/utils/renderText';
 import { cn } from '@/lib/utils';
 
 interface Props {
+  className?: string;
   challenge: ChallengeData;
 }
 
-export default function ChallengeSection({ challenge }: Props) {
+export default function ChallengeSection({ className, challenge }: Props) {
   const { language } = useLocale();
 
   return (
-    <section className="w-full container px-48 flex flex-col gap-8">
+    <section
+      className={cn('w-full container px-48 flex flex-col gap-8', className)}
+    >
       <Badge>THE CHALLENGE</Badge>
       <div className="flex justify-between gap-8 break-keep px-8">
         <h4

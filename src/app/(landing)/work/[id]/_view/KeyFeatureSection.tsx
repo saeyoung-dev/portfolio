@@ -5,10 +5,11 @@ import { KeyFeatureData } from '@/types/work';
 import { cn } from '@/lib/utils';
 
 interface Props {
+  className?: string;
   features: KeyFeatureData[];
 }
 
-export default function KeyFeatureSection({ features }: Props) {
+export default function KeyFeatureSection({ className, features }: Props) {
   const { language } = useLocale();
 
   const isGif = (src: string) => src.toLowerCase().endsWith('.gif');
@@ -18,7 +19,10 @@ export default function KeyFeatureSection({ features }: Props) {
   };
 
   return (
-    <section className="w-full container px-48" id="key-features">
+    <section
+      className={cn('w-full container px-48', className)}
+      id="key-features"
+    >
       <div className="flex flex-col gap-20">
         {/* <Badge>KEY FEATURES</Badge> */}
         {features.map((feature, index) => (

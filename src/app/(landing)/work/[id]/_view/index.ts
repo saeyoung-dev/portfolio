@@ -1,10 +1,13 @@
-export { default as WireframeSection } from './WireframeSection';
+export { default as AchievementSection } from './AchievementSection';
+export { default as ChallengeSection } from './ChallengeSection';
+export { default as DatabaseSection } from './DatabaseSection';
+export { default as UISpecificationSection } from './UISpecificationSection';
 export { default as TaskFlowSection } from './TaskFlowSection';
 export { default as InformationArchitectureSection } from './InformationArchitectureSection';
 export { default as SolutionSection } from './SolutionSection';
 export { default as TechStackSection } from './TechStackSection';
-export { default as ChallengeSection } from './ChallengeSection';
 export { default as KeyFeatureSection } from './KeyFeatureSection';
 export { default as YoutubeSection } from './YoutubeSection';
 export { default as RestropectiveSection } from './RestropectiveSection';
-export { default as AchievementSection } from './AchievementSection';
+export { default as ProductRequirementSection } from './ProductRequirementSection';
+export { default as ImageSliderSection } from './ImageSliderSection';

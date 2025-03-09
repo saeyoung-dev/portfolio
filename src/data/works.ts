@@ -12,7 +12,7 @@ export const works: Record<string, Work> = {
     },
     description: {
       ko: [
-        '비건 친화적인 식당과 카페를 **사용자의 식단 선호도와 위치 기반**으로 쉽게 찾을 수 있도록 돕는 **비건 지도 서비스**입니다.',
+        '비건 친화적인 식당과 카페를 **사용자의 채식 선호도와 위치 기반**으로 쉽게 찾을 수 있도록 돕는 **비건 지도 서비스**입니다.',
         '한국 사회에서의 비건 문화 문제점을 분석하고, 초기 아이디어 제안, 유저 타겟팅, **컨셉 기획 및 User Flow 설계**를 진행했습니다.',
         '**UI/UX 디자인 (전체 화면 구성 및 로고 디자인)** 과 함께, **React.js 기반 프론트엔드 개발(지도 API, 위치 검색, 필터 기능)을 구현**하여 사용자 경험을 개선했습니다.',
       ],
@@ -38,8 +38,8 @@ export const works: Record<string, Work> = {
       },
       description: {
         ko: [
-          '비건 식단을 실천하는 사람들은 외식할 때마다 적절한 식당을 찾는 데 어려움을 겪습니다. 기존 음식점 검색 서비스에서는 비건 친화적인 옵션이 명확하게 구분되지 않거나, 사용자 리뷰가 부족하여 신뢰할 만한 정보를 얻기 어려운 경우가 많습니다.',
-          'Veganro는 이러한 문제를 해결하기 위해 개발되었습니다. **현 위치 기반 검색과 세부 필터 기능을 제공**하여 사용자가 자신의 **식단 선호도에 맞는 비건 친화적인 장소**를 쉽고 빠르게 찾을 수 있도록 도왔습니다.',
+          '비건 식단을 실천하는 사람들은 외식할 때마다 적절한 식당을 찾는 데 어려움을 겪습니다. **일반 지도 서비스에서는 비건 친화적인 옵션이 명확하게 구분되지 않거나, 사용자 리뷰가 부족**하여 신뢰할 만한 정보를 얻기 어려운 경우가 많습니다.',
+          'Veganro는 이러한 문제를 해결하기 위해 개발되었습니다. 비건 친화적인 장소들을 큐레이팅하여 사용자가 **위치 기반 검색 및 세부 채식 유형을 선택**하여 ** 자신의 채식 선호도에 맞는 장소**를 쉽고 빠르게 찾을 수 있도록 도왔습니다.',
         ],
         en: [
           'People who follow a vegan diet often struggle to find suitable restaurants when dining out. Existing restaurant search services **do not clearly differentiate vegan-friendly options, and reliable user-generated reviews are often lacking.**',
@@ -80,11 +80,11 @@ export const works: Record<string, Work> = {
             en: 'Sign In & Sign Up',
           },
           subtitle: {
-            ko: '비회원 로그인 및 이메일 로그인 지원',
-            en: 'Non-member Login and Email Login Support',
+            ko: 'SNS 로그인 및 이메일 로그인 지원',
+            en: 'SNS Login and Email Login Support',
           },
           description: {
-            ko: '**카카오 및 이메일 로그인**과 **비회원 이용**이 가능하며, 회원가입 시 **비건 유형**을 선택할 수 있습니다. 비건 유형에 따라 **맞춤형 프로필 이미지**가 제공됩니다. //(*비회원은 마이페이지 접속, 장소 제보, 북마크, 리뷰 작성 등의 기능은 제한됩니다.)//',
+            ko: '**카카오톡 및 이메일 로그인**, **비회원 이용**이 가능하며, 회원가입 시 **비건 유형**을 선택할 수 있습니다. 비건 유형에 따라 **맞춤형 프로필 이미지**가 제공됩니다. //(*비회원은 마이페이지 접속, 장소 제보, 북마크, 리뷰 작성 등의 기능은 제한됩니다.)//',
             en: '**KakaoTalk, Email login and non-member access** are possible, and you can **select a vegan type when signing up. A personalized profile image is provided according to the vegan type. //(*Non-members are limited to accessing the My Page, reporting places, bookmarking, and writing reviews.)//',
           },
           image: '/images/work/veganro/feature-01.gif',
@@ -100,7 +100,7 @@ export const works: Record<string, Work> = {
             en: 'Map Service Based on Current Location',
           },
           description: {
-            ko: '지도의 **마커를 클릭하면 모달**을 통해 **장소의 상세 페이지**로 이동합니다. 상단 **검색 창 클릭 시, 원하는 장소를 검색**해 볼 수 있으며, 현 위치로부터 **거리순 정렬**이 되어 가장 **가까운 비건 장소**를 찾을 수 있습니다.',
+            ko: '지도의 마커를 클릭 시, 상세 모달을 통해 **장소의 상세 페이지**로 이동합니다. 상단 **검색 창 클릭 시, 원하는 장소를 검색**해 볼 수 있으며, 현 위치로부터 **거리순 정렬**이 되어 가장 **가까운 비건 장소**를 찾을 수 있습니다.',
             en: 'You can easily search for places you want by finding vegan places based on your current location and various filters.',
           },
           image: '/images/work/veganro/feature-02.gif',
@@ -172,6 +172,10 @@ export const works: Record<string, Work> = {
       {
         type: 'taskFlow',
         data: {
+          description: {
+            ko: '사용자가 비건 친화적인 장소를 쉽게 찾고 공유할 수 있도록 하려면?',
+            en: 'How can we help users find and share vegan-friendly places efficiently?',
+          },
           image: '/images/work/veganro/taskflow.png',
         },
       },
@@ -183,36 +187,38 @@ export const works: Record<string, Work> = {
         en: 'Veganro Demo Video',
       },
     },
-
     retrospective: [
       {
         question: {
-          ko: '사용자 중심의 정보 구조 설계',
-          en: 'What challenges did you face during the initial design phase of the project?',
+          ko: '지도 기반 검색 시스템 설계 및 최적화',
+          en: 'How did you design and optimize the map-based search system?',
         },
         answer: {
           ko: [
-            '비건로 프로젝트에서는 다양한 비건 식당 정보를 효율적으로 제공하는 것이 핵심이었습니다. 이를 위해 정보의 계층 구조와 네비게이션 UX를 설계하는 과정에서 사용자의 탐색 동선을 분석하고, 직관적인 카테고리 및 필터링 시스템을 구축하는 방법을 배웠습니다.',
-            '특히, 비건 친화도를 기반으로 한 필터링 기능을 구현하며 데이터 구조 설계와 UI/UX의 균형을 맞추는 것이 중요하다는 점을 깨달았습니다.',
+            '비건로 프로젝트에서는 다양한 비건 식당 정보를 효율적으로 제공하는 것이 가장 핵심이었습니다. 이를 위해 사용자의 탐색 동선을 단계적으로 분석하며, 직관적인 카테고리 및 필터링 시스템을 구축하기 위해 팀원들과 시뮬레이션을 진행했습니다.',
+            '특히, 메인 지도 화면에서 검색 페이지로 이어질 때 필터 항목을 전역적으로 유지하기 위한 방법을 고민하며, 전체 화면 흐름에서 사용자가 필요로 하는 요소들을 분석하는 과정을 팀원 전체가 검토하였습니다. 이를 해결하기 위해 기술적으로 어떤 방법이 적절한지를 고민했고, 상태 관리 라이브러리인 Recoil을 도입하였습니다. 이를 통해 전역 상태를 활용하여 필터 상태를 유지할 수 있도록 구현하였습니다.',
           ],
           en: [
-            'What challenges did you face during the initial design phase of the project?',
+            'The challenge was to efficiently provide information about various vegan restaurants. Through the process of designing the information hierarchy and navigation UX, we analyzed user navigation paths and built an intuitive category and filtering system.',
+            'While transitioning from the main map screen to the search page, we sought a way to persist filter selections globally. To address this, we analyzed the overall screen flow, considered the most suitable technical approach, and introduced Recoil for state management. This ensured that filters remained consistent across different screens.',
           ],
         },
       },
       {
         question: {
-          ko: '디자인과 개발 간의 원활한 협업',
-          en: 'What challenges did you face during the initial design phase of the project?',
+          ko: '효율적인 디자인-개발 협업 전략',
+          en: 'What strategies did you use to enhance collaboration between design and development?',
         },
         answer: {
           ko: [
             '프로젝트 진행 과정에서 디자인 시안과 실제 개발 결과물 간의 차이를 최소화하기 위해 디자인 시스템과 컴포넌트 기반 UI 개발 방식을 도입했습니다.',
             '디자인 시스템을 통해 디자인 요소를 재사용 가능하게 하고, 컴포넌트 기반 UI 개발 방식을 통해 디자인 일관성을 유지하며 개발 효율성을 향상시켰습니다.',
+            '또한, 새로운 기술을 단기간에 적용해야 하는 상황에서 팀원들의 러닝 커브를 최소화할 수 있도록 적절한 개발 언어와 라이브러리를 선택하는 과정도 중요했습니다. 이를 위해 익숙한 기술 스택을 우선 고려하면서도, 프로젝트 요구사항에 맞춰 적절한 도구를 도입하는 방향으로 진행했습니다.',
           ],
           en: [
             'To minimize the gap between design mockups and actual development results, we introduced a design system and component-based UI development approach.',
             'Through the design system, we made design elements reusable, maintained design consistency, and improved development efficiency.',
+            'Additionally, when integrating new technologies within a short time frame, we prioritized reducing the learning curve for team members. This involved selecting development languages and libraries that balanced familiarity with adaptability to project requirements.',
           ],
         },
       },
@@ -230,16 +236,16 @@ export const works: Record<string, Work> = {
     description: {
       ko: [
         'Bread & Butter는 다양한 국가의 요리 서적과 레시피 북을 제공하는 **요리 서적 전문 전자상거래 플랫폼**입니다.',
-        '**프로젝트 매니저**이자 **풀스택 개발자**로 참여하여, **상품 조회, 장바구니, 재고 관리 대시보드** 등 주요 기능을 설계하고 구현했습니다.',
+        '**프로젝트 매니저**이자 **백엔드 개발자**로 참여하여, **상품 조회, 장바구니, 재고 관리 대시보드** 등 주요 기능을 설계하고 구현했습니다.',
         '**UI/UX 디자인을 총괄**하며, **전체 화면 구성 및 브랜드 아이덴티티**//(로고, 컬러 시스템)// **설계**를 통해 일관된 사용자 경험을 구축했습니다.',
       ],
       en: [
         'Bread & Butter is a **specialized e-commerce platform for culinary books**, offering a diverse selection of cookbooks and recipe collections from around the world.',
-        'As a **Project Manager and Full-Stack Developer**, I led the development of key features such as **product browsing, shopping cart functionality, and an inventory management dashboard**.',
+        'As a **Project Manager and Backend Developer**, I led the development of key features such as **product browsing, shopping cart functionality, and an inventory management dashboard**.',
         'Additionally, I **spearheaded the UI/UX design**, overseeing **layout design, branding (logo, color system), and user experience optimization** to create a cohesive and engaging platform.',
       ],
     },
-    role: 'Full-Stack Developer & Project Manager',
+    role: 'Backend Developer & Project Manager',
     team: '3 Frontend, 3 Backend',
     contribution: {
       design: '100%',
@@ -292,7 +298,7 @@ export const works: Record<string, Work> = {
             en: 'Home & Product Browsing',
           },
           description: {
-            ko: '**베스트 상품**을 한눈에 확인할 수 있으며, 상품 상세 페이지에서 가격과 정보를 조회할 수 있습니다. **재고 수량에 따라 품절 여부**가 표시되며, **원하는 수량을 선택**하여 장바구니에 담을 수 있습니다. 또한, 하단에는 추천 상품이 자동으로 로딩되며, 상품 정렬 및 페이지네이션 기능을 지원합니다.',
+            ko: '**베스트 상품**을 한눈에 확인할 수 있으며, 상품 상세 페이지에서 가격과 정보를 조회할 수 있습니다. **재고 수량에 따라 품절 여부**가 표시되며, **원하는 수량을 선택하여 장바구니**에 담을 수 있습니다. 또한, 하단에는 추천 상품이 자동으로 로딩되며, 상품 정렬 및 페이지네이션 기능을 지원합니다.',
             en: 'Users can easily browse best-selling products and view detailed product information, including pricing. Out-of-stock indicators are displayed based on inventory, and users can adjust quantity before adding items to the cart. Recommended products are dynamically loaded, and sorting & pagination features enhance the shopping experience.',
           },
           image: '/images/work/bab/feature-01.gif',
@@ -362,7 +368,57 @@ export const works: Record<string, Work> = {
     },
     mainImage: '/images/work/bab/main.png',
     featureImage: '/images/work/bab/feature.png',
-    sections: [],
+    sections: [
+      {
+        type: 'productRequirement',
+        data: {
+          image: '/images/work/bab/product-requirement.png',
+          description: {
+            ko: 'CRUD 별로 기능을 나눈 뒤, 각 기능에 필요한 요구 사항들과 중요도를 정했습니다. 또한 각 페이지의 권한//(전체, 회원, 관리자)// 을 부여하고 기능의 중요도를 파악해 우선 순위를 정했습니다.',
+            en: 'I divided the pages based on CRUD, then listed the necessary requirements and prioritized them. I also set the page permissions (all, member, admin) and prioritized the importance of each function to determine the priority. This allowed the backend team to write an API specification document and divide the work.',
+          },
+        },
+      },
+      {
+        type: 'database',
+        data: {
+          image: '/images/work/bab/database.png',
+          description: {
+            ko: '데이터 모델을 정의할 때, **그룹핑할 수 있는 항목을 세분화하여 구조화된 데이터 모델을 설계**했습니다. 이를 통해 데이터 간의 관계를 명확하게 정리하고, 확장성과 유지보수성을 고려한 체계를 마련하였습니다. 또한, 사용자의 행동 패턴을 분석하여 필요한 데이터 항목을 도출하고, **API의 입력 및 출력 형식을 사전에 정의하여** 백엔드 팀이 원활하게 개발할 수 있도록 지원했습니다. 이를 바탕으로 백엔드 팀원들이 [API 명세서](https://caring-sidecar-47f.notion.site/API-0a4c856d1aea45e1ba70f1718a279906)를 작성하고, 데이터베이스를 구축할 수 있도록 협업하였습니다.',
+            en: 'When defining the data model, I structured and categorized the data attributes to create a well-organized and scalable data architecture. This helped establish clear relationships between data entities, ensuring maintainability and future expansion. Additionally, I analyzed user behavior patterns to determine essential data fields and **predefined input and output formats for APIs**, allowing the backend team to develop with clear specifications. Based on this, the backend team was able to build the database and draft the API specification document efficiently.',
+          },
+        },
+      },
+      {
+        type: 'taskFlow',
+        data: {
+          image: '/images/work/bab/taskflow.png',
+          description: {
+            ko: '회원 여부에 따라 분기되는 흐름을 정의하고, 유저의 목적에 따른 페이지 이동과 행동 단계를 구조적으로 설계하여 직관적인 사용자 경험을 제공했습니다.',
+            en: 'Defined the flow based on user purpose and membership status, structuring page transitions and action steps to provide an intuitive user experience.',
+          },
+        },
+      },
+    ],
+    retrospective: [
+      {
+        question: {
+          ko: 'API 문서화 없이 협업하는 과정에서 어떤 문제를 겪었으며, 어떻게 개선했는가?',
+          en: 'What issues were encountered while collaborating without API documentation, and how were they improved?',
+        },
+        answer: {
+          ko: [
+            '프로젝트 초기에는 API 명세를 별도로 문서화하지 않고, MongoDB 모델을 기반으로 직접 프론트엔드와 협업을 진행했습니다. 이 방식은 빠르게 개발을 진행하는 데는 유리했지만, API 응답 형식이 불명확하여 프론트엔드에서 데이터 처리 시 혼선이 발생하는 문제가 있었습니다. 이를 해결하기 위해, MongoDB 모델을 기준으로 API 응답 예시(JSON 형태)를 정리하여 공유하였고, API 엔드포인트별로 필요한 필드와 데이터 타입을 정리한 간단한 Notion 문서를 만들어 프론트엔드와의 소통을 원활하게 했습니다.',
+            '또한, 예상치 못한 데이터 누락을 방지하기 위해 기본값을 설정하고, 필수 필드를 체크하는 데이터 검증 로직을 추가하였습니다. 이 과정을 통해, API 문서화가 없을 경우 협업 속도가 느려질 수 있으며, 최소한의 명세라도 정리해 공유하는 것이 개발 효율성을 높이는 데 필수적이라는 점을 깨달았습니다. 향후에는 API 문서화 툴을 도입하거나, 초기 기획 단계에서 응답 형식을 더 명확하게 정리하는 방식을 적용하고 싶습니다.',
+          ],
+          en: [
+            'In the early stages of the project, we collaborated with the frontend team directly based on the MongoDB model without separately documenting the API specifications. This approach allowed for rapid development but led to issues where the API response format was unclear, causing confusion in frontend data processing.',
+            'To address this, we structured and shared API response examples in JSON format based on the MongoDB model. We also created a simple Notion document outlining the required fields and data types for each API endpoint to facilitate better communication with the frontend team. Additionally, to prevent unexpected data loss, we implemented default values and added validation logic to check required fields.',
+            'Through this process, we realized that the lack of API documentation could slow down collaboration, and even a minimal set of specifications can significantly improve development efficiency. Moving forward, I aim to adopt an API documentation tool or establish a clearer response format during the initial planning phase.',
+          ],
+        },
+      },
+    ],
   },
   'omo-omo': {
     id: 'omo-omo',
@@ -377,17 +433,14 @@ export const works: Record<string, Work> = {
         '오모오모는 삼성화재에서 운영하는 **메타버스 기반 반려동물 커뮤니티 플랫폼**으로, 출시 6개월 만에 가입자 10만 명을 돌파하며 큰 호응을 얻었습니다.',
         '사용자는 **펫 캐릭터를 커스터마이징**하고, 가상 공간에서 다른 사용자들과 소통하며 **미니게임**을 즐길 수 있습니다.',
         '2차 오픈 이후, 3D 기반의 캐릭터 활동 공간을 **웹(2D)으로 전환**하고, 게시판 카테고리를 세분화하여 정보 접근성을 높이는 리뉴얼을 진행하였습니다.',
-        '또한, 활동량에 따른 **보상 시스템**을 도입하여 사용자들이 다양한 아이템을 획득하고, 펫 캐릭터 및 마이홈을 꾸미는 등의 재미 요소를 강화하였습니다.',
       ],
       en: [
         'OmoOmo is a metaverse-based pet community platform operated by Samsung Fire & Marine Insurance, surpassing 100,000 users within six months of its launch.',
         'Users can customize pet avatars, interact with others in virtual spaces, and enjoy various mini-games.',
         'Recently, the platform transitioned its 3D character interaction spaces into a 2D web-based environment, refining accessibility through categorized community boards.',
-        'A reward system based on user activity was also introduced, allowing users to earn items, decorate pet avatars, and personalize their home spaces for a more engaging experience.',
       ],
     },
     role: 'UI Developer & Planner',
-    team: '3 Frontend, 3 Backend',
     contribution: {
       research: '100%',
       planning: '80%',
@@ -407,12 +460,16 @@ export const works: Record<string, Work> = {
       },
       description: {
         ko: [
-          '반려동물을 키우는 사람들은 **다양한 정보를 공유하고 소통할 공간**을 원하지만, 기존 플랫폼들은 이러한 요구를 충분히 충족하지 못했습니다.',
-          '오모오모는 반려동물 보호자들이 **메타버스 환경에서 자신만의 펫 캐릭터를 만들고, 다른 사용자들과 교류하며 유용한 정보를 공유할 수 있도록 기획**되었습니다.',
+          '반려동물 보호자들은 **다양한 정보를 공유하고 소통할 공간**을 원하지만, 기존 플랫폼들은 이러한 요구를 충분히 충족하지 못했습니다.',
+          '메타버스 환경에서 사용자가 실질적인 소속감을 느낄 수 있도록 **펫 아바타와 마이홈 시스템을 도입**하여 자신만의 공간을 만들고 꾸밀 수 있도록 기획하였습니다.',
+          '또한, **MZ세대 사용자의 참여를 유도하기 위해 게임 요소를 결합**하여 일일 퀘스트, 랭킹 시스템, 보상형 미션을 추가하였고, 이를 통해 지속적인 재방문율을 높였습니다.',
+          '커뮤니티 활성화를 위해 **게시판을 세분화**하고, 반려동물 정보 공유와 **사용자 간 소셜 네트워크 기능을 강화**하여 실질적인 정보 교류와 관계 형성을 돕는 플랫폼으로 발전시켰습니다.',
         ],
         en: [
           'Pet owners seek platforms where they can share knowledge and connect, but existing platforms often fall short.',
-          'OmoOmo was designed to allow pet lovers to create their own avatars, interact with others, and exchange valuable information in a metaverse environment.',
+          'To foster a sense of belonging in a metaverse environment, we introduced **pet avatars and home customization features**, allowing users to create and personalize their virtual spaces.',
+          'To encourage engagement among MZ users, **we integrated gamification elements** such as daily quests, ranking systems, and reward-based missions, increasing retention and repeat visits.',
+          'Community engagement was further strengthened by **categorizing discussion boards** and enhancing social networking features to facilitate meaningful interactions and knowledge-sharing among users.',
         ],
       },
     },
@@ -464,25 +521,31 @@ export const works: Record<string, Work> = {
         },
       ],
     },
+    keyFeatureSlider: {
+      images: [
+        '/images/work/omoomo/feature-01.webp',
+        '/images/work/omoomo/feature-02.webp',
+        '/images/work/omoomo/feature-03.webp',
+        '/images/work/omoomo/feature-03.webp',
+        '/images/work/omoomo/feature-05.webp',
+        '/images/work/omoomo/feature-06.webp',
+        '/images/work/omoomo/feature-07.webp',
+        '/images/work/omoomo/feature-08.webp',
+      ],
+    },
     solution: {
       title: {
-        ko: '반려동물 보호자들이 소통하고 정보를 공유할 수 있는 메타버스 커뮤니티 구축',
-        en: 'Creating a Metaverse Community for Pet Owners to Connect and Share Information',
+        ko: '반려동물과 함께하는 몰입형 메타버스 커뮤니티',
+        en: 'An Immersive Metaverse Community for Pet Owners',
       },
       description: {
-        ko: '반려동물과 함께하는 가상 공간을 조성하여 사용자들이 더욱 친근하고 자연스럽게 소통할 수 있도록 했습니다. 또한, 게임 요소를 접목하여 사용자 참여를 유도하고 지속적인 방문을 유도하는 환경을 구축했습니다.',
-        en: 'We designed an engaging virtual space where pet owners can interact more naturally. By integrating game mechanics, we enhanced user engagement and encouraged repeat visits.',
+        ko: '오모오모는 반려동물과 보호자가 함께 소통하고 정보를 나눌 수 있는 **메타버스 기반 커뮤니티**로 기획되었습니다. 펫 헬스케어, 커뮤니티, 그리고 **게임화 요소(Gamification)**를 결합하여 사용자가 적극적으로 참여하고 지속적으로 방문할 수 있도록 유도했습니다. 또한, **반려동물 보호자들의 실제 니즈를 반영**하여, 200명 이상의 사용자 리서치를 기반으로 펫 아바타 커스터마이징, 마이홈 공간 꾸미기, 랭킹 시스템 등 다양한 기능을 개발했습니다. 이러한 요소들은 사용자 경험을 극대화하고, 반려동물과 보호자가 함께하는 **종합 라이프스타일 플랫폼**으로 자리 잡을 수 있도록 발전시켰습니다.',
+        en: 'OmoOmo was designed as a **metaverse-based community** where pet owners can interact, share information, and engage with their virtual pets. By integrating pet healthcare, community features, and **gamification elements**, we encouraged active participation and increased user retention. Additionally, we conducted extensive **user research with over 200 participants** to develop features that genuinely address the needs of pet owners. This included pet avatar customization, MyHome space decoration, and a ranking system. These features were carefully crafted to enhance user experience and establish OmoOmo as a **comprehensive lifestyle platform** for both pets and their owners.',
       },
     },
     mainImage: '/images/work/omoomo/main.png',
     featureImage: '/images/work/omoomo/feature.png',
     sections: [
-      {
-        type: 'wireframe',
-        data: {
-          image: '/images/work/omoomo/wireframe.png',
-        },
-      },
       {
         type: 'taskFlow',
         data: {
@@ -493,6 +556,26 @@ export const works: Record<string, Work> = {
         type: 'informationArchitecture',
         data: {
           image: '/images/work/omoomo/ia.png',
+        },
+      },
+      {
+        type: 'productRequirement',
+        data: {
+          image: '/images/work/omoomo/product-requirement.png',
+          description: {
+            ko: '프로젝트 관리는 Jira와 엑셀을 활용하여 진행하였으며, 간트 차트를 제작하여 일정과 진행 상황을 시각적으로 정리했습니다. 또한, 프로젝트 매니저(PM)를 보조하며 각 주요 화면별 테스트 시나리오를 작성하였고, 이를 기반으로 체계적인 테스트를 수행하여 품질을 검증하였습니다.',
+            en: 'Project management was conducted using Jira and Excel, with Gantt charts created to visually organize schedules and progress. Additionally, I assisted the project manager (PM) by drafting test scenarios for key screens and carried out structured testing based on these scenarios to ensure quality assurance.',
+          },
+        },
+      },
+      {
+        type: 'uiSpecification',
+        data: {
+          description: {
+            ko: '상세 화면 설계서는 요구 사항 분석을 바탕으로 작성되었으며, 사용자 경험(UX)과 기능적 요구사항을 고려하여 각 화면의 구성 요소와 동작을 구체적으로 정의하였습니다.',
+            en: 'The detailed screen design document was created based on requirements analysis, defining the layout and functionality of each screen while considering user experience (UX) and functional requirements.',
+          },
+          image: '/images/work/omoomo/ui-specification.png',
         },
       },
     ],
@@ -511,29 +594,37 @@ export const works: Record<string, Work> = {
     retrospective: [
       {
         question: {
-          ko: '커뮤니티와 사용자 경험 중심의 기획',
-          en: 'Community & User Experience-Focused Planning',
+          ko: '프로젝트 기획부터 출시 및 고도화까지의 경험',
+          en: 'Experience in All Stages from Planning to Growth and Operation',
         },
         answer: {
           ko: [
-            '단순한 정보 공유를 넘어 사용자가 지속적으로 활동할 수 있도록 커뮤니티와 보상 시스템을 설계하였습니다.',
+            '오모오모 프로젝트는 **단순한 기능 개발이 아닌, 서비스의 방향성과 정체성을 설정하는 과정부터 참여한 경험**이었습니다. 네이밍부터 캐릭터 기획, 가상 공간의 테마 디자인, 서비스 정책 수립 등 다양한 역할을 수행하며 **프로젝트의 전반적인 흐름을 이해**할 수 있었습니다.',
+            '특히, 프로젝트의 출시뿐만 아니라 운영 및 고도화 과정까지 경험하며, 실사용자의 피드백을 반영하여 지속적으로 서비스를 개선하는 과정이 중요하다는 것을 깨달았습니다.',
+            '이 과정에서 **유관 부서와의 협업**을 통해 마케팅, 사용자 지원, 기술 개선 등의 다양한 업무를 경험할 수 있었으며, 서비스 운영에서 발생하는 예기치 않은 문제를 해결하는 역량을 키울 수 있었습니다.',
           ],
           en: [
-            'Beyond simple information sharing, we designed a community and reward system to encourage ongoing user engagement.',
+            'OmoOmo was not just about feature development but about defining the direction and identity of the service from the start. I was involved in every aspect, from naming and character planning to designing virtual spaces and setting service policies, **gaining a comprehensive understanding of the project lifecycle**. Beyond the initial launch, I also gained experience in maintaining and enhancing the service by continuously incorporating real user feedback to improve functionality and user experience.',
+            '**Through collaboration with various departments**, I was exposed to marketing strategies, user support processes, and technical optimizations, allowing me to develop problem-solving skills in live service operations.',
           ],
         },
       },
       {
         question: {
-          ko: '서비스 고도화 및 리뉴얼',
-          en: 'Service Enhancement & Renewal',
+          ko: '메타버스 환경에서의 사용자 경험 디자인',
+          en: 'User Experience Design in the Metaverse',
         },
         answer: {
           ko: [
-            '사용자 피드백을 반영하여 3D 캐릭터 공간을 웹(2D)으로 전환하고, 정보 접근성을 개선하는 리뉴얼을 진행하였습니다.',
+            '**메타버스 환경**에서의 UX는 기존 웹이나 앱과 다르게, **사용자의 몰입감**과 **상호작용 방식**이 중요한 요소로 작용했습니다. **펫 캐릭터의 움직임**과 **감정 표현**, **가상 공간에서의 탐색 경험**을 설계하며, 유저들이 자연스럽게 **커뮤니티에 참여**하고 머물 수 있는 환경을 만드는 것이 핵심 과제였습니다.',
+            '이를 위해 200명 이상의 사용자 리서치를 바탕으로 **캐릭터 디자인**과 **공간 테마**를 개선하며, **현실감**과 **재미**를 동시에 제공하는 UX를 설계하는 경험을 쌓았습니다.',
+            '또한, **가상 환경에서의 사용자 동선**과 **인터랙션 방식**을 최적화하여, 초보자도 쉽게 적응할 수 있도록 **내비게이션 시스템**과 **직관적인 UI 요소**를 배치하는 데 중점을 두었습니다.',
           ],
           en: [
-            'Based on user feedback, we transitioned the 3D character space to a 2D web environment and improved information accessibility.',
+            'UX design in the **metaverse** differs from traditional web or app design, as **immersion** and **interaction methods** play a crucial role.',
+            'While designing **pet character movements**, **emotional expressions**, and **navigation within virtual spaces**, we focused on creating an environment where users naturally engage and stay in the community.',
+            'By conducting research with over 200 users, we refined **character design** and **spatial themes**, ensuring a balance between **realism** and **entertainment** in the user experience.',
+            'Additionally, we optimized **user flows** and **interaction patterns** within the **virtual space** to ensure that even first-time users could easily navigate the environment through **intuitive UI elements** and a well-structured **navigation system**.',
           ],
         },
       },
@@ -544,13 +635,13 @@ export const works: Record<string, Work> = {
     category: 'Development',
     title: 'Officener',
     subtitle: {
-      ko: '오피스 관리 웹 통합 플랫폼',
-      en: 'Office Management Web Integration Platform',
+      ko: '오피스너 웹 통합 플랫폼',
+      en: 'Officener Web Platform',
     },
     description: {
       ko: [
         '기존 모바일 앱으로만 제공되던 **오피스너 서비스를 웹으로 확장**하여 사용자들이 **멀티플랫폼**에서 편리하게 이용할 수 있도록 개발된 프로젝트입니다.',
-        '**불편 접수 수정/삭제 및 이미지 업로드 컴포넌트 개발**을 담당했으며, MSW를 활용한 API Mocking으로 백엔드 개발과 병행하여 빠른 개발을 진행했습니다.',
+        '**불편 접수 수정/삭제 및 이미지 업로드 컴포넌트 개발**을 담당했으며, API 부재인 상황에서 MSW를 활용한 API Mocking으로 빠른 개발을 진행했습니다.',
         '**React Hook Form & Zod**를 활용한 폼 상태 관리 및 유효성 검증을 구현하여 사용자 경험을 개선했습니다.',
       ],
       en: [
@@ -587,14 +678,15 @@ export const works: Record<string, Work> = {
         'TypeScript',
         'TanStack Query',
         'Zustand',
-        'React Hook Form',
         'Zod',
+        'React Hook Form',
         'TailwindCSS',
         'Shadcn/UI',
+        'MSW',
       ],
       tools: {
         label: 'Collaboration',
-        items: ['Git', 'Notion', 'Discord', 'MSW'],
+        items: ['Git', 'Notion', 'Discord', 'Linear', 'Figma'],
       },
     },
     keyFeatures: {
@@ -669,7 +761,7 @@ export const works: Record<string, Work> = {
           en: 'Increased user convenience through improved multi-platform accessibility',
         },
         {
-          ko: 'MSW를 활용한 API Mocking으로 개발 생산성 향상',
+          ko: 'API 부재 시, MSW를 활용한 API Mocking으로 개발 생산성 향상',
           en: 'Improved development productivity using MSW for API Mocking',
         },
       ],
@@ -680,13 +772,13 @@ export const works: Record<string, Work> = {
     category: 'Design',
     title: 'Virtual Seoul Platform',
     subtitle: {
-      ko: '서울 관광 가상 체험 및 온라인 컨퍼런스 플랫폼',
-      en: 'Seoul Virtual Tourism & Online Conference Platform',
+      ko: '3D 가상 관광 플랫폼',
+      en: '3D Virtual Tourism Platform',
     },
     description: {
       ko: [
         '**서울 관광재단**과 협력하여 개발된 가상 체험 및 온라인 컨퍼런스 플랫폼으로, **전 세계 사용자들이 온라인으로 서울의 명소를 탐험하며 화상 회의를 진행**할 수 있도록 지원합니다.',
-        '온라인 관광과 화상 회의 트렌드 분석 및 사용자 니즈 조사,반응형 테스트 및 다양한 기기에서의 사용자 경험 개선, **UI/UX 기획 및 마크업 개발을 담당**하며, **디자인 가이드라인 정립 및 개발 협업을 진행**했습니다.',
+        '온라인 관광과 화상 회의 트렌드 분석 및 사용자 니즈 조사, 반응형 테스트 및 다양한 기기에서의 사용자 경험 개선, **UI/UX 기획 및 마크업 개발을 담당**하며, **디자인 가이드라인 정립 및 개발 협업을 진행**했습니다.',
       ],
       en: [
         "A virtual tourism and online conference platform developed in collaboration with the **Seoul Tourism Organization**, allowing users worldwide to explore Seoul's landmarks and participate in virtual meetings.",
@@ -732,90 +824,6 @@ export const works: Record<string, Work> = {
         items: ['Figma', 'Confluence', 'Jira', 'Photoshop'],
       },
     },
-    keyFeatures: {
-      interface: [
-        {
-          title: {
-            ko: 'E-컨퍼런스',
-            en: 'E-Conference',
-          },
-          subtitle: {
-            ko: '실시간 화상 회의 및 발표',
-            en: 'Real-time Video Conference & Presentation',
-          },
-          description: {
-            ko: '**서울의 랜드마크를 배경**으로 실시간 화상 회의를 진행할 수 있습니다. **발표자 화면 공유, 실시간 채팅, 참석자 관리** 등 컨퍼런스에 필요한 핵심 기능을 제공합니다.',
-            en: 'Conduct real-time video conferences with **Seoul landmarks as backgrounds**. Features include **presenter screen sharing, live chat, and participant management**.',
-          },
-          image: '/images/work/vspe/feature-01.gif',
-          imageType: 'landscape',
-        },
-        {
-          title: {
-            ko: '가상 전시',
-            en: 'Virtual Exhibition',
-          },
-          subtitle: {
-            ko: '3D 전시관 체험',
-            en: '3D Exhibition Hall Experience',
-          },
-          description: {
-            ko: '**WebGL 기반 3D 전시관**에서 기업 및 제품 정보를 탐색할 수 있습니다. **360도 뷰어**를 통해 전시품을 자세히 살펴볼 수 있으며, 담당자와 **실시간 문의**도 가능합니다.',
-            en: 'Explore company and product information in a **WebGL-based 3D exhibition hall**. View exhibits in detail through **360-degree viewers** and make **real-time inquiries**.',
-          },
-          image: '/images/work/vspe/feature-02.gif',
-          imageType: 'landscape',
-        },
-        {
-          title: {
-            ko: '1:1 비즈니스 상담',
-            en: '1:1 Business Meeting',
-          },
-          subtitle: {
-            ko: '화상 미팅 및 통역 서비스',
-            en: 'Video Meeting & Interpretation Service',
-          },
-          description: {
-            ko: '**실시간 통역 서비스**를 통해 언어 장벽 없이 비즈니스 미팅을 진행할 수 있습니다. **문서 공유 및 화면 공유** 기능으로 원활한 커뮤니케이션이 가능합니다.',
-            en: 'Conduct business meetings without language barriers through **real-time interpretation services**. Enable smooth communication with **document and screen sharing** features.',
-          },
-          image: '/images/work/vspe/feature-03.gif',
-          imageType: 'landscape',
-        },
-        {
-          title: {
-            ko: '네트워킹',
-            en: 'Networking',
-          },
-          subtitle: {
-            ko: '참가자 간 소통 및 교류',
-            en: 'Communication & Exchange between Participants',
-          },
-          description: {
-            ko: '**비즈니스 매칭 시스템**을 통해 관심 있는 기업과 연결될 수 있습니다. **명함 교환, 채팅, 화상 통화** 등 다양한 네트워킹 도구를 제공합니다.',
-            en: 'Connect with interested companies through a **business matching system**. Provides various networking tools including **business card exchange, chat, and video calls**.',
-          },
-          image: '/images/work/vspe/feature-04.gif',
-          imageType: 'landscape',
-        },
-        {
-          title: {
-            ko: '관리자 페이지',
-            en: 'Admin Dashboard',
-          },
-          subtitle: {
-            ko: '행사 및 참가자 관리',
-            en: 'Event & Participant Management',
-          },
-          description: {
-            ko: '**실시간 참석자 현황과 행사 진행 상황**을 모니터링할 수 있습니다. **통계 분석, 참가자 관리, 콘텐츠 업데이트** 등 행사 운영에 필요한 기능을 제공합니다.',
-            en: 'Monitor **real-time attendance and event progress**. Provides features necessary for event operation including **statistical analysis, participant management, and content updates**.',
-          },
-          image: '/images/work/vspe/feature-05.gif',
-          imageType: 'landscape',
-        },
-      ],
-    },
     solution: {
       title: {
         ko: '가상 관광과 온라인 컨퍼런스를 결합한 새로운 비대면 경험',
@@ -828,7 +836,6 @@ export const works: Record<string, Work> = {
     },
     mainImage: '/images/work/vspe/main.png',
     featureImage: '/images/work/vspe/feature.png',
-    sections: [],
     video: {
       title: {
         ko: 'Virtual Seoul 시연 영상',
@@ -839,27 +846,35 @@ export const works: Record<string, Work> = {
     achievements: {
       highlights: [
         {
-          ko: '‘2021 버추얼 마이스 쇼’에서 8개국 81개 기업 및 26개 국내 기업이 참여하여 1:1 화상 비즈니스 상담을 진행했습니다.',
+          ko: '‘2021 버추얼 마이스 쇼’에서 8개국 81개 기업 및 26개 국내 기업이 참여하여 1:1 화상 비즈니스 상담 진행',
           en: "Participated in the '2021 Virtual Myeongdong Show' with 81 companies from 8 countries and 26 domestic companies, conducting 1:1 video business consultations.",
         },
         {
-          ko: "'제66회 국제약학대학생연합 온라인 세계총회'에서는 92개국 2,000여 명의 약학대학생이 참여하여 다양한 프로그램을 운영하며 글로벌 가상 이벤트 플랫폼으로서의 가능성을 입증했습니다.",
-          en: "Participated in the '66th International Pharmaceutical Student Conference' with 2,000 participants from 92 countries, proving the potential of a global virtual event platform.",
+          ko: "'제66회 국제약학대학생연합 온라인 세계총회' 92개국 2,000여 명의 약학대학생 참여",
+          en: "Participated in the '66th International Pharmaceutical Student Conference' with 2,000 participants from 92 countries",
+        },
+        {
+          ko: '행사 주최자의 커스터마이징 가능한 글로벌 가상 이벤트 플랫폼 구현',
+          en: 'Implemented a customizable global virtual event platform for event organizers',
         },
       ],
     },
+    sections: [],
     retrospective: [
       {
         question: {
-          ko: '디자인과 개발의 균형',
-          en: 'Balancing Design and Development',
+          ko: '비대면 환경에서의 UX 최적화 경험',
+          en: 'Optimizing UX in a Remote Environment',
         },
         answer: {
           ko: [
-            'UI/UX 기획과 개발을 병행하면서 디자인 의도를 유지하면서도 기술적인 구현 가능성을 고려하는 것이 중요했습니다.',
+            'Virtual Seoul 2.0 프로젝트에 참여하면서, UI/UX 기획과 개발을 병행하며 **디자인 의도를 유지하면서도 기술적인 구현 가능성을 고려하는 것**이 중요하다는 것을 경험했습니다. 특히, **가상공간과 어우러지는 UI 구성**을 발전시키는 데 집중하였으며, 단순한 웹사이트 기획이 아닌 몰입형 인터페이스 설계를 위한 다양한 시도를 진행하였습니다.',
+            '콘텐츠 관리자 시스템(CMS)을 도입하여 행사 주최자가 개발자 도움 없이도 플랫폼을 맞춤화할 수 있도록 설계하였으며, 이를 통해 사용자의 편의성을 크게 향상시켰습니다. 또한, 가상 전시 및 PSA(1:1 비즈니스 상담) 기능을 추가하여 플랫폼 활용 범위를 확장하고, 다양한 형태의 온라인 행사를 지원할 수 있도록 개선하였습니다.',
+            '이러한 경험을 통해 가상 공간에서의 사용자 경험을 극대화하는 방법을 탐색할 수 있었으며, 앞으로도 보다 자연스럽고 직관적인 인터랙션을 설계하는 데 집중할 것입니다.',
           ],
           en: [
-            'While managing both UX/UI planning and development, it was crucial to maintain design intent while ensuring technical feasibility.',
+            'Through the Virtual Seoul 2.0 project, I gained experience **in balancing UX/UI design with technical feasibility to maintain design intent while ensuring smooth development**. In particular, I **focused on evolving UI design that seamlessly integrates with virtual spaces, moving beyond traditional website planning to create immersive interface experiences**. We introduced a Content Management System (CMS) that enabled event organizers to customize the platform without developer assistance, significantly improving user convenience. Additionally, we expanded the platform’s capabilities by integrating virtual exhibitions and 1:1 business consultations (PSA), allowing a wider range of online events to be supported.',
+            'This experience allowed me to explore ways to enhance user experiences in virtual environments, and I will continue to focus on designing more natural and intuitive interactions in future projects.',
           ],
         },
       },

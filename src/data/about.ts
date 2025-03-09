@@ -16,7 +16,7 @@ export const aboutContent: AboutContent = {
         en: 'Currently seeking **a product design and planning role** where I can bridge design, strategy, and execution to drive product growth.',
       },
       previous: {
-        ko: '디자인을 전공하고, 스타트업에서 UI 디자인과 마크업 개발을 담당했습니다. 이후, **프론트엔드 개발을 심화 학습**하며 **디지털 프로덕트 제작에 대한 이해**를 더욱 넓혔습니다.',
+        ko: '시각 디자인을 전공하고, 스타트업에서 UI 디자인과 마크업 개발을 담당했습니다. 이후, **프론트엔드 개발을 심화 학습**하며 **디지털 프로덕트 제작에 대한 이해**를 더욱 넓혔습니다.',
         en: 'Worked as a **UI developer at startups**. Later, I learned **frontend development** to broaden my understanding of digital product creation.',
       },
     },
@@ -53,7 +53,7 @@ export const aboutContent: AboutContent = {
           ko: 'Building Together',
         },
         description: {
-          ko: '다양한 팀과 긴밀하게 협력하여 제품 비전을 설정하고 실행합니다. 기획, 디자인, 개발을 아우르는 **커뮤니케이션 역량**을 통해 프로젝트를 원활하게 리드합니다.',
+          ko: '**다양한 팀과 긴밀하게 협력**하여 제품 비전을 설정하고 실행합니다. 기획, 디자인, 개발을 아우르는 **커뮤니케이션 역량**을 통해 프로젝트를 원활하게 리드합니다.',
           en: 'I work closely with diverse teams to define and execute product vision. **With strong communication** across planning, design, and development, I ensure a smooth and effective workflow.',
         },
       },
@@ -67,7 +67,7 @@ export const aboutContent: AboutContent = {
     images: [
       {
         description: {
-          ko: '새로운 장소로 여행하기 🌎',
+          ko: '새로운 장소로 여행 🌎',
           en: 'Traveling to new places 🌎',
         },
       },
@@ -79,8 +79,8 @@ export const aboutContent: AboutContent = {
       },
       {
         description: {
-          ko: '산에서 컵라면 먹기 🍜',
-          en: 'Eating instant noodles in the mountains 🍜',
+          ko: '바다보다 산 🏔️',
+          en: 'Mountains over the sea 🏔️',
         },
       },
       {

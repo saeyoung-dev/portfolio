@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Footer from './_view/Footer';
 import Header from './_view/Header';
+import Footer from './_view/Footer';
 
 export const metadata: Metadata = {
   title: 'Saeyoung Choi | Product Designer',

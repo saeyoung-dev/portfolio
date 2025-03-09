@@ -4,11 +4,12 @@ import { cn } from '@/lib/utils';
 
 interface Props {
   techStack: TechStackData;
+  className?: string;
 }
 
 type StackKey = 'frontend' | 'backend';
 
-export default function TechStackSection({ techStack }: Props) {
+export default function TechStackSection({ techStack, className }: Props) {
   const frontendItems = techStack.frontend || [];
   const backendItems = techStack.backend || [];
 
@@ -20,7 +21,7 @@ export default function TechStackSection({ techStack }: Props) {
   ) as StackKey;
 
   return (
-    <section className="w-full container px-48">
+    <section className={cn('w-full container px-48', className)}>
       <div className="flex flex-col gap-8">
         <Badge>TECH STACK</Badge>
         <div className="flex justify-between gap-12 items-start text-center bg-white py-8 px-12 rounded-2xl shadow border border-neutral-100">

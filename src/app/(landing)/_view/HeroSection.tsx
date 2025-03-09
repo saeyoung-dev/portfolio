@@ -37,9 +37,25 @@ export default function HeroSection() {
   }, []);
 
   useEffect(() => {
-    if (!isHovered) {
-      intervalRef.current = setInterval(animateSlogan, 3000);
-    }
+    gsap.fromTo(
+      sloganRef.current,
+      {
+        y: 60,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        delay: 0.9,
+        duration: 0.6,
+        ease: 'power3.out',
+        onComplete: () => {
+          if (!isHovered) {
+            intervalRef.current = setInterval(animateSlogan, 3000);
+          }
+        },
+      }
+    );
 
     return () => {
       if (intervalRef.current) {

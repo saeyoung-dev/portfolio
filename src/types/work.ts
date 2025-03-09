@@ -17,7 +17,7 @@ export interface BaseSection {
 }
 
 // Section Data Types
-export interface WireframeData extends BaseSection {
+export interface UISpecificationData extends BaseSection {
   image: string;
 }
 
@@ -27,6 +27,19 @@ export interface TaskFlowData extends BaseSection {
 
 export interface InformationArchitectureData extends BaseSection {
   image: string;
+}
+
+export interface DatabaseData extends BaseSection {
+  image: string;
+}
+
+export interface ProductRequirementData extends BaseSection {
+  image: string;
+}
+
+export interface ImageSliderData {
+  title?: string;
+  images: string[];
 }
 
 export interface AchievementData {
@@ -71,22 +84,31 @@ export interface ChallengeData {
 }
 
 // Section Types
-export type SectionType = 'informationArchitecture' | 'wireframe' | 'taskFlow';
+export type SectionType =
+  | 'informationArchitecture'
+  | 'uiSpecification'
+  | 'taskFlow'
+  | 'database'
+  | 'productRequirement';
 
 export type SectionTypeToData = {
   informationArchitecture: InformationArchitectureData;
   taskFlow: TaskFlowData;
-  wireframe: WireframeData;
+  uiSpecification: UISpecificationData;
+  database: DatabaseData;
+  productRequirement: ProductRequirementData;
 };
 
 export interface WorkSection {
   type: SectionType;
   data: SectionTypeToData[SectionType];
+  description?: LocalizedContent;
 }
 
 // Props Type
 export interface SectionProps<T> {
   data: T;
+  className?: string;
 }
 
 export type WorkCategory =
@@ -122,6 +144,7 @@ export interface Work {
   keyFeatures?: {
     interface: KeyFeatureData[];
   };
+  keyFeatureSlider?: ImageSliderData;
   solution?: SolutionData;
   mainImage: string;
   featureImage: string;

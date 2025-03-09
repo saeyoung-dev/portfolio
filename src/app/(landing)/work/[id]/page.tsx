@@ -9,7 +9,7 @@ import { renderText } from '@/utils/renderText';
 import { Button } from '@/components/ui/button';
 import { getWorkById } from '@/data/works';
 import {
-  WireframeSection,
+  UISpecificationSection,
   TaskFlowSection,
   InformationArchitectureSection,
   SolutionSection,
@@ -19,10 +19,16 @@ import {
   RestropectiveSection,
   YoutubeSection,
   AchievementSection,
+  DatabaseSection,
+  ProductRequirementSection,
+  ImageSliderSection,
 } from './_view/index';
 import { ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface Props {
   params: Promise<{
@@ -33,7 +39,9 @@ interface Props {
 const SECTION_COMPONENTS = {
   informationArchitecture: InformationArchitectureSection,
   taskFlow: TaskFlowSection,
-  wireframe: WireframeSection,
+  uiSpecification: UISpecificationSection,
+  database: DatabaseSection,
+  productRequirement: ProductRequirementSection,
 } as const;
 
 export default function WorkDetail({ params }: Props) {
@@ -55,35 +63,39 @@ export default function WorkDetail({ params }: Props) {
   }, []);
 
   useEffect(() => {
-    const workAnimation = gsap.fromTo(
-      '.work-content',
-      {
-        opacity: 0,
-        y: 40,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.work-content',
-          start: 'top center+=100',
-          once: true,
+    const workContents = gsap.utils.toArray<HTMLElement>('.work-content');
+
+    workContents.forEach((content) => {
+      gsap.fromTo(
+        content,
+        {
+          opacity: 0,
+          y: 40,
         },
-      }
-    );
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: content,
+            start: 'top bottom-=100',
+            end: 'bottom top',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
 
     return () => {
-      workAnimation.scrollTrigger?.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
   return (
     <main className="flex w-full flex-col items-center relative gap-28">
       {/* Main Image */}
-      <section className="w-screen overflow-hidden">
+      <section className="w-screen overflow-hidden work-content">
         <Image
           src={work.mainImage}
           alt="Project Main"
@@ -94,7 +106,7 @@ export default function WorkDetail({ params }: Props) {
         />
       </section>
       {/* Description Section */}
-      <section className="w-full container px-48">
+      <section className="w-full container px-48 work-content">
         <div className="flex flex-col gap-6">
           <h1 className="text-6xl font-semibold tracking-tighter leading-tight text-green-900">
             {work.title}
@@ -187,16 +199,29 @@ export default function WorkDetail({ params }: Props) {
         </div>
       </section>
 
-      {work.techStack && <TechStackSection techStack={work.techStack} />}
-      {work.challenge && <ChallengeSection challenge={work.challenge} />}
-      {work.solution && <SolutionSection solution={work.solution} />}
-      {/* Key Features Section */}
-      {work.keyFeatures && (
-        <KeyFeatureSection features={work.keyFeatures.interface} />
+      {work.techStack && (
+        <TechStackSection className="work-content" techStack={work.techStack} />
       )}
-      {/* Video Section */}
+      {work.challenge && (
+        <ChallengeSection className="work-content" challenge={work.challenge} />
+      )}
+      {work.solution && (
+        <SolutionSection className="work-content" solution={work.solution} />
+      )}
+      {work.keyFeatures && (
+        <KeyFeatureSection
+          className="work-content"
+          features={work.keyFeatures.interface}
+        />
+      )}
+      {work.keyFeatureSlider && (
+        <ImageSliderSection
+          title={work.keyFeatureSlider.title}
+          images={work.keyFeatureSlider.images}
+        />
+      )}
       {work.video && (
-        <section className="w-full container px-48">
+        <section className="w-full container px-48 work-content">
           <YoutubeSection
             videoId={work.video.videoId}
             title={work.video.title[language]}
@@ -209,15 +234,21 @@ export default function WorkDetail({ params }: Props) {
         const SectionComponent = SECTION_COMPONENTS[section.type];
         return (
           <Fragment key={`${section.type}-${index}`}>
-            <SectionComponent data={section.data} />
+            <SectionComponent data={section.data} className="work-content" />
           </Fragment>
         );
       })}
       {work.achievements && (
-        <AchievementSection achievements={work.achievements} />
+        <AchievementSection
+          achievements={work.achievements}
+          className="work-content"
+        />
       )}
       {work.retrospective && (
-        <RestropectiveSection restropective={work.retrospective} />
+        <RestropectiveSection
+          restropective={work.retrospective}
+          className="work-content"
+        />
       )}
       <div className="w-full h-6" />
     </main>

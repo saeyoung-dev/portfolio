@@ -2,15 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale } from '@/hooks/useLocale';
 import { Work } from '@/types/work';
+import { cn } from '@/lib/utils';
 interface Props {
   work: Work;
+  className?: string;
 }
 
-export default function WorkCard({ work }: Props) {
+export default function WorkCard({ work, className }: Props) {
   const { language } = useLocale();
 
   return (
-    <Link href={`/work/${work.id}`} className="block">
+    <Link href={`/work/${work.id}`} className={cn('block', className)}>
       <div className="flex flex-col gap-4 group">
         <div className="aspect-video rounded-2xl overflow-hidden relative">
           <Image
