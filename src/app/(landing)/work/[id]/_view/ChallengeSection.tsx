@@ -20,8 +20,8 @@ export default function ChallengeSection({ className, challenge }: Props) {
       <div className="flex justify-between gap-8 break-keep px-8">
         <h4
           className={cn(
-            'text-3xl font-medium text-pretty tracking-tight text-green-900 flex-1',
-            language === 'ko' ? 'leading-normal font-bold' : 'leading-snug'
+            'text-3xl font-bold text-pretty tracking-tight text-green-900 flex-1',
+            language === 'ko' ? 'leading-normal' : 'leading-snug'
           )}
         >
           {challenge.question[language]}

@@ -21,7 +21,7 @@ export default function SolutionSection({
     <section className={cn('w-full container px-48', className)}>
       <div className="flex flex-col gap-8">
         <Badge>SOLUTION</Badge>
-        <h3 className="flex items-center justify-center bg-white py-8 px-12 rounded-2xl shadow border border-neutral-100 text-center text-2xl font-semibold text-green-900 break-keep text-balance leading-10">
+        <h3 className="flex items-center justify-center bg-white py-8 px-10 rounded-2xl shadow border border-neutral-100 text-center text-2xl font-semibold text-green-900 break-keep text-balance leading-10">
           {boldTitle}
         </h3>
         {solution.image && (

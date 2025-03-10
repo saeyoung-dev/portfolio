@@ -283,7 +283,7 @@ export const works: Record<string, Work> = {
     solution: {
       title: {
         ko: '**세계 각국의 요리책**을 한 곳에서 만날 수 있는 따뜻한 공간을 만들었습니다',
-        en: "Creating a Warm Space Where the **World's Cookbooks Come Together**",
+        en: "Creating a Warm Space Where the World's Cookbooks Come Together.",
       },
       description: {
         ko: 'Bread & Butter는 **세계 요리 책을 한 곳에 모아 쉽게 탐색하고 구매할 수 있는 온라인 서점**입니다. 다양한 요리 문화와 레시피를 소개하여, 사용자가 새로운 맛을 발견하고 더 깊이 있는 요리 경험을 할 수 있도록 하였습니다. 편리한 쇼핑을 위해 **비회원 주문 조회, 회원 인증, 장바구니, 주문 관리, 실시간 재고 확인 기능**을 도입하였으며, 판매자가 서적을 효율적으로 관리할 수 있도록 **관리자 대시보드**를 구축하였습니다. ✨',
@@ -418,6 +418,24 @@ export const works: Record<string, Work> = {
           ],
         },
       },
+      {
+        question: {
+          ko: '단기간 내 디자인과 개발을 병행하며 CSR 이슈를 경험한 과정',
+          en: 'Managing Both Design and Development While Facing CSR Challenges',
+        },
+        answer: {
+          ko: [
+            '엘리스 부트캠프에서 진행된 Bread and Butter 프로젝트는 2주라는 짧은 기간 동안 디자인과 개발을 동시에 수행해야 했던 도전적인 프로젝트였습니다. 빠른 기획과 디자인 작업이 필요했고, 효율적인 개발을 위해 디자인 시스템을 최소화하고 컴포넌트 단위로 개발을 진행했습니다.',
+            '그러나 CSR(Client-Side Rendering) 방식으로 개발되면서 페이지 전환 시 깜빡임이 발생하는 이슈가 있었습니다. 데이터 로딩이 완료되기 전에 UI가 먼저 렌더링되면서 불필요한 화면 변화가 발생했고, 이는 사용자 경험에 부정적인 영향을 미쳤습니다. 짧은 기간 동안 해당 문제를 완벽히 해결하지는 못했지만, Skeleton UI 적용 등의 방안을 고민하며 개선할 방법을 모색했습니다.',
+            '이번 경험을 통해 단기간 내 디자인과 개발을 병행하는 어려움을 체감했고, CSR 방식에서 발생할 수 있는 UI/UX 문제를 사전에 고려하는 것이 중요하다는 점을 배웠습니다.',
+          ],
+          en: [
+            'The Bread and Butter project, conducted as part of the Ellice Bootcamp, was a challenging task that required both design and development to be completed within a tight 2-week timeframe. Rapid planning and design execution were essential, so I focused on streamlining the process by minimizing the design system and leveraging component-based development.',
+            'However, using Client-Side Rendering (CSR) led to a flickering issue when navigating between pages. Since the UI rendered before the data was fully loaded, unintended visual inconsistencies negatively impacted the user experience. Due to the short development period, we were unable to fully resolve this issue, but we explored potential solutions such as implementing a Skeleton UI to mitigate the problem.',
+            'This experience highlighted the challenges of managing both design and development in a limited timeframe and reinforced the importance of proactively addressing UI/UX issues in CSR-based applications.',
+          ],
+        },
+      },
     ],
   },
   'omo-omo': {
@@ -480,46 +498,6 @@ export const works: Record<string, Work> = {
         label: 'Collaboration',
         items: ['Figma', 'Confluence', 'Jira', 'Photoshop'],
       },
-    },
-    keyFeatures: {
-      interface: [
-        {
-          title: {
-            ko: '펫 캐릭터 커스터마이징',
-            en: 'Pet Character Customization',
-          },
-          description: {
-            ko: '사용자는 다양한 액세서리와 스타일을 적용하여 자신만의 펫을 만들 수 있습니다.',
-            en: 'Users can personalize their pets with various accessories and styles.',
-          },
-          image: '/images/work/omoomo/feature-01.webp',
-          imageType: 'portrait',
-        },
-        {
-          title: {
-            ko: '메타버스 커뮤니티 공간',
-            en: 'Metaverse Community Spaces',
-          },
-          description: {
-            ko: '다양한 테마의 가상 공간에서 사용자 간 상호작용과 커뮤니티 활동을 지원합니다.',
-            en: 'Users can interact and engage in themed virtual spaces.',
-          },
-          image: '/images/work/omoomo/feature-02.webp',
-          imageType: 'portrait',
-        },
-        {
-          title: {
-            ko: '미니게임 & 소셜 활동',
-            en: 'Mini-Games & Social Features',
-          },
-          description: {
-            ko: '게임을 통해 반려동물과 상호작용하고, 다른 유저들과 협력하며 보상을 받을 수 있습니다.',
-            en: 'Users can interact with their pets through games, collaborate with others, and earn rewards.',
-          },
-          image: '/images/work/omoomo/feature-03.webp',
-          imageType: 'portrait',
-        },
-      ],
     },
     keyFeatureSlider: {
       images: [
@@ -640,14 +618,12 @@ export const works: Record<string, Work> = {
     },
     description: {
       ko: [
-        '기존 모바일 앱으로만 제공되던 **오피스너 서비스를 웹으로 확장**하여 사용자들이 **멀티플랫폼**에서 편리하게 이용할 수 있도록 개발된 프로젝트입니다.',
-        '**불편 접수 수정/삭제 및 이미지 업로드 컴포넌트 개발**을 담당했으며, API 부재인 상황에서 MSW를 활용한 API Mocking으로 빠른 개발을 진행했습니다.',
-        '**React Hook Form & Zod**를 활용한 폼 상태 관리 및 유효성 검증을 구현하여 사용자 경험을 개선했습니다.',
+        '기존 모바일 앱으로만 제공되던 **오피스너 서비스를 웹으로 확장**하여 사용자들이 **멀티플랫폼**에서 편리하게 이용할 수 있도록 개발된 프로젝트입니다. **불편 접수 및 정기 주차, FAQ 개발**을 담당했으며, API 부재인 상황에서 MSW를 활용한 API Mocking으로 빠른 개발을 진행했습니다.',
+        '**React Hook Form & Zod**를 활용한 폼 상태 관리 및 유효성 검증을 구현하여 사용자 경험을 개선했습니다. 이 프로젝트는 **기업 연계 프로그램을 통해 실제 개발이 진행**되었으며, 최종적으로 **실제 서비스로 출시**되었습니다.',
       ],
       en: [
-        'A project that expands the existing Officener mobile app service to the web, allowing users to conveniently use it on multiple platforms.',
-        'Developed complaint modification/deletion and image upload components, and implemented fast development in parallel with backend development using MSW for API Mocking.',
-        'Improved user experience by implementing form state management and validation using React Hook Form & Zod.',
+        'A project that expands the existing Officener mobile app service to the web, allowing users to conveniently use it on multiple platforms. Developed complaint modification/deletion and image upload components, and implemented fast development in parallel with backend development using MSW for API Mocking.',
+        'Improved user experience by implementing form state management and validation using React Hook Form & Zod. This project was **developed through an industry collaboration program** and was eventually **launched as a real service**.',
       ],
     },
     role: 'Frontend Developer',
@@ -744,11 +720,11 @@ export const works: Record<string, Work> = {
     solution: {
       title: {
         ko: '웹 환경에 최적화된 사용자 경험 제공',
-        en: 'Providing User Experience Optimized for Web Environment',
+        en: 'Providing an Optimized User Experience for Web',
       },
       description: {
-        ko: '**React Hook Form과 Zod**를 활용한 폼 상태 관리로 사용자 입력 오류를 최소화하고, **MSW를 통한 API Mocking**으로 개발 효율성을 높였습니다. **TanStack Query**를 활용한 서버 상태 관리로 데이터 동기화 문제를 해결했습니다.',
-        en: 'Minimized user input errors with form state management using React Hook Form and Zod, improved development efficiency through API Mocking with MSW, and resolved data synchronization issues with server state management using TanStack Query.',
+        ko: '기존의 모바일 앱을 웹 환경으로 이전하면서 **Next.js**를 개발 프레임워크로 채택하였습니다. 이는 **검색 엔진 최적화(SEO)**를 고려한 선택이었으며, 또한 건물별로 다른 데이터를 제공해야 하는 특성상 **동적 라우팅과 서버사이드 렌더링(SSR)을 지원하는 Next.js의 장점**을 활용하기 위함이었습니다. 프로젝트에서는 **반응형 디자인을 적용**하여 다양한 디바이스에서 일관된 사용자 경험을 제공하고, **Zod 및 React Hook Form을 활용한 유효성 검사**를 통해 사용자 입력 오류를 최소화하였습니다. 또한, **TanStack Query를 통한 서버 상태 관리**로 데이터 동기화 및 캐싱 전략을 최적화하여 성능을 향상시켰습니다.',
+        en: "As the project involved transitioning the existing mobile app to a web environment, we adopted **Next.js** as the development framework. This decision was based on **SEO considerations** and the need to handle **dynamic data per building using Next.js's dynamic routing and server-side rendering (SSR)**. The project also implemented **responsive design** to ensure a seamless experience across different devices. Additionally, **form validation using Zod and React Hook Form** reduced user input errors, while **server state management with TanStack Query** improved data synchronization and caching strategies for better performance.",
       },
     },
     mainImage: '/images/work/officener/main.png',
@@ -766,18 +742,38 @@ export const works: Record<string, Work> = {
         },
       ],
     },
+    retrospective: [
+      {
+        question: {
+          ko: '프론트엔드 개발자로서 API 부재 상황을 해결한 경험',
+          en: 'Experience in Handling API Deficiencies as a Frontend Developer',
+        },
+        answer: {
+          ko: [
+            '우리 팀은 불편 접수 및 정기 주차 등록 기능을 메인으로 담당하며, **이미지 업로드 기능을 포함한 등록 수정 및 삭제 기능 개발**을 진행했습니다. **이러한 기능은 단순 UI 구현이 아니라 실제 데이터가 반영되어야 했고**, 수정 및 삭제 후 적절한 알럿이 표시되는 등 인터랙션이 포함된 작업이었습니다. 그러나 프로젝트 초반 API가 완전히 구현되지 않은 상태였기 때문에, 프론트엔드 개발을 지속적으로 진행하기 위해 **MSW(Mock Service Worker)**를 도입하게 되었습니다.',
+            '기존에는 단순한 Mock Data를 활용할 수도 있었지만, 실제 API와 동일한 형태의 Mocking을 통해 더 정확한 개발 및 테스트 환경을 구축할 수 있었습니다. 또한, MSW를 사용함으로써 **기획자 및 디자이너와의 원활한 소통**이 가능해졌습니다. **데모를 통해 구현된 기능을 직접 시연하며 UX 및 플로우를 논의할 수 있었고, 피드백을 즉각적으로 반영하는 과정에서 협업의 효율성을 높일 수 있었습니다.**',
+            '결과적으로, API가 완전히 구현되지 않은 상황에서도 개발을 원활하게 진행하는 방법을 익혔으며, **Mock API를 활용한 실전적인 개발 방법**을 체득할 수 있는 기회가 되었습니다.',
+          ],
+          en: [
+            'Our team was primarily responsible for developing the comment and complaint submission features, including **image uploads, modification, and deletion functionalities**. These features required not just UI implementation but also real-time data updates, proper alerts after modifications or deletions, and seamless user interactions. However, in the early stages of the project, the API was not fully developed, which led us to adopt **MSW (Mock Service Worker)** to continue frontend development efficiently.',
+            'Instead of simply using static mock data, we opted for API Mocking that closely mirrored the actual API structure, enabling more accurate development and testing. Additionally, using MSW facilitated **better communication with designers and planners**. Through live demos, we could showcase implemented features, discuss UX and flow improvements, and quickly integrate feedback to refine the user experience.',
+            'Ultimately, this experience allowed us to successfully develop features even in the absence of a fully implemented API, while gaining hands-on knowledge of **practical API Mocking strategies** for real-world frontend development.',
+          ],
+        },
+      },
+    ],
   },
   'virtual-seoul-platform': {
     id: 'virtual-seoul-platform',
     category: 'Design',
     title: 'Virtual Seoul Platform',
     subtitle: {
-      ko: '3D 가상 관광 플랫폼',
-      en: '3D Virtual Tourism Platform',
+      ko: '3D 온라인 컨퍼런스 플랫폼',
+      en: '3D Online Conference Platform',
     },
     description: {
       ko: [
-        '**서울 관광재단**과 협력하여 개발된 가상 체험 및 온라인 컨퍼런스 플랫폼으로, **전 세계 사용자들이 온라인으로 서울의 명소를 탐험하며 화상 회의를 진행**할 수 있도록 지원합니다.',
+        '**서울 관광재단**과 협력하여 개발된 가상 전시 및 온라인 컨퍼런스 플랫폼으로, **전 세계 사용자들이 온라인으로 서울의 명소를 탐험하며 화상 회의를 진행**할 수 있도록 지원합니다.',
         '온라인 관광과 화상 회의 트렌드 분석 및 사용자 니즈 조사, 반응형 테스트 및 다양한 기기에서의 사용자 경험 개선, **UI/UX 기획 및 마크업 개발을 담당**하며, **디자인 가이드라인 정립 및 개발 협업을 진행**했습니다.',
       ],
       en: [
@@ -863,18 +859,21 @@ export const works: Record<string, Work> = {
     retrospective: [
       {
         question: {
-          ko: '비대면 환경에서의 UX 최적화 경험',
-          en: 'Optimizing UX in a Remote Environment',
+          ko: 'Virtual Seoul 2.0을 통해 배운 점과 개선하고 싶은 점',
+          en: 'Lessons Learned and Areas for Improvement in Virtual Seoul 2.0',
         },
         answer: {
           ko: [
-            'Virtual Seoul 2.0 프로젝트에 참여하면서, UI/UX 기획과 개발을 병행하며 **디자인 의도를 유지하면서도 기술적인 구현 가능성을 고려하는 것**이 중요하다는 것을 경험했습니다. 특히, **가상공간과 어우러지는 UI 구성**을 발전시키는 데 집중하였으며, 단순한 웹사이트 기획이 아닌 몰입형 인터페이스 설계를 위한 다양한 시도를 진행하였습니다.',
-            '콘텐츠 관리자 시스템(CMS)을 도입하여 행사 주최자가 개발자 도움 없이도 플랫폼을 맞춤화할 수 있도록 설계하였으며, 이를 통해 사용자의 편의성을 크게 향상시켰습니다. 또한, 가상 전시 및 PSA(1:1 비즈니스 상담) 기능을 추가하여 플랫폼 활용 범위를 확장하고, 다양한 형태의 온라인 행사를 지원할 수 있도록 개선하였습니다.',
-            '이러한 경험을 통해 가상 공간에서의 사용자 경험을 극대화하는 방법을 탐색할 수 있었으며, 앞으로도 보다 자연스럽고 직관적인 인터랙션을 설계하는 데 집중할 것입니다.',
+            'Virtual Seoul 2.0 프로젝트를 진행하며, **UI/UX 기획과 기술적 구현 사이의 균형을 맞추는 것**이 얼마나 중요한지 배웠습니다. 단순한 웹사이트 기획이 아닌 **가상공간과 자연스럽게 어우러지는 UI를 설계**하는 과정에서 기존의 방식과는 다른 접근이 필요하다는 점을 깨달았습니다.',
+            '콘텐츠 관리자 시스템(CMS)을 도입하여 **비개발자도 플랫폼을 쉽게 수정할 수 있도록 한 점**은 긍정적인 경험이었지만, 더 직관적인 UX 설계를 할 필요가 있었습니다. 향후 프로젝트에서는 **CMS 사용성을 더욱 개선**하여 운영자의 효율성을 높이고 싶습니다.',
+            '또한, **가상 전시 및 1:1 비즈니스 상담(PSA) 기능을 추가하면서 플랫폼의 확장성을 고민**하는 계기가 되었습니다. 기능이 늘어날수록 사용자 경험이 복잡해질 가능성이 높으므로, UI의 직관성과 일관성을 유지하는 방법을 더욱 깊이 고민해야 한다는 점을 배웠습니다.',
+            '가상 공간의 시각적 요소를 방해하지 않기 위해 **정적인 UI를 구성하는 방식**을 택했지만, 향후에는 가상 공간 내에서 UI가 자연스럽게 융합될 수 있도록 **더 창의적인 접근 방식을 적용**하고 싶습니다.',
           ],
           en: [
-            'Through the Virtual Seoul 2.0 project, I gained experience **in balancing UX/UI design with technical feasibility to maintain design intent while ensuring smooth development**. In particular, I **focused on evolving UI design that seamlessly integrates with virtual spaces, moving beyond traditional website planning to create immersive interface experiences**. We introduced a Content Management System (CMS) that enabled event organizers to customize the platform without developer assistance, significantly improving user convenience. Additionally, we expanded the platform’s capabilities by integrating virtual exhibitions and 1:1 business consultations (PSA), allowing a wider range of online events to be supported.',
-            'This experience allowed me to explore ways to enhance user experiences in virtual environments, and I will continue to focus on designing more natural and intuitive interactions in future projects.',
+            'Through the Virtual Seoul 2.0 project, I learned the importance of **balancing UX/UI planning with technical implementation**. Unlike traditional website planning, **designing UI that seamlessly integrates into virtual spaces** required a different approach.',
+            'Implementing a Content Management System (CMS) allowed **non-developers to easily modify the platform**, which was a positive experience. However, I realized the need for a more intuitive CMS UX, and in future projects, I aim to enhance its usability for more efficient management.',
+            'Additionally, **expanding the platform with virtual exhibitions and 1:1 business consultations (PSA) raised new challenges in scalability**. As more features were introduced, ensuring a consistent and intuitive UI became increasingly important. This experience reinforced the need for maintaining simplicity and clarity in UX while expanding functionalities.',
+            'To avoid obstructing the visual elements of the virtual space, we opted for **a static UI layout**, but in future projects, I would like to explore **more creative approaches to seamlessly integrate UI within virtual environments**.',
           ],
         },
       },
