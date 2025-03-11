@@ -1,14 +1,16 @@
-<p style="font-size: 24px; font-style:bold">Saeyoung Choi ⎮ Portfolio</p>  
+<p style="font-size: 36px; font-style:bold">Saeyoung Choi ⎮ Portfolio</p>  
 
 <br/>
 
-<b>🌐 Live Site</b>
-[saeyoung-choi.site](https://saeyoung-choi.site)
+<p style="font-size:30px;">
+   <b>🌐 Live Site</b>
+   <span>[saeyoung-choi.site](https://saeyoung-choi.site)</span>
+</p>
 
 <br/>
 
 <p style="line-height: 1.8;">
-이 프로젝트는 <b>서비스 기획 및 UX/UI 디자인 포트폴리오</b>입니다.  
+이 프로젝트는 <b>서비스 기획 및 UX/UI 디자인 포트폴리오</b>입니다.<br/>
 프로젝트별 사례와 기여도를 정리하고, 사용자 경험 중심의 디자인 및 프로젝트를 소개합니다.  
 </p>
 
