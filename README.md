@@ -7,17 +7,17 @@
 
 <br/>
 
-### 🌐 Live Site
-#### [saeyoung-choi.site](https://saeyoung-choi.site)
+### 🌐 Live Web Site
+### [saeyoung-choi.site](https://saeyoung-choi.site)
 
 <br/>
 
 ### 📌 Features
-<p style="line-height: 1.4; font-style:semibold">✅ <b>프로젝트별 기획 & UX/UI 디자인 사례 정리</b></p>
-<p style="line-height: 1.4; font-style:semibold">✅ <b>디자인 시스템 및 프로토타이핑 활용</b></p>
-<p style="line-height: 1.4; font-style:semibold">✅ <b>반응형 웹 디자인으로 최적화된 UI 제공</b></p>
-<p style="line-height: 1.4; font-style:semibold">✅ <b>Next.js, React 기반 SSR 및 SEO 최적화</b></p>
-<p style="line-height: 1.4; font-style:semibold">✅ <b>Vercel을 통한 지속적 배포 (CI/CD)</b></p>
+- **프로젝트별 기획 & UX/UI 디자인 사례 정리** 
+- **디자인 시스템 및 프로토타이핑 활용** 
+- **반응형 웹 디자인으로 최적화된 UI 제공**
+- **Next.js, React 기반 SSR 및 SEO 최적화**
+- **Vercel을 통한 지속적 배포 (CI/CD)**
 
 <br/>
 
@@ -51,10 +51,13 @@
 <br/>
 
 ### 📬 Contact  
-더 많은 정보가 궁금하다면?  
+**더 많은 정보가 궁금하다면?**
+<p style="height: 4px"/>
 ✉️ **Email:** saeyoung.dev@gmail.com  
+   <p style="height: 4px"/>
 📌 **Website:** [saeyoung-choi.site](https://saeyoung-choi.site)  
+   <p style="height: 4px"/>
 👾 **GitHub:** [@saeyoung-dev](https://github.com/saeyoung-dev)  
 
 <br/>
-Made with ❤️ by **Saeyoung Choi**
+### Made with ❤️ by **Saeyoung Choi**
