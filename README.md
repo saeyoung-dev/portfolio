@@ -4,13 +4,11 @@
 <p style="line-height: 1.6;">프로젝트별 사례와 기여도를 정리하고, 사용자 경험 중심의 디자인 및 프로젝트를 소개합니다.</p>
 
 <br/>
----
 
 ### 🌐 Live Web Site
 ### [saeyoung-choi.site](https://saeyoung-choi.site)
 
----
-<br/>
+<div style="width:100%; height:1px;"/>
 
 ### 📌 Features
 - **프로젝트별 기획 & UX/UI 디자인 사례 정리** 
