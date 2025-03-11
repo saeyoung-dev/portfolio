@@ -6,7 +6,6 @@
 프로젝트별 사례와 기여도를 정리하고, 사용자 경험 중심의 디자인 및 프로젝트를 소개합니다.  
 
 
-
 ## 📌 Features  
 ✅ **프로젝트별 기획 & UX/UI 디자인 사례 정리**  
 ✅ **디자인 시스템 및 프로토타이핑 활용**  
@@ -20,21 +19,6 @@
 - **Styling:** Tailwind CSS  
 - **Design & Planning:** Figma, Google Docs, Notion  
 - **Deployment:** Vercel  
-
-
-
-## 📂 Project Structure  
-portfolio/
-│── public/ # Static assets (images, fonts, etc.)
-│── src/
-│ │── components/ # Reusable UI components
-│ │── pages/ # Next.js pages
-│ │── styles/ # Global and module styles
-│ │── utils/ # Helper functions
-│── .gitignore
-│── package.json
-│── README.md
-
 
 
 ## 🚀 Getting Started  
