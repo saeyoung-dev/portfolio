@@ -1,13 +1,7 @@
-<p style="font-size: 36px; font-style:bold">Saeyoung Choi ⎮ Portfolio</p>  
+# Saeyoung Choi ⎮ Portfolio
 
-<br/>
-
-<p style="font-size:30px;">
-   <b>🌐 Live Site</b>
-   <span>[saeyoung-choi.site](https://saeyoung-choi.site)</span>
-</p>
-
-<br/>
+### 🌐 Live Site
+[saeyoung-choi.site](https://saeyoung-choi.site)
 
 <p style="line-height: 1.8;">
 이 프로젝트는 <b>서비스 기획 및 UX/UI 디자인 포트폴리오</b>입니다.<br/>
