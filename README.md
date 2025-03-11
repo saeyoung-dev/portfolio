@@ -8,7 +8,7 @@
 ### 🌐 Live Web Site
 ### [saeyoung-choi.site](https://saeyoung-choi.site)
 
-<div style="width:100%; height:1px;"/>
+<div style="width:100%; height:1px; background:gray;"/>
 
 ### 📌 Features
 - **프로젝트별 기획 & UX/UI 디자인 사례 정리** 
