@@ -5,12 +5,12 @@
 
 <br/>
 
-### 🌐 Live Web Site
+## 🌐 Live Web Site
 ### [saeyoung-choi.site](https://saeyoung-choi.site)
 
 <div style="width:100%; height:1px; background:gray;"/>
 
-### 📌 Features
+## 📌 Features
 - **프로젝트별 기획 & UX/UI 디자인 사례 정리** 
 - **디자인 시스템 및 프로토타이핑 활용** 
 - **반응형 웹 디자인으로 최적화된 UI 제공**
@@ -19,7 +19,7 @@
 
 <br/>
 
-### 🛠 Tech Stack  
+## 🛠 Tech Stack  
 - **Frontend:** Next.js, React, TypeScript  
 - **Styling:** Tailwind CSS, Shadcn/ui
 - **Design & Planning:** Figma, Google Docs, Notion  
@@ -27,7 +27,7 @@
 
 <br/>
 
-### 🚀 Getting Started  
+## 🚀 Getting Started  
 
 1. **레포지토리 클론:**  
    ```sh
@@ -48,7 +48,7 @@
 
 <br/>
 
-### 📬 Contact  
+## 📬 Contact  
 **더 많은 정보가 궁금하다면?**
 
    <p style="height: 4px"/>
