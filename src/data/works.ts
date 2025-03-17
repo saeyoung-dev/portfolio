@@ -496,7 +496,7 @@ export const works: Record<string, Work> = {
       backend: ['Node.js', 'Firebase', 'MongoDB'],
       tools: {
         label: 'Collaboration',
-        items: ['Figma', 'Confluence', 'Jira', 'Photoshop'],
+        items: ['Figma', 'Notion', 'Jira', 'Slack', 'Google Docs'],
       },
     },
     keyFeatureSlider: {
@@ -517,7 +517,7 @@ export const works: Record<string, Work> = {
         en: 'An Immersive Metaverse Community for Pet Owners',
       },
       description: {
-        ko: '오모오모는 반려동물과 보호자가 함께 소통하고 정보를 나눌 수 있는 **메타버스 기반 커뮤니티**로 기획되었습니다. 펫 헬스케어, 커뮤니티, 그리고 **게임화 요소(Gamification)**를 결합하여 사용자가 적극적으로 참여하고 지속적으로 방문할 수 있도록 유도했습니다. 또한, **반려동물 보호자들의 실제 니즈를 반영**하여, 200명 이상의 사용자 리서치를 기반으로 펫 아바타 커스터마이징, 마이홈 공간 꾸미기, 랭킹 시스템 등 다양한 기능을 개발했습니다. 이러한 요소들은 사용자 경험을 극대화하고, 반려동물과 보호자가 함께하는 **종합 라이프스타일 플랫폼**으로 자리 잡을 수 있도록 발전시켰습니다.',
+        ko: '오모오모는 반려동물과 보호자가 함께 소통하고 정보를 나눌 수 있는 **메타버스 기반 커뮤니티**로 기획되었습니다. **펫 헬스케어, 커뮤니티, 그리고 게임화 요소(Gamification)**를 결합하여 사용자가 적극적으로 참여하고 지속적으로 방문할 수 있도록 유도했습니다. 또한, **반려동물 보호자들의 실제 니즈를 반영**하여, 200명 이상의 사용자 리서치를 기반으로 펫 아바타 커스터마이징, 마이홈 공간 꾸미기, 랭킹 시스템 등 다양한 기능을 개발했습니다. 이러한 요소들은 사용자 경험을 극대화하고, 반려동물과 보호자가 함께하는 **종합 라이프스타일 플랫폼**으로 자리 잡을 수 있도록 발전시켰습니다.',
         en: 'OmoOmo was designed as a **metaverse-based community** where pet owners can interact, share information, and engage with their virtual pets. By integrating pet healthcare, community features, and **gamification elements**, we encouraged active participation and increased user retention. Additionally, we conducted extensive **user research with over 200 participants** to develop features that genuinely address the needs of pet owners. This included pet avatar customization, MyHome space decoration, and a ranking system. These features were carefully crafted to enhance user experience and establish OmoOmo as a **comprehensive lifestyle platform** for both pets and their owners.',
       },
     },
