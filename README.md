@@ -6,7 +6,7 @@
 <br/>
 
 ## 🌐 Live Web Site
-### →[saeyoung-choi.site](https://saeyoung-choi.site)
+### [saeyoung-choi.site](https://saeyoung-choi.site)
 
 <br/>
 
@@ -51,9 +51,9 @@
 ## 📬 Contact  
 **더 많은 정보가 궁금하다면?**
 
-###### ✉️ Email: saeyoung.dev@gmail.com
-###### 📌 Website: [saeyoung-choi.site](https://saeyoung-choi.site)
-###### 👾 Github: [@saeyoung-dev](https://github.com/saeyoung-dev)
+##### ✉️ Email: saeyoung.dev@gmail.com
+##### 📌 Website: [saeyoung-choi.site](https://saeyoung-choi.site)
+##### 👾 Github: [@saeyoung-dev](https://github.com/saeyoung-dev)
 
 --- 
 
