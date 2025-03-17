@@ -1,4 +1,4 @@
-# 🌎 Saeyoung Choi · Portfolio
+# 🌎 Saeyoung Choi ⎮ Portfolio
 
 <p style="line-height: 1.6;">이 프로젝트는 <b>서비스 기획 및 UX/UI 디자인 포트폴리오</b>입니다.</p>
 <p style="line-height: 1.6;">프로젝트별 사례와 기여도를 정리하고, 사용자 경험 중심의 디자인 및 프로젝트를 소개합니다.</p>
@@ -6,7 +6,7 @@
 <br/>
 
 ## 🌐 Live Web Site
-### → [saeyoung-choi.site](https://saeyoung-choi.site)
+### →[saeyoung-choi.site](https://saeyoung-choi.site)
 
 <br/>
 
@@ -51,10 +51,10 @@
 ## 📬 Contact  
 **더 많은 정보가 궁금하다면?**
 
-##### ✉️ Email: saeyoung.dev@gmail.com
-##### 📌 Website: [saeyoung-choi.site](https://saeyoung-choi.site)
-##### 👾 Github: [@saeyoung-dev](https://github.com/saeyoung-dev)
+###### ✉️ Email: saeyoung.dev@gmail.com
+###### 📌 Website: [saeyoung-choi.site](https://saeyoung-choi.site)
+###### 👾 Github: [@saeyoung-dev](https://github.com/saeyoung-dev)
 
-<br/>
+--- 
 
 #### Made with ❤️ by Saeyoung Choi
