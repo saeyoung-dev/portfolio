@@ -26,7 +26,7 @@ export default function ChallengeSection({ className, challenge }: Props) {
         >
           {challenge.question[language]}
         </h4>
-        <p className="text-base font-medium text-green-900 text-pretty leading-tighter flex-1 flex flex-col gap-4">
+        <p className="text-base font-medium text-green-900 leading-tighter flex-1 flex flex-col gap-4">
           {challenge.description[language].map((description, index) => (
             <span key={index}>{renderText(description)}</span>
           ))}

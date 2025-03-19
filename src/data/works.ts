@@ -478,16 +478,14 @@ export const works: Record<string, Work> = {
       },
       description: {
         ko: [
-          '반려동물 보호자들은 **다양한 정보를 공유하고 소통할 공간**을 원하지만, 기존 플랫폼들은 이러한 요구를 충분히 충족하지 못했습니다.',
-          '메타버스 환경에서 사용자가 실질적인 소속감을 느낄 수 있도록 **펫 아바타와 마이홈 시스템을 도입**하여 자신만의 공간을 만들고 꾸밀 수 있도록 기획하였습니다.',
-          '또한, **MZ세대 사용자의 참여를 유도하기 위해 게임 요소를 결합**하여 일일 퀘스트, 랭킹 시스템, 보상형 미션을 추가하였고, 이를 통해 지속적인 재방문율을 높였습니다.',
-          '커뮤니티 활성화를 위해 **게시판을 세분화**하고, 반려동물 정보 공유와 **사용자 간 소셜 네트워크 기능을 강화**하여 실질적인 정보 교류와 관계 형성을 돕는 플랫폼으로 발전시켰습니다.',
+          '반려동물 보호자들은 정보를 공유하고 소통할 공간을 원하지만, 기존 플랫폼들은 이를 충분히 제공하지 못했습니다. 이를 해결하기 위해 메타버스 환경에서 **펫 아바타와 마이홈 시스템을 도입**하여 사용자가 자신만의 공간을 꾸미고 소속감을 느낄 수 있도록 기획했습니다.',
+          '또한, MZ세대의 참여를 유도하기 위해 **게임 요소를 접목하여 일일 퀘스트, 랭킹 시스템, 보상형 미션을 추가**하고, 이를 통해 **지속적인 재방문을 유도**했습니다.',
+          '**커뮤니티 활성화를 위해 게시판을 세분화하고, 소셜 네트워크 기능을 강화**하여 반려동물 정보를 효율적으로 공유할 수 있도록 설계하였으며, 사용자 간 관계 형성을 지원하는 플랫폼으로 발전시켰습니다.',
         ],
         en: [
-          'Pet owners seek platforms where they can share knowledge and connect, but existing platforms often fall short.',
-          'To foster a sense of belonging in a metaverse environment, we introduced **pet avatars and home customization features**, allowing users to create and personalize their virtual spaces.',
-          'To encourage engagement among MZ users, **we integrated gamification elements** such as daily quests, ranking systems, and reward-based missions, increasing retention and repeat visits.',
-          'Community engagement was further strengthened by **categorizing discussion boards** and enhancing social networking features to facilitate meaningful interactions and knowledge-sharing among users.',
+          'Pet owners seek a space to share information and connect, but existing platforms have not fully met this need. To address this, we introduced pet avatars and the MyHome system, allowing users to personalize their virtual spaces and feel a sense of belonging.',
+          'Additionally, to engage the MZ generation, **we incorporated gamification elements** such as daily quests, ranking systems, and reward-based missions, encouraging repeat visits and sustained participation.',
+          'To enhance community engagement, **discussion boards were categorized** and social networking features were strengthened, enabling efficient information sharing and fostering meaningful user connections.',
         ],
       },
     },
@@ -527,13 +525,43 @@ export const works: Record<string, Work> = {
       {
         type: 'taskFlow',
         data: {
-          image: '/images/work/omoomo/taskflow.png',
+          image: '/images/work/omoomo/taskflow-upload.png',
+          title: {
+            ko: '이미지 업로드 및 편집 부분',
+            en: 'Image Upload & Editing',
+          },
+          description: {
+            ko: '오모오모에서 사용자가 이미지를 선택하고 업로드한 후, 편집하여 게시글에 반영하는 과정을 정리한 Task Flow입니다. 최소한의 단계로 이미지 선택부터 편집, 적용까지 진행될 수 있도록 설계되었습니다.',
+            en: "OmoOmo's Task Flow illustrates the process of selecting, uploading, editing, and applying images to a post. The flow is designed to enable users to complete these steps efficiently with minimal actions.",
+          },
         },
       },
       {
         type: 'informationArchitecture',
         data: {
-          image: '/images/work/omoomo/ia.png',
+          image: '/images/work/omoomo/post-ia.png',
+          title: {
+            ko: '게시글 및 댓글 시스템 구조',
+            en: 'Post & Comment System Architecture',
+          },
+          description: {
+            ko: '오모오모의 게시글 및 댓글 시스템 구조를 정리한 IA입니다. 사용자가 글을 작성하고, 게시글을 탐색하며, 댓글과 반응을 남기는 과정을 시각적으로 구성하였습니다. 전체 서비스 IA의 일부로, 글쓰기부터 타임라인 노출, 댓글/대댓글 인터랙션까지의 흐름을 정리하였습니다. 또한, 날짜 표기 방식과 댓글/대댓글 기능에 대한 주요 고려 사항을 포함하여 서비스 구조를 설계하였습니다.',
+            en: 'This Information Architecture outlines the structure of OmoOmo’s post and comment system. It visualizes the user journey from writing a post to exploring content, leaving comments, and interacting with reactions. As part of the overall service IA, it defines the flow from post creation to timeline visibility and comment interactions. Additionally, key considerations for date formatting and comment functionality have been incorporated into the system design.',
+          },
+        },
+      },
+      {
+        type: 'moderationProcess',
+        data: {
+          image: '/images/work/omoomo/post-review-flow.png',
+          title: {
+            ko: '게시글 검수 시스템을 통한 커뮤니티 운영 및 UX 개선',
+            en: 'Post Moderation System for Community Management & UX Enhancement',
+          },
+          description: {
+            ko: '커뮤니티 내에서 안전하고 원활한 사용자 경험을 제공하기 위해 **게시글 자동 검수 및 관리자 검수 프로세스**를 구축하였습니다. AWS 검열 시스템을 활용하여 부적절한 콘텐츠를 자동 분석하고, 부적절한 게시글은 보류 후 추가 검토를 진행합니다. 이를 통해 유해 콘텐츠를 사전에 차단하고, 커뮤니티의 신뢰도를 높이는 역할을 합니다.',
+            en: 'To ensure a safe and seamless community experience, OmoOmo has implemented an **automated and manual post moderation system**. Using AWS moderation tools, the system detects inappropriate content and flags it for further review. This proactive filtering helps maintain a trustworthy and engaging platform.',
+          },
         },
       },
       {
@@ -680,7 +708,7 @@ export const works: Record<string, Work> = {
             ko: '사용자는 **불편사항을 등록**하고 처리 상태를 확인할 수 있으며, **이미지 업로드**와 함께 상세 내용을 작성할 수 있습니다. 관리자와의 **답글을 통한 소통**이 가능하며, 기존 민원을 **수정하거나 삭제**할 수 있습니다.',
             en: 'Users can register complaints and check processing status, write details with image uploads, communicate through replies with administrators, and modify or delete existing complaints.',
           },
-          image: '/images/work/officener/feature-01.png',
+          image: '/images/work/officener/feature-01.gif',
           imageType: 'landscape',
         },
         {
@@ -696,23 +724,7 @@ export const works: Record<string, Work> = {
             ko: '사용자는 **불편사항을 등록**하고 처리 상태를 확인할 수 있으며, **이미지 업로드**와 함께 상세 내용을 작성할 수 있습니다. 관리자와의 **답글을 통한 소통**이 가능하며, 기존 민원을 **수정하거나 삭제**할 수 있습니다.',
             en: 'Users can register complaints and check processing status, write details with image uploads, communicate through replies with administrators, and modify or delete existing complaints.',
           },
-          image: '/images/work/officener/feature-02.png',
-          imageType: 'landscape',
-        },
-        {
-          title: {
-            ko: '자주 묻는 질문',
-            en: 'FAQ',
-          },
-          subtitle: {
-            ko: '자주 묻는 질문',
-            en: 'Frequently Asked Questions',
-          },
-          description: {
-            ko: '사용자는 **불편사항을 등록**하고 처리 상태를 확인할 수 있으며, **이미지 업로드**와 함께 상세 내용을 작성할 수 있습니다. 관리자와의 **답글을 통한 소통**이 가능하며, 기존 민원을 **수정하거나 삭제**할 수 있습니다.',
-            en: 'Users can register complaints and check processing status, write details with image uploads, communicate through replies with administrators, and modify or delete existing complaints.',
-          },
-          image: '/images/work/officener/feature-03.png',
+          image: '/images/work/officener/feature-02.gif',
           imageType: 'landscape',
         },
       ],

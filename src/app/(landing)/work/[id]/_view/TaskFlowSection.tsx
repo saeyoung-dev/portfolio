@@ -11,9 +11,14 @@ export default function TaskFlowSection({ data }: SectionProps<TaskFlowData>) {
     <section className="w-full container px-48">
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <Badge>TASK FLOW</Badge>
+          <Badge className="mb-4">TASK FLOW</Badge>
+          {data.title && (
+            <p className="text-lg font-bold text-neutral-600">
+              {renderText(data.title[language])}
+            </p>
+          )}
           {data.description && (
-            <p className="mt-4 text-base font-medium text-neutral-600">
+            <p className="text-base font-medium text-neutral-600">
               {renderText(data.description[language])}
             </p>
           )}

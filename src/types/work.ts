@@ -12,6 +12,7 @@ export interface LocalizedArray {
 
 // Section Base Types
 export interface BaseSection {
+  title?: LocalizedContent;
   description?: LocalizedContent;
   image?: string;
 }
@@ -22,6 +23,10 @@ export interface UISpecificationData extends BaseSection {
 }
 
 export interface TaskFlowData extends BaseSection {
+  image: string;
+}
+
+export interface ModerationProcessData extends BaseSection {
   image: string;
 }
 
@@ -88,12 +93,14 @@ export type SectionType =
   | 'informationArchitecture'
   | 'uiSpecification'
   | 'taskFlow'
+  | 'moderationProcess'
   | 'database'
   | 'productRequirement';
 
 export type SectionTypeToData = {
   informationArchitecture: InformationArchitectureData;
   taskFlow: TaskFlowData;
+  moderationProcess: ModerationProcessData;
   uiSpecification: UISpecificationData;
   database: DatabaseData;
   productRequirement: ProductRequirementData;
@@ -111,12 +118,7 @@ export interface SectionProps<T> {
   className?: string;
 }
 
-export type WorkCategory =
-  // | 'Web App'
-  // | 'Platform'
-  // | 'E-Commerce'
-  // | 'Mobile App'
-  'Development' | 'Design';
+export type WorkCategory = 'Development' | 'Design';
 
 export interface Work {
   id: string;

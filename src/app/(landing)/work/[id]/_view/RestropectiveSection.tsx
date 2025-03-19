@@ -31,7 +31,7 @@ export default function RestropectiveSection({
             key={`retrospective-${index}`}
             className="flex flex-col gap-3 p-6 rounded-2xl bg-white shadow"
           >
-            <h4 className="text-xl flex items-center gap-4 font-semibold text-green-900 text-pretty">
+            <h4 className="text-xl flex items-center gap-4 font-semibold text-green-900">
               {item.icon ? (
                 <Image
                   src={item.icon}

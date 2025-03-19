@@ -42,16 +42,16 @@ export function ImageViewer({ src, alt, className }: Props) {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+          className="fixed inset-0 z-[9999] w-screen h-screen top-0 left-0 bg-black/90 flex items-center justify-center"
           onClick={handleClose}
         >
           <button
-            className="absolute top-8 right-8 text-white hover:text-neutral-300"
+            className="fixed top-8 right-8 text-white hover:text-neutral-300 z-[9999]"
             onClick={handleClose}
           >
             <X className="w-8 h-8" />
           </button>
-          <div className="relative w-[90vw] h-[90vh] flex items-center justify-center">
+          <div className="w-screen h-screen flex items-center justify-center p-8">
             <Image
               src={src}
               alt={alt}

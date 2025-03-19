@@ -3,10 +3,9 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 import { useLocale } from '@/hooks/useLocale';
+import Image from 'next/image';
 import { renderText } from '@/utils/renderText';
-import { ImageViewer } from '@/components/ui/image-viewer';
 import { aboutContent } from '@/data/about';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -263,9 +262,12 @@ export default function AboutPage() {
               key={index}
               className="aspect-auto cursor-pointer border group relative border-green-900/20 overflow-hidden"
             >
-              <ImageViewer
+              <Image
                 src={`/images/about/life-0${index + 1}.png`}
                 alt={image.description[language]}
+                width={0}
+                height={0}
+                sizes="100vw"
                 className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-90 transition-transform duration-300"
               />
               <span className="text-white font-medium text-center break-keep hidden group-hover:block text-sm absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">

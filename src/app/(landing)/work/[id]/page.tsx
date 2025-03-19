@@ -12,6 +12,7 @@ import {
   UISpecificationSection,
   TaskFlowSection,
   InformationArchitectureSection,
+  ModerationProcessSection,
   SolutionSection,
   TechStackSection,
   ChallengeSection,
@@ -42,6 +43,7 @@ const SECTION_COMPONENTS = {
   uiSpecification: UISpecificationSection,
   database: DatabaseSection,
   productRequirement: ProductRequirementSection,
+  moderationProcess: ModerationProcessSection,
 } as const;
 
 export default function WorkDetail({ params }: Props) {

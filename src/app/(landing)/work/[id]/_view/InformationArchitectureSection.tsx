@@ -1,7 +1,8 @@
 import { Badge } from '@/components/ui/badge';
-import { InformationArchitectureData, SectionProps } from '@/types/work';
 import { useLocale } from '@/hooks/useLocale';
-import Image from 'next/image';
+import { renderText } from '@/utils/renderText';
+import { InformationArchitectureData, SectionProps } from '@/types/work';
+import { ImageViewer } from '@/components/ui/image-viewer';
 export default function InformationArchitectureSection({
   data,
 }: SectionProps<InformationArchitectureData>) {
@@ -9,21 +10,23 @@ export default function InformationArchitectureSection({
 
   return (
     <section className="w-full flex flex-col gap-6 bg-neutral-100 rounded-3xl py-24">
-      <div className="flex flex-col gap-8 px-48 container">
-        <Badge>INFORMATION ARCHITECTURE</Badge>
-        {data.description && (
-          <p className="text-base font-medium text-neutral-600 mb-8">
-            {data.description[language]}
+      <div className="flex flex-col gap-2 px-48 container">
+        <Badge className="mb-4">INFORMATION ARCHITECTURE</Badge>
+        {data.title && (
+          <p className="text-lg font-bold text-neutral-600">
+            {renderText(data.title[language])}
           </p>
         )}
-        <div className="px-12">
-          <Image
+        {data.description && (
+          <p className="text-base font-medium text-neutral-600">
+            {renderText(data.description[language])}
+          </p>
+        )}
+        <div className="px-8 mt-8">
+          <ImageViewer
             src={data.image}
             alt="Information Architecture"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full"
+            className="w-full h-auto"
           />
         </div>
       </div>
