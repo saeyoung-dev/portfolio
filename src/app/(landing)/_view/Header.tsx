@@ -106,7 +106,7 @@ export default function Header() {
               </Link>
             </div>
             <div className='relative px-4 py-3 rounded-full bg-green-900 text-beige font-title-medium border border-transparent hover:bg-beige hover:text-green-900 hover:border-green-900 transition-all duration-300'>
-              <Link href='/' className='block'>
+              <Link href='/resume' className='block'>
                 Resume
               </Link>
             </div>

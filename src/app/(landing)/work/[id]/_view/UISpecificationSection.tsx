@@ -23,7 +23,7 @@ export default function UISpecificationSection({
         <ImageViewer
           src={data.image}
           alt='UI Specification'
-          className='w-full h-auto mt-4 px-16'
+          className='w-full h-auto mt-4 px:8 md:px-12 2xl:px-16'
         />
       </div>
     </section>

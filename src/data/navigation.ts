@@ -17,6 +17,12 @@ export const navigation = [
     },
     href: '/work',
   },
+  {
+    name: {
+      en: 'Resume',
+    },
+    href: '/resume',
+  },
 ] as const;
 
 export type NavigationItem = (typeof navigation)[number];

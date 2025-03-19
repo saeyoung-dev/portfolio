@@ -148,7 +148,7 @@ export default function WorkDetail({ params }: Props) {
                 </Button>
               </div>
             </div>
-            <div className='h-[1px] w-full bg-neutral-200' />
+            <div className='sm:hidden h-[1px] w-full bg-neutral-200' />
             <div className='justify-center text-center md:text-left md:justify-start flex gap-4 w-full md:w-1/4'>
               <div className='md:gap-4 gap-2 flex flex-col text-base text-green-900/70'>
                 <div>
@@ -198,7 +198,7 @@ export default function WorkDetail({ params }: Props) {
                 )}
               </div>
             </div>
-            <div className='h-[1px] w-full bg-neutral-200' />
+            <div className='sm:hidden h-[1px] w-full bg-neutral-200' />
           </div>
         </div>
       </section>
@@ -225,7 +225,7 @@ export default function WorkDetail({ params }: Props) {
         />
       )}
       {work.video && (
-        <section className='w-full container px-48 work-content'>
+        <section className='w-full container px-8 md:px-16 lg:px-32 xl:px-48 work-content'>
           <YoutubeSection
             videoId={work.video.videoId}
             title={work.video.title[language]}

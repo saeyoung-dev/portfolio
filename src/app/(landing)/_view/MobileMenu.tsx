@@ -60,7 +60,7 @@ export default function MobileMenu() {
               ×
             </span>
           </button>
-          <nav className='flex flex-col gap-8'>
+          <nav className='flex flex-col gap-12'>
             {navigation.map((item: NavigationItem) => (
               <Link
                 key={item.href}

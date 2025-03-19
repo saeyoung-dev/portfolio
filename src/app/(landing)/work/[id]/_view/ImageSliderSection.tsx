@@ -32,7 +32,7 @@ export default function ImageSliderSection({ title, images }: ImageSliderData) {
 
   return (
     <section className='w-full container sm:px-8 md:px-16 lg:px-32 xl:px-48'>
-      <div className='flex flex-col gap-6'>
+      <div className='flex flex-col gap-4 md:gap-6'>
         {title && <Badge>{title}</Badge>}
         <Carousel
           opts={{
@@ -60,13 +60,13 @@ export default function ImageSliderSection({ title, images }: ImageSliderData) {
             ))}
           </CarouselContent>
           <CarouselPrevious
-            className={cn('transition-opacity', {
+            className={cn('transition-opacity hidden sm:flex', {
               'opacity-0': current === 0,
               'opacity-100': current !== 0,
             })}
           />
           <CarouselNext
-            className={cn('transition-opacity', {
+            className={cn('transition-opacity hidden sm:flex', {
               'opacity-0': current === count - 1,
               'opacity-100': current !== count - 1,
             })}
