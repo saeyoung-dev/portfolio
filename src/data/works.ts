@@ -12,13 +12,14 @@ export const works: Record<string, Work> = {
     },
     description: {
       ko: [
-        '비건 친화적인 식당과 카페를 **사용자의 채식 선호도와 위치 기반**으로 쉽게 찾을 수 있도록 돕는 **비건 지도 서비스**입니다.',
-        '한국 사회에서의 비건 문화 문제점을 분석하고, 초기 아이디어 제안, 유저 타겟팅, **컨셉 기획 및 User Flow 설계**를 진행했습니다.',
-        '**UI/UX 디자인 (전체 화면 구성 및 로고 디자인)** 과 함께, **React.js 기반 프론트엔드 개발(지도 API, 위치 검색, 필터 기능)을 구현**하여 사용자 경험을 개선했습니다.',
+        'Veganro는 사용자의 채식 선호도와 위치를 반영하여 적절한 식당과 카페를 추천하는 지도 서비스입니다.',
+        '한국 사회에서의 비건 문화 문제를 분석하고, 초기 아이디어 기획부터 유저 타겟팅, **컨셉 기획 및 User Flow 설계**를 진행했습니다.',
+        'UI/UX 디자인을 총괄하며, **화면 구성과 로고 디자인을 담당**하고, **React.js 기반 프론트엔드 개발을** //(지도 API, 위치 검색, 필터 기능)// 구현하여 사용자 경험을 개선했습니다.',
       ],
       en: [
-        'Veganro is a map service that helps users find vegan-friendly places while promoting a sustainable lifestyle.',
-        'As a frontend developer, I implemented key features such as the **main map functionality, location-based search, and advanced filtering options** to enhance user experience.',
+        'Veganro is a map service designed to help users discover vegan-friendly places based on their dietary preferences and location.',
+        'I analyzed issues related to vegan culture in Korea and contributed to concept planning, user targeting, and **User Flow design**.',
+        'As the lead UI/UX designer, I worked on **screen layouts and logo design** while also implementing key frontend features in **React.js, including map API integration, location search, and filtering options.**',
       ],
     },
     role: 'Frontend Developer & UI Designer',
@@ -34,20 +35,19 @@ export const works: Record<string, Work> = {
     challenge: {
       question: {
         ko: '사용자가 비건 친화적인 장소를 쉽게 찾고 공유할 수 있도록 하려면?',
-        en: 'How can we help users find and share vegan-friendly places efficiently?',
+        en: 'How can we enable users to discover and share vegan-friendly locations with ease?',
       },
       description: {
         ko: [
-          '비건 식단을 실천하는 사람들은 외식할 때마다 적절한 식당을 찾는 데 어려움을 겪습니다. **일반 지도 서비스에서는 비건 친화적인 옵션이 명확하게 구분되지 않거나, 사용자 리뷰가 부족**하여 신뢰할 만한 정보를 얻기 어려운 경우가 많습니다.',
-          'Veganro는 이러한 문제를 해결하기 위해 개발되었습니다. 비건 친화적인 장소들을 큐레이팅하여 사용자가 **위치 기반 검색 및 세부 채식 유형을 선택**하여 ** 자신의 채식 선호도에 맞는 장소**를 쉽고 빠르게 찾을 수 있도록 도왔습니다.',
+          '비건 식단을 실천하는 사람들은 외식할 때마다 적절한 식당을 찾기 어려움을 겪습니다. **일반 지도 서비스에서는 비건 옵션이 명확히 구분되지 않거나, 신뢰할 수 있는 사용자 리뷰가 부족**하여 정보 탐색이 어렵습니다.',
+          '이 문제를 해결하고자 Veganro는 **큐레이팅된 비건 장소 정보를 제공**하며, 사용자가 **위치 기반 검색과 맞춤 필터를 활용**하여 적절한 장소를 쉽게 찾을 수 있도록 설계되었습니다.',
         ],
         en: [
-          'People who follow a vegan diet often struggle to find suitable restaurants when dining out. Existing restaurant search services **do not clearly differentiate vegan-friendly options, and reliable user-generated reviews are often lacking.**',
-          'Veganro was developed to address this issue. By providing location-based search and detailed filtering options, users can quickly and easily find places that **match their dietary preferences.**',
+          'People following a vegan diet often face challenges when looking for suitable restaurants. Most general map services **lack clear vegan-friendly labeling and reliable user reviews**, making it difficult to find trustworthy options.',
+          'To address this, Veganro offers a **curated list of vegan-friendly locations**, allowing users to refine their search with location-based and dietary-specific filters.',
         ],
       },
     },
-
     techStack: {
       frontend: [
         'React',
@@ -85,7 +85,7 @@ export const works: Record<string, Work> = {
           },
           description: {
             ko: '**카카오톡 및 이메일 로그인**, **비회원 이용**이 가능하며, 회원가입 시 **비건 유형**을 선택할 수 있습니다. 비건 유형에 따라 **맞춤형 프로필 이미지**가 제공됩니다. //(*비회원은 마이페이지 접속, 장소 제보, 북마크, 리뷰 작성 등의 기능은 제한됩니다.)//',
-            en: '**KakaoTalk, Email login and non-member access** are possible, and you can **select a vegan type when signing up. A personalized profile image is provided according to the vegan type. //(*Non-members are limited to accessing the My Page, reporting places, bookmarking, and writing reviews.)//',
+            en: '**KakaoTalk, Email login and non-member access** are possible, and you can select a vegan type when signing up. A personalized profile image is provided according to the vegan type. //(*Non-members are limited to accessing the My Page, reporting places, bookmarking, and writing reviews.)//',
           },
           image: '/images/work/veganro/feature-01.gif',
           imageType: 'portrait',
@@ -101,7 +101,7 @@ export const works: Record<string, Work> = {
           },
           description: {
             ko: '지도의 마커를 클릭 시, 상세 모달을 통해 **장소의 상세 페이지**로 이동합니다. 상단 **검색 창 클릭 시, 원하는 장소를 검색**해 볼 수 있으며, 현 위치로부터 **거리순 정렬**이 되어 가장 **가까운 비건 장소**를 찾을 수 있습니다.',
-            en: 'You can easily search for places you want by finding vegan places based on your current location and various filters.',
+            en: 'When you click on a marker on the map, you can easily move to the detailed page of the place by clicking on the search bar at the top. You can also search for the place you want by clicking on the search bar at the top, and find the nearest vegan place sorted by distance from your current location.',
           },
           image: '/images/work/veganro/feature-02.gif',
           imageType: 'portrait',
@@ -207,7 +207,7 @@ export const works: Record<string, Work> = {
       {
         question: {
           ko: '효율적인 디자인-개발 협업 전략',
-          en: 'What strategies did you use to enhance collaboration between design and development?',
+          en: 'How did you improve design-development collaboration?',
         },
         answer: {
           ko: [
@@ -236,13 +236,13 @@ export const works: Record<string, Work> = {
     description: {
       ko: [
         'Bread & Butter는 다양한 국가의 요리 서적과 레시피 북을 제공하는 **요리 서적 전문 전자상거래 플랫폼**입니다.',
-        '**프로젝트 매니저**이자 **백엔드 개발자**로 참여하여, **상품 조회, 장바구니, 재고 관리 대시보드** 등 주요 기능을 설계하고 구현했습니다.',
-        '**UI/UX 디자인을 총괄**하며, **전체 화면 구성 및 브랜드 아이덴티티**//(로고, 컬러 시스템)// **설계**를 통해 일관된 사용자 경험을 구축했습니다.',
+        '프로젝트 매니저와 백엔드 개발자로 참여하여 **상품 조회, 장바구니, 재고 관리 대시보드** 등 주요 기능을 설계하고 구현했습니다.',
+        'UI/UX 디자인을 총괄하며, **화면 구성과 브랜드 아이덴티티(로고, 컬러 시스템) 설계**를 통해 일관된 사용자 경험을 구축했습니다.',
       ],
       en: [
         'Bread & Butter is a **specialized e-commerce platform for culinary books**, offering a diverse selection of cookbooks and recipe collections from around the world.',
-        'As a **Project Manager and Backend Developer**, I led the development of key features such as **product browsing, shopping cart functionality, and an inventory management dashboard**.',
-        'Additionally, I **spearheaded the UI/UX design**, overseeing **layout design, branding (logo, color system), and user experience optimization** to create a cohesive and engaging platform.',
+        'As a **Project Manager and Backend Developer**, I developed key features such as **product browsing, shopping cart functionality, and an inventory management dashboard**.',
+        'Additionally, I led the **UI/UX design**, overseeing **layout design, branding, and user experience optimization** to create a cohesive and engaging platform.',
       ],
     },
     role: 'Backend Developer & Project Manager',
@@ -262,16 +262,15 @@ export const works: Record<string, Work> = {
       },
       description: {
         ko: [
-          '**각국의 다양한 요리**를 배우고 싶은 사람들에게 적절한 책을 찾는 일은 쉽지 않습니다. 서점마다 취급하는 책이 다르고, 온라인에서는 신뢰할 수 있는 리뷰를 찾기가 어렵습니다.',
-          '이러한 고민에서 Bread & Butter가 시작되었습니다. **세계 각국의 요리책**을 한곳에 모아, 사용자가 **쉽게 탐색하고 구매할 수 있는 공간**을 만들고자 했습니다.',
+          '다양한 국가의 요리를 배우고 싶은 사람들에게 적절한 책을 찾는 일은 쉽지 않습니다. 서점마다 취급하는 도서가 다르고, 온라인에서는 신뢰할 만한 리뷰를 찾기가 어렵습니다.',
+          '이러한 고민에서 Bread & Butter가 시작되었습니다. **세계 각국의 요리책을 한 플랫폼에서 제공**하여, 사용자가 **손쉽게 탐색하고 구매할 수 있는 환경**을 만들고자 했습니다.',
         ],
         en: [
-          '**Finding the right cookbook** can be challenging, as different bookstores offer varying selections, and online reviews are often unreliable.',
-          'Bread & Butter was created to solve this problem. We wanted to build **a warm and inviting space where users can easily explore and purchase curated cookbooks from around the world.**',
+          'Finding the right cookbook can be challenging, as different bookstores offer varying selections, and online reviews are often unreliable.',
+          'Bread & Butter was created to solve this problem by **providing a curated collection of cookbooks from various countries**, making it easy for users to browse and purchase their ideal cookbook.',
         ],
       },
     },
-
     techStack: {
       frontend: ['HTML5', 'CSS3', 'JavaScript', 'ESLint'],
       backend: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'Mongoose', 'PM2'],
@@ -479,13 +478,13 @@ export const works: Record<string, Work> = {
       description: {
         ko: [
           '반려동물 보호자들은 정보를 공유하고 소통할 공간을 원하지만, 기존 플랫폼들은 이를 충분히 제공하지 못했습니다. 이를 해결하기 위해 메타버스 환경에서 **펫 아바타와 마이홈 시스템을 도입**하여 사용자가 자신만의 공간을 꾸미고 소속감을 느낄 수 있도록 기획했습니다.',
-          '또한, MZ세대의 참여를 유도하기 위해 **게임 요소를 접목하여 일일 퀘스트, 랭킹 시스템, 보상형 미션을 추가**하고, 이를 통해 **지속적인 재방문을 유도**했습니다.',
-          '**커뮤니티 활성화를 위해 게시판을 세분화하고, 소셜 네트워크 기능을 강화**하여 반려동물 정보를 효율적으로 공유할 수 있도록 설계하였으며, 사용자 간 관계 형성을 지원하는 플랫폼으로 발전시켰습니다.',
+          '또한, MZ세대의 참여를 유도하기 위해 **게임 요소를 접목하여 일일 퀘스트, 랭킹 시스템, 보상형 미션을 추가**하고, 이를 통해 **사용자의 참여를 높이고 재방문율을 향상**시켰습니다.',
+          '**커뮤니티 활성화를 위해 게시판을 세분화하고, 소셜 네트워크 기능을 강화**하여 반려동물 정보를 손쉽게 공유할 수 있도록, 사용자 간 관계 형성을 지원하는 플랫폼으로 발전시켰습니다.',
         ],
         en: [
           'Pet owners seek a space to share information and connect, but existing platforms have not fully met this need. To address this, we introduced pet avatars and the MyHome system, allowing users to personalize their virtual spaces and feel a sense of belonging.',
-          'Additionally, to engage the MZ generation, **we incorporated gamification elements** such as daily quests, ranking systems, and reward-based missions, encouraging repeat visits and sustained participation.',
-          'To enhance community engagement, **discussion boards were categorized** and social networking features were strengthened, enabling efficient information sharing and fostering meaningful user connections.',
+          'Additionally, to engage the MZ generation, **we incorporated gamification elements** such as daily quests, ranking systems, and reward-based missions, increasing user engagement and retention.',
+          'To enhance community engagement, **discussion boards were categorized** and social networking features were strengthened, enabling efficient information sharing and enhancing social interactions among users.',
         ],
       },
     },
