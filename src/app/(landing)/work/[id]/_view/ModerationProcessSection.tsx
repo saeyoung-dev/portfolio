@@ -10,25 +10,25 @@ export default function ModerationProcessSection({
   const { language } = useLocale();
 
   return (
-    <section className="w-full container px-48">
-      <div className="flex flex-col gap-6">
-        <div className="flex flex-col gap-2">
-          <Badge className="mb-4">MODERATION PROCESS</Badge>
+    <section className='w-full container sm:px-8 md:px-16 lg:px-32 xl:px-48'>
+      <div className='flex flex-col gap-6'>
+        <div className='flex flex-col gap-2'>
+          <Badge className='mb-4'>MODERATION PROCESS</Badge>
           {data.title && (
-            <p className="text-lg font-bold text-neutral-600">
+            <p className='text-lg font-bold text-neutral-600'>
               {renderText(data.title[language])}
             </p>
           )}
           {data.description && (
-            <p className="text-base font-medium text-neutral-600">
+            <p className='text-base font-medium text-neutral-600'>
               {renderText(data.description[language])}
             </p>
           )}
         </div>
         <ImageViewer
           src={data.image}
-          alt="Flow Chart"
-          className="w-full h-auto mt-4"
+          alt='Flow Chart'
+          className='w-full h-auto mt-4'
         />
       </div>
     </section>

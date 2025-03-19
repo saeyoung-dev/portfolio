@@ -21,51 +21,53 @@ export default function TechStackSection({ techStack, className }: Props) {
   ) as StackKey;
 
   return (
-    <section className={cn('w-full container px-48', className)}>
-      <div className="flex flex-col gap-8">
+    <section
+      className={cn(
+        'w-full container sm:px-8 md:px-16 lg:px-32 xl:px-48',
+        className
+      )}
+    >
+      <div className='flex flex-col gap-4 md:gap-8'>
         <Badge>TECH STACK</Badge>
-        <div className="flex justify-between gap-12 items-start text-center bg-white py-8 px-12 rounded-2xl shadow border border-neutral-100">
+        <div className='flex flex-col md:flex-row justify-between gap-4 sm:gap-6 md:gap-12 bg-white py-6 px-8 md:py-8 md:px-12 rounded-2xl shadow border border-neutral-100'>
           {techStack[sideStack] && (
             <div
-              className={cn(
-                'flex flex-col gap-4',
-                Object.keys(techStack).length === 2 ? 'w-1/3' : 'w-1/4'
-              )}
+              className={`w-full flex flex-col gap-1 md:text-center sm:gap-2 md:gap-4 ${
+                Object.keys(techStack).length === 2 ? 'lg:w-1/3' : 'lg:w-1/4'
+              }`}
             >
-              <h4 className="text-2xl font-medium text-green-900">
+              <h4 className='text-xl md:text-2xl font-medium text-green-900'>
                 {sideStack === 'frontend' ? 'Frontend' : 'Backend'}
               </h4>
-              <p className="text-lg text-green-900/80 leading-relaxed">
+              <p className='text-base md:text-lg text-green-900/80 leading-relaxed'>
                 {techStack[sideStack].join(', ')}
               </p>
             </div>
           )}
           {techStack[centerStack] && (
             <div
-              className={cn(
-                'flex flex-col gap-4',
-                Object.keys(techStack).length === 2 ? 'w-2/3' : 'w-2/4'
-              )}
+              className={`w-full flex flex-col gap-1 md:text-center sm:gap-2 md:gap-4 ${
+                Object.keys(techStack).length === 2 ? 'lg:w-2/3' : 'lg:w-2/4'
+              }`}
             >
-              <h4 className="text-2xl font-medium text-green-900">
+              <h4 className='text-xl md:text-2xl font-medium text-green-900'>
                 {centerStack === 'frontend' ? 'Frontend' : 'Backend'}
               </h4>
-              <p className="text-lg text-green-900/80 leading-relaxed text-balance">
+              <p className='text-base md:text-lg text-green-900/80 leading-relaxed text-balance'>
                 {techStack[centerStack].join(', ')}
               </p>
             </div>
           )}
           {techStack.tools && (
             <div
-              className={cn(
-                'flex flex-col gap-4',
-                Object.keys(techStack).length === 2 ? 'w-1/3' : 'w-1/4'
-              )}
+              className={`w-full flex flex-col gap-1 md:text-center sm:gap-2 md:gap-4 ${
+                Object.keys(techStack).length === 2 ? 'lg:w-1/3' : 'lg:w-1/4'
+              }`}
             >
-              <h4 className="text-2xl font-medium text-green-900">
+              <h4 className='text-xl md:text-2xl font-medium text-green-900'>
                 {techStack.tools.label}
               </h4>
-              <p className="text-lg text-green-900/80 leading-relaxed">
+              <p className='text-base md:text-lg text-green-900/80 leading-relaxed'>
                 {techStack.tools.items.join(', ')}
               </p>
             </div>

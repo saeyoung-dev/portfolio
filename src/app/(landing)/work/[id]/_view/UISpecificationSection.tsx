@@ -10,20 +10,20 @@ export default function UISpecificationSection({
   const { language } = useLocale();
 
   return (
-    <section className="w-full">
-      <div className="flex flex-col gap-6">
-        <div className="flex flex-col gap-2 container px-48">
+    <section className='w-full'>
+      <div className='flex flex-col gap-6'>
+        <div className='flex flex-col gap-2 container sm:px-8 md:px-16 lg:px-32 xl:px-48'>
           <Badge>UI SPECIFICATION</Badge>
           {data.description && (
-            <p className="mt-4 text-base font-medium text-neutral-600">
+            <p className='mt-4 text-base font-medium text-neutral-600'>
               {renderText(data.description[language])}
             </p>
           )}
         </div>
         <ImageViewer
           src={data.image}
-          alt="UI Specification"
-          className="w-full h-auto mt-4 px-16"
+          alt='UI Specification'
+          className='w-full h-auto mt-4 px-16'
         />
       </div>
     </section>

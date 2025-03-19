@@ -48,21 +48,21 @@ export default function JobSummary({ className }: { className?: string }) {
     <section
       ref={sectionRef}
       className={cn(
-        'px-32 pb-16 w-full container text-green-900 2xl:hidden',
+        'px-6 lg:px-32 pb-16 w-full container text-green-900',
         className
       )}
     >
-      <div className="border-t-2 border-green-900 pt-16" />
-      <div className="flex gap-32">
-        <div className="flex-1 job-summary-content">
-          <h2 className="text-xl font-semibold mb-4">CURRENTLY:</h2>
-          <p className="text-lg text-pretty break-keep font-medium leading-relaxed text-green-900/80">
+      <div className='border-t-2 border-green-900 pt-16' />
+      <div className='flex flex-col md:flex-row gap-12 md:gap-16 lg:gap-32'>
+        <div className='flex-1 job-summary-content'>
+          <h2 className='text-lg md:text-xl font-semibold mb-4'>CURRENTLY:</h2>
+          <p className='text-lg md:text-xl text-pretty break-keep font-medium leading-relaxed text-green-900/80'>
             {renderText(hero.status.current[language])}
           </p>
         </div>
-        <div className="flex-1 job-summary-content">
-          <h2 className="text-xl font-semibold mb-4">PREVIOUSLY:</h2>
-          <p className="text-lg text-pretty break-keep font-medium leading-relaxed text-green-900/80">
+        <div className='flex-1 job-summary-content'>
+          <h2 className='text-lg md:text-xl font-semibold mb-4'>PREVIOUSLY:</h2>
+          <p className='text-lg md:text-xl text-pretty break-keep font-medium leading-relaxed text-green-900/80'>
             {renderText(hero.status.previous[language])}
           </p>
         </div>

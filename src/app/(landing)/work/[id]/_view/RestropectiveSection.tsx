@@ -17,43 +17,48 @@ export default function RestropectiveSection({
 
   return (
     <section
-      className={cn('w-full container px-48 flex flex-col gap-8', className)}
+      className={cn(
+        'w-full container sm:px-8 md:px-16 lg:px-32 xl:px-48 flex flex-col gap-8',
+        className
+      )}
     >
       <Badge>WHAT DID I LEARN?</Badge>
       <div
         className={cn(
           'grid gap-6 break-keep',
-          restropective.length === 2 ? 'grid-cols-2' : 'grid-cols-1'
+          restropective.length === 2
+            ? 'grid-cols-1 lg:grid-cols-2'
+            : 'grid-cols-1'
         )}
       >
         {restropective.map((item, index) => (
           <div
             key={`retrospective-${index}`}
-            className="flex flex-col gap-3 p-6 rounded-2xl bg-white shadow"
+            className='flex flex-col gap-3 p-6 rounded-2xl bg-white shadow'
           >
-            <h4 className="text-xl flex items-center gap-4 font-semibold text-green-900">
+            <h4 className='text-base sm:text-lg md:text-xl flex items-center gap-4 font-semibold text-green-900'>
               {item.icon ? (
                 <Image
                   src={item.icon}
-                  alt="icon"
+                  alt='icon'
                   width={0}
                   height={0}
-                  sizes="100vw"
-                  className="size-8"
+                  sizes='100vw'
+                  className='size-6 sm:size-8'
                 />
               ) : (
                 <Image
                   src={'/images/icon/restropective.png'}
-                  alt="icon"
+                  alt='icon'
                   width={0}
                   height={0}
-                  sizes="100vw"
-                  className="size-8"
+                  sizes='100vw'
+                  className='size-6 sm:size-8'
                 />
               )}
               {item.question[language]}
             </h4>
-            <div className="text-base font-medium text-neutral-600 flex flex-col gap-3 break-normal">
+            <div className='text-base font-medium text-neutral-600 flex flex-col gap-3 break-normal'>
               {item.answer[language].map((answer, index) => (
                 <p
                   key={`retrospective-answer-${index}`}

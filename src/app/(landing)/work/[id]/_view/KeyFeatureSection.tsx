@@ -20,14 +20,20 @@ export default function KeyFeatureSection({ className, features }: Props) {
 
   return (
     <section
-      className={cn('w-full container px-48', className)}
-      id="key-features"
+      className={cn(
+        'w-full container sm:px-8 md:px-16 lg:px-32 xl:px-48',
+        className
+      )}
+      id='key-features'
     >
-      <div className="flex flex-col gap-20">
+      <div className='flex flex-col gap-16 md:gap-20'>
         {/* <Badge>KEY FEATURES</Badge> */}
         {features.map((feature, index) => (
-          <div key={index} className="flex justify-between gap-12 items-center">
-            <div className="w-1/2 flex items-center justify-center">
+          <div
+            key={index}
+            className='flex flex-col sm:flex-row justify-between gap-8 md:gap-12 items-center'
+          >
+            <div className='w-full sm:w-1/2 flex items-center justify-center'>
               <div
                 className={cn(
                   'relative w-full overflow-hidden rounded-md',
@@ -38,7 +44,7 @@ export default function KeyFeatureSection({ className, features }: Props) {
                   src={feature.image}
                   alt={feature.title[language]}
                   fill
-                  sizes="100vw"
+                  sizes='100vw'
                   className={cn(
                     'rounded-md',
                     isLandscape(feature) ? 'object-cover' : 'object-contain'
@@ -48,14 +54,14 @@ export default function KeyFeatureSection({ className, features }: Props) {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4 w-1/2 break-keep text-balance">
-              <h5 className="text-2xl font-bold text-green-900">
+            <div className='flex flex-col gap-1 sm:gap-2 md:gap-4 w-full sm:w-1/2 break-keep sm:text-balance'>
+              <h5 className='text-xl sm:text-2xl font-bold text-green-900'>
                 {feature.title[language]}
               </h5>
-              <h6 className="text-xl font-semibold text-green-900/80 tracking-tight font-title-medium">
+              <h6 className='text-xl sm:text-2xl font-semibold text-green-900/80 tracking-tight font-title-medium'>
                 {feature.subtitle?.[language]}
               </h6>
-              <p className="text-base font-medium text-neutral-600 leading-relaxed">
+              <p className='text-base sm:text-lg font-medium text-neutral-600 leading-relaxed'>
                 {renderText(feature.description[language])}
               </p>
             </div>

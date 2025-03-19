@@ -8,6 +8,7 @@ import { useLocale } from '@/hooks/useLocale';
 import { Switch } from '@/components/ui/switch';
 import { cn } from '@/lib/utils';
 import gsap from 'gsap';
+import MobileMenu from './MobileMenu';
 
 export default function Header() {
   const pathname = usePathname();
@@ -49,10 +50,10 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 z-30 flex w-full justify-center transition-transform duration-200"
+      className='fixed top-0 left-0 z-[999] flex w-full justify-center transition-transform duration-200'
     >
-      <div className="w-full relative flex items-center justify-center">
-        <div className="absolute w-full inset-0 transition-colors duration-300 ease-out">
+      <div className='hidden md:flex w-full relative items-center justify-center'>
+        <div className='absolute w-full inset-0 transition-colors duration-300 ease-out'>
           <div
             className={cn(
               'absolute inset-0 -top-2 -z-10 backdrop-blur-md bg-beige/90 mask-gradient-60',
@@ -60,23 +61,23 @@ export default function Header() {
             )}
           />
         </div>
-        <div className="flex w-full max-w-[1400px] items-center justify-between px-10 py-5 relative">
+        <div className='flex w-full max-w-[1400px] items-center justify-between px-10 py-5 relative'>
           <Link
-            href="/"
-            className="relative flex group items-center hover:scale-110 transition-transform duration-200 ease-in h-14 w-14 bg-[url('/images/icon/main-01.png')] bg-cover bg-center"
+            href='/'
+            className="z-[999] relative flex group items-center hover:scale-110 transition-transform duration-200 ease-in h-14 w-14 bg-[url('/images/icon/main-01.png')] bg-cover bg-center"
           >
             <Image
-              src="/images/icon/main-02.png"
-              alt="main-logo"
+              src='/images/icon/main-02.png'
+              alt='main-logo'
               width={0}
               height={0}
-              sizes="100vw"
-              className="w-auto h-14 group-hover:rotate-180 transition-transform duration-300 ease-out"
+              sizes='100vw'
+              className='w-auto h-14 group-hover:rotate-180 transition-transform duration-300 ease-out'
               priority
             />
           </Link>
-          <nav className="flex gap-8 font-semibold items-center text-green-900">
-            <div className="flex items-center gap-4">
+          <nav className='flex ml-auto gap-8 font-semibold items-center text-green-900'>
+            <div className='flex items-center gap-4'>
               <Switch
                 checked={language === 'en'}
                 onCheckedChange={(checked) =>
@@ -84,32 +85,59 @@ export default function Header() {
                 }
               />
             </div>
-            <div className="relative overflow-hidden group">
-              <Link href="/work" className="block relative">
-                <span className="nav-text block relative transition-transform duration-300 group-hover:-translate-y-5">
+            <div className='relative overflow-hidden group'>
+              <Link href='/work' className='block relative'>
+                <span className='nav-text block relative transition-transform duration-300 group-hover:-translate-y-5'>
                   Work
                 </span>
-                <span className="nav-text-overlay absolute top-0 left-0 w-full text-center opacity-0 translate-y-5 transition-all duration-300 group-hover:opacity-50 group-hover:translate-y-0">
+                <span className='nav-text-overlay absolute top-0 left-0 w-full text-center opacity-0 translate-y-5 transition-all duration-300 group-hover:opacity-50 group-hover:translate-y-0'>
                   Work
                 </span>
               </Link>
             </div>
-            <div className="relative overflow-hidden group">
-              <Link href="/about" className="block relative">
-                <span className="nav-text block relative transition-transform duration-300 group-hover:-translate-y-5">
+            <div className='relative overflow-hidden group'>
+              <Link href='/about' className='block relative'>
+                <span className='nav-text block relative transition-transform duration-300 group-hover:-translate-y-5'>
                   About
                 </span>
-                <span className="nav-text-overlay absolute top-0 left-0 w-full text-center opacity-0 translate-y-5 transition-all duration-300 group-hover:opacity-50 group-hover:translate-y-0">
+                <span className='nav-text-overlay absolute top-0 left-0 w-full text-center opacity-0 translate-y-5 transition-all duration-300 group-hover:opacity-50 group-hover:translate-y-0'>
                   About
                 </span>
               </Link>
             </div>
-            <div className="relative px-4 py-3 rounded-full bg-green-900 text-beige font-title-medium border border-transparent hover:bg-beige hover:text-green-900 hover:border-green-900 transition-all duration-300">
-              <Link href="/" className="block">
+            <div className='relative px-4 py-3 rounded-full bg-green-900 text-beige font-title-medium border border-transparent hover:bg-beige hover:text-green-900 hover:border-green-900 transition-all duration-300'>
+              <Link href='/' className='block'>
                 Resume
               </Link>
             </div>
           </nav>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className='fixed md:hidden inset-0 flex justify-between items-center top-0 left-0 py-10 px-4'>
+        <Link
+          href='/'
+          className="relative flex group items-center hover:scale-110 transition-transform duration-200 ease-in h-14 w-14 bg-[url('/images/icon/main-01.png')] bg-cover bg-center"
+        >
+          <Image
+            src='/images/icon/main-02.png'
+            alt='main-logo'
+            width={0}
+            height={0}
+            sizes='100vw'
+            className='w-auto h-14 group-hover:rotate-180 transition-transform duration-300 ease-out'
+            priority
+          />
+        </Link>
+        <div className='flex items-center gap-4'>
+          <button
+            onClick={() => setLanguage(language === 'ko' ? 'en' : 'ko')}
+            className='text-xs font-medium text-green-900/60 hover:text-green-900'
+          >
+            {language === 'ko' ? 'EN' : 'KO'}
+          </button>
+          <MobileMenu />
         </div>
       </div>
     </header>

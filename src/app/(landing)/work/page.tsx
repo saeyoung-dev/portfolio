@@ -55,18 +55,21 @@ export default function WorkPage() {
   }, []);
 
   return (
-    <main className="flex w-full flex-col items-center pt-32 pb-16 gap-8">
-      <section className="w-full container px-32 text-green-900">
+    <main className='flex w-full flex-col items-center pt-32 pb-16 gap-8'>
+      <section className='w-full container sm:px-8 md:px-16 lg:px-32 text-green-900'>
         <h1
           ref={titleRef}
-          className="text-6xl font-semibold tracking-tighter leading-tight"
+          className='text-6xl font-semibold tracking-tighter leading-tight'
         >
           Work
         </h1>
-        <div ref={categoryButtonsRef} className="flex gap-2 mt-8 mb-2">
+        <div
+          ref={categoryButtonsRef}
+          className='flex gap-2 mt-4 sm:mt-8 sm:mb-2'
+        >
           <Button
             variant={selectedCategory === 'All' ? 'filtered' : 'outline'}
-            className="cursor-pointer"
+            className='cursor-pointer'
             onClick={() => setSelectedCategory('All')}
           >
             All
@@ -75,7 +78,7 @@ export default function WorkPage() {
             <Button
               key={category}
               variant={selectedCategory === category ? 'filtered' : 'outline'}
-              className="cursor-pointer"
+              className='cursor-pointer'
               onClick={() => setSelectedCategory(category)}
             >
               {category}
@@ -85,11 +88,11 @@ export default function WorkPage() {
       </section>
       <section
         ref={workCardsRef}
-        className="w-full container px-32 text-green-900"
+        className='w-full container sm:px-8 md:px-16 lg:px-32 text-green-900'
       >
-        <div className="grid grid-cols-2 gap-10">
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
           {filteredWorks.map((work) => (
-            <WorkCard key={work.id} work={work} className="work-card" />
+            <WorkCard key={work.id} work={work} className='work-card' />
           ))}
         </div>
       </section>

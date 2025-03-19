@@ -18,24 +18,29 @@ export default function SolutionSection({
   const boldDescription = renderText(solution.description[language]);
 
   return (
-    <section className={cn('w-full container px-48', className)}>
-      <div className="flex flex-col gap-8">
+    <section
+      className={cn(
+        'w-full container sm:px-8 md:px-16 lg:px-32 xl:px-48',
+        className
+      )}
+    >
+      <div className='flex flex-col gap-4 md:gap-8'>
         <Badge>SOLUTION</Badge>
-        <h3 className="flex items-center justify-center bg-white py-8 px-10 rounded-2xl shadow border border-neutral-100 text-center text-2xl font-semibold text-green-900 break-keep text-balance leading-10">
+        <h3 className='bg-white py-6 md:py-8 px-6 md:px-10 rounded-2xl shadow border border-neutral-100 text-center text-xl sm:text-2xl md:text-3xl font-semibold text-green-900 break-keep md:text-balance md:leading-10'>
           {boldTitle}
         </h3>
         {solution.image && (
           <Image
             src={solution.image}
-            alt="Solution"
+            alt='Solution'
             width={0}
             height={0}
-            sizes="100vw"
-            className="w-full h-auto rounded-2xl "
+            sizes='100vw'
+            className='w-full h-auto rounded-2xl '
           />
         )}
         {solution.description && (
-          <p className="text-lg font-medium text-green-900 leading-8 text-pretty break-keep">
+          <p className='text-base md:text-lg font-medium text-green-900 md:leading-8 leading-tighter text-pretty break-keep'>
             {boldDescription}
           </p>
         )}

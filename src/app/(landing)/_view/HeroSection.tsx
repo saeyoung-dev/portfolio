@@ -66,14 +66,17 @@ export default function HeroSection() {
 
   return (
     <div
-      className="mt-2 h-10 overflow-hidden cursor-pointer"
+      className='mt-1 md:mt-2 h-10 overflow-hidden cursor-pointer'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {
         setIsHovered(false);
         animateSlogan();
       }}
     >
-      <p className="text-3xl font-semibold" ref={sloganRef}>
+      <p
+        className='text-xl sm:text-2xl md:text-3xl 2xl:text-4xl font-semibold'
+        ref={sloganRef}
+      >
         + From concept to product
       </p>
     </div>

@@ -31,8 +31,8 @@ export default function ImageSliderSection({ title, images }: ImageSliderData) {
   }, [api]);
 
   return (
-    <section className="w-full container px-48">
-      <div className="flex flex-col gap-6">
+    <section className='w-full container sm:px-8 md:px-16 lg:px-32 xl:px-48'>
+      <div className='flex flex-col gap-6'>
         {title && <Badge>{title}</Badge>}
         <Carousel
           opts={{
@@ -41,19 +41,19 @@ export default function ImageSliderSection({ title, images }: ImageSliderData) {
             slidesToScroll: 3,
           }}
           setApi={setApi}
-          className="relative w-full"
+          className='relative w-full'
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className='-ml-4'>
             {images.map((image, index) => (
-              <CarouselItem key={index} className="pl-4 basis-1/3">
-                <div className="flex flex-col gap-4">
+              <CarouselItem key={index} className='pl-4 basis-1/3'>
+                <div className='flex flex-col gap-4'>
                   <Image
                     src={image}
                     alt={`Slide ${index + 1}`}
-                    className="w-full h-auto rounded-lg"
+                    className='w-full h-auto rounded-lg'
                     width={0}
                     height={0}
-                    sizes="100vw"
+                    sizes='100vw'
                   />
                 </div>
               </CarouselItem>
