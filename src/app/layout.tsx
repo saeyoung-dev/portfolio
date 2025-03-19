@@ -1,7 +1,8 @@
-import localFont from 'next/font/local';
 import '@/app/globals.css';
+import type { Metadata } from 'next';
+import { META } from '@/constants/metadata';
+import localFont from 'next/font/local';
 import { LanguageProvider } from '@/hooks/useLocale';
-import CustomCursor from '@/components/ui/custom-cursor';
 
 const wantedSans = localFont({
   src: '/fonts/WantedSansVariable.woff2',
@@ -26,18 +27,40 @@ const walsheimGT = localFont({
   variable: '--font-walsheim',
 });
 
-type Props = {
-  children: React.ReactNode;
+export const metadata: Metadata = {
+  title: META.title,
+  description: META.description,
+  keywords: META.keyword.join(', '),
+  metadataBase: new URL(META.url),
+  openGraph: {
+    title: META.title,
+    description: META.description,
+    url: META.url,
+    siteName: META.siteName,
+    images: [
+      {
+        url: META.ogImage,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'ko',
+    type: 'website',
+  },
+  icons: {
+    icon: META.favicon,
+  },
 };
 
-export default function RootLayout({ children }: Props) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="ko">
       <body className={`${wantedSans.variable} ${walsheimGT.variable}`}>
-        <LanguageProvider>
-          {children}
-          <CustomCursor />
-        </LanguageProvider>
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

@@ -1,13 +1,19 @@
 import type { Metadata } from 'next';
+import { META } from '@/constants/metadata';
 import Header from './_view/Header';
 import Footer from './_view/Footer';
 
 export const metadata: Metadata = {
-  title: 'Saeyoung Choi | Product Designer',
-  description: 'Saeyoung Choi | Product Designer',
+  title: META.title,
+  description: META.description,
   openGraph: {
-    title: 'Saeyoung Choi | Product Designer',
-    description: 'Saeyoung Choi | Product Designer',
+    title: META.title,
+    description: META.description,
+    images: [META.ogImage],
+    siteName: META.siteName,
+    locale: 'ko',
+    type: 'website',
+    url: META.url,
   },
 };
 

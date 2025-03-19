@@ -1,13 +1,13 @@
 export const META = {
-  title: 'Saeyoung Choi | Product Designer',
-  siteName: 'Saeyoung Choi | Product Designer',
-  description: 'Product Designer & Frontend Developer',
+  title: 'Saeyoung Choi | Product Planner',
+  siteName: 'Saeyoung Choi | Product Planner',
+  description: 'A Product Planner bridging design & development',
   keyword: [
     '최세영',
     'saeyoung choi',
     'frontend developer',
     'frontend engineer',
-    'product designer',
+    'product planner',
     'product engineer',
     'ui/ux designer',
     'ui/ux engineer',
@@ -15,8 +15,6 @@ export const META = {
     'ui engineer',
   ],
   url: 'https://www.saeyoung-choi.site',
-  googleVerification: 'xxx',
-  naverVerification: 'xxx',
   ogImage: '/images/opengraph-image.png',
   favicon: '/images/favicon.ico',
 } as const;
