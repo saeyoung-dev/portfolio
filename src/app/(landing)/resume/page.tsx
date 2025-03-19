@@ -17,6 +17,7 @@ export default function ResumePage() {
     about: useRef<HTMLDivElement>(null),
     experience: useRef<HTMLDivElement>(null),
     projects: useRef<HTMLDivElement>(null),
+    relaventExperience: useRef<HTMLDivElement>(null),
     education: useRef<HTMLDivElement>(null),
     skills: useRef<HTMLDivElement>(null),
     certifications: useRef<HTMLDivElement>(null),
@@ -48,10 +49,10 @@ export default function ResumePage() {
     <main className='flex w-full flex-col items-center pt-24 sm:pt-32'>
       {/* Hero Section */}
       <section className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'>
-        <h1 className='text-4xl sm:text-5xl font-bold text-green-900 mb-4'>
+        <h1 className='text-5xl sm:text-6xl font-extrabold text-green-900 mb-4'>
           {renderText(resumeData.name[language])}
         </h1>
-        <p className='text-xl font-semibold text-green-900/80'>
+        <p className='text-2xl font-semibold text-green-900/80'>
           {renderText(resumeData.title[language])}
         </p>
       </section>
@@ -61,8 +62,8 @@ export default function ResumePage() {
         ref={sectionRefs.about}
         className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'
       >
-        <Badge className='mb-4'>ABOUT</Badge>
-        <div className='whitespace-pre-line text-lg font-medium text-green-900/80 leading-relaxed'>
+        <Badge className='mb-4 text-sm'>ABOUT</Badge>
+        <div className='whitespace-pre-line text-lg font-medium text-green-900/70 leading-relaxed'>
           {renderText(resumeData.about[language])}
         </div>
       </section>
@@ -72,29 +73,29 @@ export default function ResumePage() {
         ref={sectionRefs.experience}
         className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'
       >
-        <Badge className='mb-8'>EXPERIENCE</Badge>
+        <Badge className='mb-8 text-sm'>EXPERIENCE</Badge>
         <div className='flex flex-col gap-8'>
           {resumeData.experiences.map((exp, index) => (
             <div key={index} className='flex flex-col gap-4'>
               <div className='flex justify-between items-start'>
                 <div>
-                  <h3 className='text-xl font-semibold mb-2 text-green-900'>
+                  <h3 className='text-2xl font-bold mb-2 text-green-900'>
                     {renderText(exp.company[language])}
                   </h3>
-                  <p className='text-green-900/80 font-medium'>
+                  <p className='text-lg font-semibold text-green-900/80'>
                     {renderText(exp.title[language])}
                   </p>
                 </div>
-                <div className='text-right'>
-                  <p className='text-green-900/60 mb-2'>{exp.period}</p>
-                  <p className='text-green-900/60'>
-                    {renderText(exp.location[language])}
-                  </p>
+                <div className='text-right text-green-900/60 text-sm font-medium'>
+                  <p>{exp.period}</p>
+                  <p>{renderText(exp.location[language])}</p>
                 </div>
               </div>
-              <ul className='list-disc list-inside flex flex-col gap-2 text-green-900/80'>
+              <ul className='list-disc list-inside text-base font-medium text-green-900/80 leading-relaxed'>
                 {exp.description[language].map((item, i) => (
-                  <li key={i}>· {renderText(item)}</li>
+                  <li key={i} className='pl-2'>
+                    · {renderText(item)}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -107,26 +108,56 @@ export default function ResumePage() {
         ref={sectionRefs.projects}
         className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'
       >
-        <Badge className='mb-8'>PROJECTS</Badge>
+        <Badge className='mb-8 text-sm'>PROJECTS</Badge>
         <div className='flex flex-col gap-8'>
           {resumeData.projects.map((project, index) => (
             <div key={index} className='flex flex-col gap-4'>
               <div className='flex justify-between items-start'>
                 <div>
-                  <h3 className='text-xl font-semibold mb-2 text-green-900'>
+                  <h3 className='text-2xl font-bold mb-2 text-green-900'>
                     {project.title[language]}
                   </h3>
-                  <p className='text-green-900/80 font-medium'>
+                  <p className='text-lg font-semibold text-green-900/80'>
                     {project.role?.[language]}
                   </p>
                 </div>
-                <p className='text-green-900/60'>{project.year}</p>
+                <p className='text-green-900/60 text-sm'>{project.year}</p>
               </div>
-              <ul className='list-disc list-inside flex flex-col gap-2.5 text-green-900/80'>
+              <ul className='list-disc list-inside text-base font-medium text-green-900/80 leading-relaxed'>
                 {project.description[language].map((item, i) => (
-                  <li key={i}>· {renderText(item)}</li>
+                  <li key={i} className='pl-2'>
+                    · {renderText(item)}
+                  </li>
                 ))}
               </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Relavent Experience Section */}
+      <section
+        ref={sectionRefs.relaventExperience}
+        className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'
+      >
+        <Badge className='mb-8 text-sm'>RELAVENT EXPERIENCE</Badge>
+        <div className='flex flex-col gap-8'>
+          {resumeData.relaventExperience.map((exp, index) => (
+            <div key={index} className='flex justify-between items-start'>
+              <div>
+                <h3 className='text-2xl font-bold mb-2 text-green-900'>
+                  {exp.title[language]}
+                </h3>
+                <p className='text-lg font-semibold text-green-900/80'>
+                  {exp.organization[language]}
+                </p>
+                {exp.details && (
+                  <p className='text-green-900/60 font-medium whitespace-pre-line mt-2 leading-relaxed'>
+                    {renderText(exp.details[language])}
+                  </p>
+                )}
+              </div>
+              <p className='text-green-900/60'>{exp.period}</p>
             </div>
           ))}
         </div>
@@ -137,20 +168,20 @@ export default function ResumePage() {
         ref={sectionRefs.education}
         className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'
       >
-        <Badge className='mb-8'>EDUCATION</Badge>
+        <Badge className='mb-8 text-sm'>EDUCATION</Badge>
         <div className='flex flex-col gap-8'>
           {resumeData.education.map((edu, index) => (
             <div key={index} className='flex justify-between items-start'>
               <div>
-                <h3 className='text-xl font-semibold mb-2 text-green-900'>
+                <h3 className='text-2xl font-bold mb-2 text-green-900'>
                   {edu.degree[language]}
                 </h3>
-                <p className='text-green-900/80 font-medium'>
+                <p className='text-lg font-semibold text-green-900/80'>
                   {edu.school[language]}
                 </p>
                 {edu.details && (
-                  <p className='text-green-900/60 whitespace-pre-line mt-2 leading-normal'>
-                    {edu.details[language]}
+                  <p className='text-green-900/60 font-medium whitespace-pre-line mt-2 leading-relaxed'>
+                    {renderText(edu.details[language])}
                   </p>
                 )}
               </div>
@@ -165,9 +196,9 @@ export default function ResumePage() {
         ref={sectionRefs.skills}
         className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'
       >
-        <Badge className='mb-8'>SKILLS</Badge>
+        <Badge className='mb-8 text-sm'>SKILLS</Badge>
         <div className='flex flex-wrap gap-2'>
-          {resumeData.skills.map((skill, index) => (
+          {resumeData.skills[language].map((skill, index) => (
             <Badge key={index} variant='secondary' rounded='full'>
               {skill}
             </Badge>
@@ -180,12 +211,12 @@ export default function ResumePage() {
         ref={sectionRefs.certifications}
         className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'
       >
-        <Badge className='mb-8'>CERTIFICATIONS</Badge>
+        <Badge className='mb-8 text-sm'>CERTIFICATIONS</Badge>
         <div className='flex flex-col gap-4'>
           {resumeData.certifications.map((cert, index) => (
             <div key={index} className='flex justify-between items-start'>
               <div>
-                <h3 className='text-xl font-semibold mb-2 text-green-900'>
+                <h3 className='text-2xl font-bold mb-2 text-green-900'>
                   {cert.title[language]}
                 </h3>
                 <p className='text-green-900/80 font-medium'>

@@ -30,6 +30,13 @@ export interface Education {
   details?: LocalizedContent;
 }
 
+export interface RelaventExperience {
+  period: string;
+  title: LocalizedContent;
+  organization: LocalizedContent;
+  details?: LocalizedContent;
+}
+
 export interface Contact {
   type: 'email' | 'linkedin' | 'github' | 'resume';
   label: string;
@@ -50,7 +57,8 @@ export interface ResumeData {
   experiences: Experience[];
   projects: Project[];
   education: Education[];
+  relaventExperience: RelaventExperience[];
   contact: Contact[];
-  skills: string[];
+  skills: LocalizedArray;
   certifications: Certification[];
 }

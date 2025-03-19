@@ -10,15 +10,15 @@ export const resumeData: ResumeData = {
     en: 'Product Manager',
   },
   about: {
-    ko: `사용자 중심의 경험을 설계하는 서비스 기획자입니다.
+    ko: `**사용자 중심의 경험을 설계하는 서비스 기획자, 최세영**입니다.
 
-기획, 디자인, 개발 협업까지 서비스 전 과정을 주도하며 비즈니스 목표와 사용자 요구를 조율합니다.
-웹 개발 경험을 바탕으로 기술적 구현 가능성을 고려한 기획을 수행하며, 디자인 시스템을 구축해 UI 및 서비스 품질을 향상시켰습니다.
-**기획-디자인-개발 간** 연결을 강화해 더 나은 사용자 경험과 비즈니스 성과를 창출하는 데 집중하고 있습니다.`,
+**기획, 디자인, 개발 협업**까지 **서비스 전 과정을 주도**하며 **비즈니스 목표와 사용자 요구를 조율**합니다.
+웹 개발 경험을 바탕으로 **기술적 구현 가능성을 고려한 기획을 수행**하며, 디자인 시스템을 구축해 UI 및 서비스 품질을 향상시켰습니다.
+**기획-디자인-개발 간** 연결을 강화해 **더 나은 사용자 경험과 비즈니스 성과를 창출**하는 데 집중하고 있습니다.`,
     en: `I am a product manager who designs user-centered experiences.
 
-I lead the entire service process, from planning and design to development collaboration, aligning business goals with user needs.
-With a background in web development, I consider technical feasibility in planning and implement design systems to improve UI consistency and service quality.
+I **lead the entire service process,** from planning and design to development collaboration, aligning business goals with user needs.
+With a background in web development, I consider technical feasibility in planning and **implement design systems** to improve UI consistency and service quality.
 My focus is on bridging **planning, design, and development** to create seamless user experiences and drive business success.`,
   },
   experiences: [
@@ -71,27 +71,16 @@ My focus is on bridging **planning, design, and development** to create seamless
       },
     },
   ],
-  education: [
-    {
-      period: '2014 - 2019',
-      degree: {
-        ko: '가천대학교 글로벌캠퍼스',
-        en: 'Gachon University Global Campus',
-      },
-      school: {
-        ko: '시각디자인학과 학사 졸업',
-        en: 'Bachelor of Visual Design',
-      },
-    },
+  relaventExperience: [
     {
       period: '2024.08 - 2025.10',
-      degree: {
+      title: {
         ko: 'Next.js 교육 과정 | 웅진씽크빅 x 유데미',
         en: 'Next.js Training Course | Woongjin Think Big x Udemy',
       },
-      school: {
-        ko: '교육이수내역',
-        en: 'Education History',
+      organization: {
+        ko: '웅진씽크빅',
+        en: 'Woongjin Think Big',
       },
       details: {
         ko: '・ Next.js 교육 과정 이수 및 기업 연계 프로젝트 진행\n・ 오피스너 웹 통합 프로젝트 수행, 개발 및 출시',
@@ -100,11 +89,11 @@ My focus is on bridging **planning, design, and development** to create seamless
     },
     {
       period: '2023.12 - 2024.04',
-      degree: {
+      title: {
         ko: 'SW 엔지니어 트랙 | 엘리스',
         en: 'SW Engineer Track | Elice',
       },
-      school: {
+      organization: {
         ko: '교육이수내역',
         en: 'Education History',
       },
@@ -115,17 +104,30 @@ My focus is on bridging **planning, design, and development** to create seamless
     },
     {
       period: '2020.06 - 2020.11',
-      degree: {
-        ko: '퍼블리셔 양성 과정 | 강남 그린컴퓨터학원',
+      title: {
+        ko: '웹퍼블리셔 양성 과정 | 강남 그린컴퓨터학원',
         en: 'UI/UX Training Course | Gangnam Green Computer Academy',
       },
-      school: {
+      organization: {
         ko: '교육이수내역',
         en: 'Education History',
       },
       details: {
         ko: 'UI/UX 반응형 웹디자인 & 웹퍼블리셔 (디자인&코딩) 양성 과정',
         en: 'UI/UX Responsive Web Design & Web Publisher (Design & Coding) Training Course',
+      },
+    },
+  ],
+  education: [
+    {
+      period: '2014 - 2019',
+      degree: {
+        ko: '가천대학교 글로벌캠퍼스',
+        en: 'Gachon University Global Campus',
+      },
+      school: {
+        ko: '시각디자인학과 학사 졸업',
+        en: 'Bachelor of Visual Design',
       },
     },
   ],
@@ -148,7 +150,46 @@ My focus is on bridging **planning, design, and development** to create seamless
       link: 'https://github.com/saeyoungchoi',
     },
   ],
-  skills: ['Figma', 'Adobe XD', 'Adobe Photoshop', 'Adobe Illustrator'],
+  skills: {
+    ko: [
+      'Figma',
+      'Confluence',
+      'JIRA',
+      'Miro',
+      'Adobe Creative Cloud',
+      'UX 리서치',
+      '와이어프레임 & 프로토타이핑',
+      '디자인 시스템 구축',
+      '반응형 웹 디자인',
+      '웹 접근성 (WCAG)',
+      'A/B 테스트',
+      '스타일 가이드',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Node.js',
+      'CI/CD',
+    ],
+    en: [
+      'Figma',
+      'Confluence',
+      'JIRA',
+      'Miro',
+      'Adobe Creative Cloud',
+      'UX Research',
+      'Wireframing & Prototyping',
+      'Design System Management',
+      'Responsive Web Design',
+      'Accessibility (WCAG)',
+      'A/B Testing',
+      'UI Style Guide',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Node.js',
+      'CI/CD',
+    ],
+  },
   projects: [
     {
       year: '2024',
@@ -213,17 +254,17 @@ My focus is on bridging **planning, design, and development** to create seamless
       description: {
         ko: [
           'UX/UI 디자인 개선 & 반응형 웹 최적화',
-          '디자인 시스템 구축 → UI/UX 가이드 정립 및 유지보수 용이성 확보',
+          '반응형 웹 UX 최적화 → 이용자 편의성 & 접근성 향상',
+          '디자인 시스템 구축 → 컴포넌트 기반 디자인 가이드 정립 및 유지보수 용이성 확보',
           '사용자 피드백 반영 → 네비게이션 개선 및 지속적 인터페이스 전행',
           '서울 MICE 국제 컨퍼런스, 글로벌 관광포럼 등 10건 이상 지원',
-          '반응형 웹 UX 최적화 → 이용자 편의성 & 접근성 향상',
         ],
         en: [
           'UX/UI Design Improvement & Responsive Web Optimization',
-          'Design System Implementation → UI/UX Guide Establishment',
+          'Responsive Web UX Optimization → User Convenience & Accessibility',
+          'Design System Implementation → Component-based Design Guide Establishment',
           'User Feedback Integration → Navigation Improvement',
           'Support for 10+ Events including Seoul MICE International Conference',
-          'Responsive Web UX Optimization → User Convenience & Accessibility',
         ],
       },
       role: {
