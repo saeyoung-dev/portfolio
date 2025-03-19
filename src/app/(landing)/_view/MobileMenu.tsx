@@ -27,7 +27,7 @@ export default function MobileMenu() {
   }, [isOpen]);
 
   if (!mounted) {
-    return null;
+    return <div className='md:hidden' />;
   }
 
   return (
