@@ -54,6 +54,7 @@ export interface ResumeData {
   name: LocalizedContent;
   title: LocalizedContent;
   about: LocalizedContent;
+  coreValues: LocalizedArray;
   experiences: Experience[];
   projects: Project[];
   education: Education[];

@@ -861,8 +861,8 @@ export const works: Record<string, Work> = {
           en: "Participated in the '66th International Pharmaceutical Student Conference' with 2,000 participants from 92 countries",
         },
         {
-          ko: '행사 주최자의 커스터마이징 가능한 글로벌 가상 이벤트 플랫폼 구현',
-          en: 'Implemented a customizable global virtual event platform for event organizers',
+          ko: '국제회의 개최 성과로 2022년 UN 세계관광기구 우수사례로 선정',
+          en: 'Selected as a UN World Tourism Organization Excellence Case in 2022 for successfully hosting international conferences',
         },
       ],
     },

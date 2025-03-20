@@ -10,16 +10,30 @@ export const resumeData: ResumeData = {
     en: 'Product Designer',
   },
   about: {
-    ko: `**사용자 중심의 경험을 설계하는 프로덕트 디자이너, 최세영**입니다.
-
-**기획, 디자인, 개발 협업**까지 **서비스 전 과정을 주도**하며 **비즈니스 목표와 사용자 요구를 조율**합니다.
+    ko: `**기획, 디자인, 개발 협업**까지 **서비스 전 과정을 주도**하며 **비즈니스 목표와 사용자 요구를 조율**합니다.
 웹 개발 경험을 바탕으로 **기술적 구현 가능성을 고려한 기획을 수행**하며, 디자인 시스템을 구축해 UI 및 서비스 품질을 향상시켰습니다.
-**기획-디자인-개발 간** 연결을 강화해 **더 나은 사용자 경험과 비즈니스 성과를 창출**하는 데 집중하고 있습니다.`,
+**기획-디자인-개발 간 연결**을 강화해 **더 나은 사용자 경험과 비즈니스 성과를 창출**하는 데 집중하고 있습니다.`,
     en: `I am a product designer who designs user-centered experiences.
 
 I **lead the entire service process,** from planning and design to development collaboration, aligning business goals with user needs.
 With a background in web development, I consider technical feasibility in planning and **implement design systems** to improve UI consistency and service quality.
 My focus is on bridging **planning, design, and development** to create seamless user experiences and drive business success.`,
+  },
+  coreValues: {
+    ko: [
+      'End-to-End 서비스 기획 경험 (기획 - 개발 - 협업 - QA - 운영)',
+      '비즈니스 목표와 사용자 요구 조율, 다양한 유관부서와의 협업 경험',
+      '디자인 시스템 구축 및 유지 보수, 제품 일관성 확보',
+      '웹 개발 경험 바탕, 개발팀과 협업을 고려한 기획',
+      '프로젝트 효율성 향상 위한 문서화 및 협업 프로세스 개선',
+    ],
+    en: [
+      'End-to-End service planning experience (planning-development-collaboration-QA-operation)',
+      'Business goal and user needs coordination, experience with various related departments',
+      'Design system construction and maintenance, product consistency assurance',
+      'Web development experience, planning considering development team collaboration',
+      'Project efficiency improvement through documentation and collaboration process improvement',
+    ],
   },
   experiences: [
     {
@@ -71,125 +85,6 @@ My focus is on bridging **planning, design, and development** to create seamless
       },
     },
   ],
-  relaventExperience: [
-    {
-      period: '2024.08 - 2025.10',
-      title: {
-        ko: 'Next.js 교육 과정 | 웅진씽크빅 x 유데미',
-        en: 'Next.js Training Course | Woongjin Think Big x Udemy',
-      },
-      organization: {
-        ko: '웅진씽크빅',
-        en: 'Woongjin Think Big',
-      },
-      details: {
-        ko: '・ Next.js 교육 과정 이수 및 기업 연계 프로젝트 진행\n・ 오피스너 웹 통합 프로젝트 수행, 개발 및 출시',
-        en: '・ Completed Next.js training course and conducted company-linked project\n・ Performed and launched Officener web integration project',
-      },
-    },
-    {
-      period: '2023.12 - 2024.04',
-      title: {
-        ko: 'SW 엔지니어 트랙 | 엘리스',
-        en: 'SW Engineer Track | Elice',
-      },
-      organization: {
-        ko: '교육이수내역',
-        en: 'Education History',
-      },
-      details: {
-        ko: '프론트엔드 & 백엔드 웹 개발자 과정 수료, 두 개의 프로젝트 진행 및 모두 "대상" 수상\n・ 1차 프로젝트: 요리책 전문 서적 온라인 쇼핑몰 개발 (Node.js, Express.js 활용)\n・ 2차 프로젝트: 지도 기반 채식 지향 레스토랑 케어링 서비스 개발 및 배포 (React.js, Vercel)',
-        en: 'Completed Frontend & Backend Web Developer Course, Conducted two projects and won "Grand Prize" for both\n・ 1st Project: Developed cookbook online shopping mall (using Node.js, Express.js)\n・ 2nd Project: Developed and deployed map-based vegetarian restaurant caring service (using React.js, Vercel)',
-      },
-    },
-    {
-      period: '2020.06 - 2020.11',
-      title: {
-        ko: '웹퍼블리셔 양성 과정 | 강남 그린컴퓨터학원',
-        en: 'UI/UX Training Course | Gangnam Green Computer Academy',
-      },
-      organization: {
-        ko: '교육이수내역',
-        en: 'Education History',
-      },
-      details: {
-        ko: 'UI/UX 반응형 웹디자인 & 웹퍼블리셔 (디자인&코딩) 양성 과정',
-        en: 'UI/UX Responsive Web Design & Web Publisher (Design & Coding) Training Course',
-      },
-    },
-  ],
-  education: [
-    {
-      period: '2014 - 2019',
-      degree: {
-        ko: '가천대학교 글로벌캠퍼스',
-        en: 'Gachon University Global Campus',
-      },
-      school: {
-        ko: '시각디자인학과 학사 졸업',
-        en: 'Bachelor of Visual Design',
-      },
-    },
-  ],
-  contact: [
-    {
-      type: 'email',
-      label: 'Email',
-      value: 'saeyoung.dev@gmail.com',
-    },
-    {
-      type: 'linkedin',
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/saeyoungchoi',
-      link: 'https://www.linkedin.com/in/saeyoungchoi/',
-    },
-    {
-      type: 'github',
-      label: 'GitHub',
-      value: 'github.com/saeyoungchoi',
-      link: 'https://github.com/saeyoungchoi',
-    },
-  ],
-  skills: {
-    ko: [
-      'Figma',
-      'Confluence',
-      'JIRA',
-      'Miro',
-      'Adobe Creative Cloud',
-      'UX 리서치',
-      '와이어프레임 & 프로토타이핑',
-      '디자인 시스템 구축',
-      '반응형 웹 디자인',
-      '웹 접근성 (WCAG)',
-      'A/B 테스트',
-      '스타일 가이드',
-      'TypeScript',
-      'React',
-      'Next.js',
-      'Node.js',
-      'CI/CD',
-    ],
-    en: [
-      'Figma',
-      'Confluence',
-      'JIRA',
-      'Miro',
-      'Adobe Creative Cloud',
-      'UX Research',
-      'Wireframing & Prototyping',
-      'Design System Management',
-      'Responsive Web Design',
-      'Accessibility (WCAG)',
-      'A/B Testing',
-      'UI Style Guide',
-      'TypeScript',
-      'React',
-      'Next.js',
-      'Node.js',
-      'CI/CD',
-    ],
-  },
   projects: [
     {
       year: '2024',
@@ -271,6 +166,125 @@ My focus is on bridging **planning, design, and development** to create seamless
         ko: '살린 | 프론트엔드 & UX/UI 디자인',
         en: 'Salin | Frontend & UX/UI Design',
       },
+    },
+  ],
+  relaventExperience: [
+    {
+      period: '2024.08 - 2025.10',
+      title: {
+        ko: 'Next.js 교육 과정 | 웅진씽크빅 x 유데미',
+        en: 'Next.js Training Course | Woongjin Think Big x Udemy',
+      },
+      organization: {
+        ko: '교육이수내역',
+        en: 'Education',
+      },
+      details: {
+        ko: '・ Next.js 교육 과정 이수 및 기업 연계 프로젝트 진행\n・ 오피스너 웹 통합 프로젝트 수행, 개발 및 출시',
+        en: '・ Completed Next.js training course and conducted company-linked project\n・ Performed and launched Officener web integration project',
+      },
+    },
+    {
+      period: '2023.12 - 2024.04',
+      title: {
+        ko: 'SW 엔지니어 트랙 | 엘리스',
+        en: 'SW Engineer Track | Elice',
+      },
+      organization: {
+        ko: '교육이수내역',
+        en: 'SW Bootcamp',
+      },
+      details: {
+        ko: '프론트엔드 & 백엔드 웹 개발자 과정 수료, 두 개의 프로젝트 진행 및 모두 "대상" 수상\n・ 1차 프로젝트: 요리책 전문 서적 온라인 쇼핑몰 개발 (Node.js, Express.js 활용)\n・ 2차 프로젝트: 지도 기반 채식 지향 레스토랑 케어링 서비스 개발 및 배포 (React.js, Vercel)',
+        en: 'Completed Frontend & Backend Web Developer Course, Conducted two projects and won "Grand Prize" for both\n・ 1st Project: Developed cookbook online shopping mall (using Node.js, Express.js)\n・ 2nd Project: Developed and deployed map-based vegetarian restaurant caring service (using React.js, Vercel)',
+      },
+    },
+    {
+      period: '2020.06 - 2020.11',
+      title: {
+        ko: '웹퍼블리셔 양성 과정 | 강남 그린컴퓨터학원',
+        en: 'UI/UX Training Course | Green Computer Academy',
+      },
+      organization: {
+        ko: '교육이수내역',
+        en: 'SW Bootcamp',
+      },
+      details: {
+        ko: 'UI/UX 반응형 웹디자인 & 웹퍼블리셔 (디자인&코딩) 양성 과정\n・ 인터랙티브 웹 사이트 및 웹 접근성 준수 프로젝트 등 진행 ・ [View Portfolio (legacy)](https://saeyoung-dev.github.io/portfolio-dev/)',
+        en: 'UI/UX Responsive Web Design & Web Publisher (Design & Coding) Training Course\n・ Interactive Web Site & Web Accessibility Compliance Project Progress ・ [View Portfolio (legacy)](https://saeyoung-dev.github.io/portfolio-dev/)',
+      },
+    },
+  ],
+  education: [
+    {
+      period: '2014 - 2019',
+      degree: {
+        ko: '가천대학교 글로벌캠퍼스',
+        en: 'Gachon University Global Campus',
+      },
+      school: {
+        ko: '시각디자인학과 학사 졸업',
+        en: 'Bachelor of Visual Design',
+      },
+    },
+  ],
+  skills: {
+    ko: [
+      'Figma',
+      'Confluence',
+      'JIRA',
+      'Miro',
+      'Adobe Creative Cloud',
+      'UX 리서치',
+      '와이어프레임 & 프로토타이핑',
+      '디자인 시스템 구축',
+      '반응형 웹 디자인',
+      '웹 접근성 (WCAG)',
+      'A/B 테스트',
+      '스타일 가이드',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Node.js',
+      'CI/CD',
+    ],
+    en: [
+      'Figma',
+      'Confluence',
+      'JIRA',
+      'Miro',
+      'Adobe Creative Cloud',
+      'UX Research',
+      'Wireframing & Prototyping',
+      'Design System Management',
+      'Responsive Web Design',
+      'Accessibility (WCAG)',
+      'A/B Testing',
+      'UI Style Guide',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Node.js',
+      'CI/CD',
+    ],
+  },
+  contact: [
+    {
+      type: 'email',
+      label: 'Email',
+      value: 'saeyoung.dev@gmail.com',
+    },
+    {
+      type: 'linkedin',
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/saeyoungchoi',
+      link: 'https://www.linkedin.com/in/saeyoungchoi/',
+    },
+    {
+      type: 'github',
+      label: 'GitHub',
+      value: 'github.com/saeyoungchoi',
+      link: 'https://github.com/saeyoungchoi',
     },
   ],
   certifications: [

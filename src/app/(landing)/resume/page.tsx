@@ -15,6 +15,7 @@ export default function ResumePage() {
 
   const sectionRefs = {
     about: useRef<HTMLDivElement>(null),
+    coreValues: useRef<HTMLDivElement>(null),
     experience: useRef<HTMLDivElement>(null),
     projects: useRef<HTMLDivElement>(null),
     relaventExperience: useRef<HTMLDivElement>(null),
@@ -46,7 +47,7 @@ export default function ResumePage() {
   }, []);
 
   return (
-    <main className='flex w-full flex-col items-center pt-24 sm:pt-32'>
+    <main className='flex w-full flex-col items-center pt-32'>
       {/* Hero Section */}
       <section className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'>
         <h1 className='text-5xl sm:text-6xl font-extrabold text-green-900 mb-4'>
@@ -62,9 +63,23 @@ export default function ResumePage() {
         ref={sectionRefs.about}
         className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'
       >
-        <Badge className='mb-4 text-sm'>ABOUT</Badge>
-        <div className='whitespace-pre-line text-lg font-medium text-green-900/70 leading-relaxed'>
+        <div className='shadow p-8 rounded-2xl whitespace-pre-line text-lg font-medium text-green-900/70 leading-relaxed'>
           {renderText(resumeData.about[language])}
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section
+        ref={sectionRefs.coreValues}
+        className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-16'
+      >
+        <Badge className='mb-4 text-sm'>CORE VALUES</Badge>
+        <div className='whitespace-pre-line text-md flex flex-col gap-1 font-semibold text-green-900/70 leading-relaxed'>
+          {resumeData.coreValues[language].map((item, index) => (
+            <li key={index} className='pl-2'>
+              • {renderText(item)}
+            </li>
+          ))}
         </div>
       </section>
 
