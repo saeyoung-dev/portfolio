@@ -55,14 +55,14 @@ export default function JobSummary({ className }: { className?: string }) {
       <div className='border-t-2 border-green-900 pt-16' />
       <div className='flex flex-col md:flex-row gap-12 md:gap-16 lg:gap-32'>
         <div className='flex-1 job-summary-content'>
-          <h2 className='text-lg font-semibold mb-4'>CURRENTLY:</h2>
-          <p className='text-lg text-pretty break-keep font-medium leading-relaxed text-green-900/80'>
+          <h2 className='text-md md:text-lg font-semibold mb-4'>CURRENTLY:</h2>
+          <p className='text-md md:text-lg text-pretty break-keep font-medium leading-relaxed text-green-900/80'>
             {renderText(hero.status.current[language])}
           </p>
         </div>
         <div className='flex-1 job-summary-content'>
-          <h2 className='text-lg font-semibold mb-4'>PREVIOUSLY:</h2>
-          <p className='text-lg text-pretty break-keep font-medium leading-relaxed text-green-900/80'>
+          <h2 className='text-md md:text-lg font-semibold mb-4'>PREVIOUSLY:</h2>
+          <p className='text-md md:text-lg text-pretty break-keep font-medium leading-relaxed text-green-900/80'>
             {renderText(hero.status.previous[language])}
           </p>
         </div>

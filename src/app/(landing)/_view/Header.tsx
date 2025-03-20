@@ -115,10 +115,10 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className='fixed md:hidden inset-0 flex justify-between items-center top-0 left-0 py-10 px-4'>
+      <div className='fixed w-full md:hidden inset-0 top-0 left-0'>
         <Link
           href='/'
-          className="relative flex group items-center hover:scale-110 transition-transform duration-200 ease-in h-14 w-14 bg-[url('/images/icon/main-01.png')] bg-cover bg-center"
+          className="group absolute top-4 left-3 hover:scale-110 transition-transform duration-200 ease-in h-14 w-14 bg-[url('/images/icon/main-01.png')] bg-cover bg-center"
         >
           <Image
             src='/images/icon/main-02.png'
@@ -130,7 +130,7 @@ export default function Header() {
             priority
           />
         </Link>
-        <div className='flex items-center gap-4'>
+        <div className='flex items-center gap-4 absolute right-6 top-6'>
           <button
             onClick={() => setLanguage(language === 'ko' ? 'en' : 'ko')}
             className='text-xs font-medium text-green-900/60 hover:text-green-900'
