@@ -1,7 +1,7 @@
 export const META = {
-  title: 'Saeyoung Choi | Product Planner',
-  siteName: 'Saeyoung Choi | Product Planner',
-  description: 'A Product Planner bridging design & development',
+  title: 'Saeyoung Choi | Product Designer',
+  siteName: 'Saeyoung Choi | Product Designer',
+  description: 'A Product Designer bridging design & development',
   keyword: [
     '최세영',
     'saeyoung choi',

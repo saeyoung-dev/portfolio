@@ -3,12 +3,12 @@ import { AboutContent } from '@/types/about';
 export const aboutContent: AboutContent = {
   hero: {
     title: {
-      ko: 'A Product Planner bridging design & development',
-      en: 'A Product Planner bridging design & development',
+      ko: 'A Product Designer bridging design & development',
+      en: 'A Product Designer bridging design & development',
     },
     description: {
-      ko: '안녕하세요, 사용자 경험을 중심으로 기획, 디자인, 개발 협업을 아우르는 **프로덕트 기획자 최세영**입니다. UX 리서치, 기획, 디자인 시스템 구축을 통해 사용자 경험을 설계하고 개선하며, 기술적 이해를 바탕으로 다양한 팀과 협력하여 완성도 높은 서비스를 만들어갑니다.',
-      en: "I'm Saeyoung, **a Product Planner** crafting meaningful experiences through strategy, design, and technology. With a deep understanding of product planning, UX/UI, and frontend development, I bring comprehensive solutions that bridge user needs and business goals.",
+      ko: '안녕하세요, 사용자 경험을 중심으로 기획, 디자인, 개발 협업을 아우르는 **프로덕트 디자이너 최세영**입니다. UX 리서치, 기획, 디자인 시스템 구축을 통해 사용자 경험을 설계하고 개선하며, 기술적 이해를 바탕으로 다양한 팀과 협력하여 완성도 높은 서비스를 만들어갑니다.',
+      en: "I'm Saeyoung, **a Product Designer** crafting meaningful experiences through strategy, design, and technology. With a deep understanding of product planning, UX/UI, and frontend development, I bring comprehensive solutions that bridge user needs and business goals.",
     },
     status: {
       current: {

@@ -6,16 +6,16 @@ export const resumeData: ResumeData = {
     en: 'Saeyoung Choi',
   },
   title: {
-    ko: '서비스 기획자',
-    en: 'Product Manager',
+    ko: '프로덕트 디자이너',
+    en: 'Product Designer',
   },
   about: {
-    ko: `**사용자 중심의 경험을 설계하는 서비스 기획자, 최세영**입니다.
+    ko: `**사용자 중심의 경험을 설계하는 프로덕트 디자이너, 최세영**입니다.
 
 **기획, 디자인, 개발 협업**까지 **서비스 전 과정을 주도**하며 **비즈니스 목표와 사용자 요구를 조율**합니다.
 웹 개발 경험을 바탕으로 **기술적 구현 가능성을 고려한 기획을 수행**하며, 디자인 시스템을 구축해 UI 및 서비스 품질을 향상시켰습니다.
 **기획-디자인-개발 간** 연결을 강화해 **더 나은 사용자 경험과 비즈니스 성과를 창출**하는 데 집중하고 있습니다.`,
-    en: `I am a product manager who designs user-centered experiences.
+    en: `I am a product designer who designs user-centered experiences.
 
 I **lead the entire service process,** from planning and design to development collaboration, aligning business goals with user needs.
 With a background in web development, I consider technical feasibility in planning and **implement design systems** to improve UI consistency and service quality.
@@ -46,8 +46,8 @@ My focus is on bridging **planning, design, and development** to create seamless
     {
       period: '2021.05 - 2023.12',
       title: {
-        ko: '서비스 전략실 · 사원 3년차 · 서비스기획',
-        en: 'Service Strategy Team · Associate (3rd year) · Service Planning',
+        ko: '서비스 전략실 · 사원 3년차 · UI 설계 및 퍼블리싱',
+        en: 'Service Strategy Team · Associate (3rd year) · UI Design & Mark-Up',
       },
       company: {
         ko: '(주)살린',
