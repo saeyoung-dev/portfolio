@@ -111,7 +111,6 @@ export default function Header() {
                 href={isResume ? '/최세영_이력서.pdf' : '/resume'}
                 className="block"
                 download={isResume}
-                target="_blank"
               >
                 {isResume ? 'Download' : 'Resume'}
               </Link>
