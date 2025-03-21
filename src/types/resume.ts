@@ -21,6 +21,7 @@ export interface Project {
   title: LocalizedContent;
   description: LocalizedArray;
   role?: LocalizedContent;
+  accomplishments?: LocalizedArray;
 }
 
 export interface Education {
@@ -53,7 +54,7 @@ export interface Certification {
 export interface ResumeData {
   name: LocalizedContent;
   title: LocalizedContent;
-  about: LocalizedContent;
+  about: LocalizedArray;
   coreValues: LocalizedArray;
   experiences: Experience[];
   projects: Project[];
