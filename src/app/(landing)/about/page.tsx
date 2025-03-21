@@ -177,39 +177,39 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <main className='flex w-full flex-col items-center pt-32'>
+    <main className="flex w-full flex-col items-center pt-32">
       {/* Hero Section */}
-      <section className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 2xl:items-center flex flex-col lg:flex-row justify-between gap-8 sm:gap-12'>
-        <div className='flex flex-col items-center sm:items-start gap-6 sm:gap-8 lg:w-3/5'>
+      <section className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 2xl:items-center flex flex-col lg:flex-row justify-between gap-8 sm:gap-12">
+        <div className="flex flex-col items-center sm:items-start gap-6 sm:gap-8 lg:w-3/5">
           <Image
             ref={imageRef}
-            src={'/images/about/profile.png'}
-            alt='About Image'
+            src={'/images/about/profile.webp'}
+            alt="About Image"
             width={0}
             height={0}
-            sizes='100vw'
-            className='md:hidden cursor-pointer h-auto rounded-xl w-[60%] object-cover hover:brightness-90 transition-all duration-300'
+            sizes="100vw"
+            className="md:hidden cursor-pointer h-auto rounded-xl w-[60%] object-cover hover:brightness-90 transition-all duration-300"
           />
           <h1
             ref={titleRef}
-            className='text-center sm:text-left text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter leading-tight text-green-900'
+            className="text-center sm:text-left text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter leading-tight text-green-900"
           >
             {content.hero.title[language]}
           </h1>
-          <div ref={descriptionRef} className='flex flex-col gap-6'>
-            <p className='text-base sm:text-lg text-green-900 leading-relaxed max-w-3xl sm:text-balance break-keep'>
+          <div ref={descriptionRef} className="flex flex-col gap-6">
+            <p className="text-base sm:text-lg text-green-900 leading-relaxed max-w-3xl sm:text-balance break-keep">
               {renderText(content.hero.description[language])}
             </p>
-            <div className='flex flex-col gap-4 text-pretty break-keep'>
-              <div className='flex gap-1 text-sm sm:text-base font-medium text-green-900/70'>
+            <div className="flex flex-col gap-4 text-pretty break-keep">
+              <div className="flex gap-1 text-sm sm:text-base font-medium text-green-900/70">
                 <span>
-                  <span className='font-semibold'>CURRENTLY</span> :{' '}
+                  <span className="font-semibold">CURRENTLY</span> :{' '}
                   {renderText(content.hero.status.current[language])}
                 </span>
               </div>
-              <div className='flex gap-1 text-sm sm:text-base font-medium text-green-900/70'>
+              <div className="flex gap-1 text-sm sm:text-base font-medium text-green-900/70">
                 <span>
-                  <span className='font-semibold'>PREVIOUSLY</span> :{' '}
+                  <span className="font-semibold">PREVIOUSLY</span> :{' '}
                   {renderText(content.hero.status.previous[language])}
                 </span>
               </div>
@@ -218,34 +218,34 @@ export default function AboutPage() {
         </div>
         <Image
           ref={imageRef}
-          src={'/images/about/profile.png'}
-          alt='About Image'
+          src={'/images/about/profile.webp'}
+          alt="About Image"
           width={0}
           height={0}
-          sizes='100vw'
-          className='hidden md:block cursor-pointer opacity-0 h-auto rounded-xl w-full lg:w-2/5 object-cover hover:brightness-90 transition-all duration-300'
+          sizes="100vw"
+          className="hidden md:block cursor-pointer opacity-0 h-auto rounded-xl w-full lg:w-2/5 object-cover hover:brightness-90 transition-all duration-300"
         />
       </section>
 
       {/* Values Section */}
       <section
         ref={valuesSectionRef}
-        className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 py-16 sm:py-24'
+        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 py-16 sm:py-24"
       >
         <div
           ref={valuesNumbersRef}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-y-2 border-green-900 py-16 sm:py-24'
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-y-2 border-green-900 py-16 sm:py-24"
         >
           {content.values.items.map((item, index) => (
-            <div key={index} className='flex gap-4 sm:gap-6'>
-              <h2 className='values-number text-3xl sm:text-4xl font-semibold text-green-900/70'>
+            <div key={index} className="flex gap-4 sm:gap-6">
+              <h2 className="values-number text-3xl sm:text-4xl font-semibold text-green-900/70">
                 {String(index + 1).padStart(2, '0')}
               </h2>
-              <div className='flex flex-col gap-4 pt-1'>
-                <h3 className='text-2xl font-semibold text-green-900'>
+              <div className="flex flex-col gap-4 pt-1">
+                <h3 className="text-2xl font-semibold text-green-900">
                   {item.title[language]}
                 </h3>
-                <p className='text-base sm:text-lg text-green-900/80 leading-relaxed text-balance break-keep'>
+                <p className="text-base sm:text-lg text-green-900/80 leading-relaxed text-balance break-keep">
                   {renderText(item.description[language])}
                 </p>
               </div>
@@ -257,40 +257,40 @@ export default function AboutPage() {
       {/* Image Section */}
       <section
         ref={lifeSectionRef}
-        className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 pb-16 sm:pb-24'
+        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 pb-16 sm:pb-24"
       >
         <h2
           ref={lifeHeaderRef}
-          className='text-2xl sm:text-3xl font-semibold text-green-900 mb-8 sm:mb-12 flex items-center gap-2'
+          className="text-2xl sm:text-3xl font-semibold text-green-900 mb-8 sm:mb-12 flex items-center gap-2"
         >
           <Image
             src={'/images/icon/about-01.png'}
-            alt='coffee'
+            alt="coffee"
             width={0}
             height={0}
-            sizes='100vw'
-            className='w-8 h-8 sm:w-10 sm:h-10'
+            sizes="100vw"
+            className="w-8 h-8 sm:w-10 sm:h-10"
           />
           {content.life.title[language]}
         </h2>
         <div
           ref={lifeImagesRef}
-          className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 pb-16 sm:pb-24 border-b-2 border-green-900'
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 pb-16 sm:pb-24 border-b-2 border-green-900"
         >
           {content.life.images.map((image, index) => (
             <div
               key={index}
-              className='aspect-auto cursor-pointer border group relative border-green-900/20 overflow-hidden'
+              className="aspect-auto cursor-pointer border group relative border-green-900/20 overflow-hidden"
             >
               <Image
-                src={`/images/about/life-0${index + 1}.png`}
+                src={`/images/about/life-0${index + 1}.webp`}
                 alt={image.description[language]}
                 width={0}
                 height={0}
-                sizes='100vw'
-                className='w-full h-full object-cover group-hover:scale-105 group-hover:brightness-90 transition-transform duration-300'
+                sizes="100vw"
+                className="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-90 transition-transform duration-300"
               />
-              <span className='text-white font-medium text-center break-keep hidden group-hover:block text-xs sm:text-sm absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
+              <span className="text-white font-medium text-center break-keep hidden group-hover:block text-xs sm:text-sm absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
                 {image.description[language]}
               </span>
             </div>
@@ -301,28 +301,28 @@ export default function AboutPage() {
       {/* Core Values Section */}
       <section
         ref={coreSectionRef}
-        className='w-full container px-6 sm:px-8 md:px-16 lg:px-32 pb-24 sm:pb-32'
+        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 pb-24 sm:pb-32"
       >
         <div
           ref={coreNumbersRef}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {content.core.sections.map((item, index) => (
-            <div key={index} className='flex gap-4'>
-              <h2 className='core-number text-3xl sm:text-4xl font-semibold text-green-900/70'>
+            <div key={index} className="flex gap-4">
+              <h2 className="core-number text-3xl sm:text-4xl font-semibold text-green-900/70">
                 {String(index + 1).padStart(2, '0')}
               </h2>
-              <div className='flex flex-col gap-4 sm:gap-6 pt-1'>
-                <h3 className='text-2xl font-semibold text-green-900'>
+              <div className="flex flex-col gap-4 sm:gap-6 pt-1">
+                <h3 className="text-2xl font-semibold text-green-900">
                   {item.title[language]}
                 </h3>
-                <ul className='flex flex-col gap-3 sm:gap-4 break-keep'>
+                <ul className="flex flex-col gap-3 sm:gap-4 break-keep">
                   {item.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
-                      className='text-base flex items-center gap-2 sm:text-lg text-green-900/80 font-medium'
+                      className="text-base flex items-center gap-2 sm:text-lg text-green-900/80 font-medium"
                     >
-                      <p className='sm:hidden w-1 h-1 bg-green-900 rounded-full' />
+                      <p className="sm:hidden w-1 h-1 bg-green-900 rounded-full" />
                       {item.text[language]}
                     </li>
                   ))}

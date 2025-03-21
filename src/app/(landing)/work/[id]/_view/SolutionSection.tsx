@@ -24,23 +24,23 @@ export default function SolutionSection({
         className
       )}
     >
-      <div className='flex flex-col gap-4 md:gap-8'>
+      <div className="flex flex-col gap-4 md:gap-8">
         <Badge>SOLUTION</Badge>
-        <h3 className='bg-white py-6 md:py-8 px-6 md:px-10 rounded-2xl shadow border border-neutral-100 text-center text-xl sm:text-2xl md:text-3xl font-semibold text-green-900 break-keep md:text-balance md:leading-10'>
+        <h3 className="bg-white py-6 md:py-8 px-6 md:px-10 rounded-2xl shadow border border-neutral-100 text-center text-xl sm:text-2xl md:text-3xl font-semibold text-green-900 break-keep md:text-pretty md:leading-10">
           {boldTitle}
         </h3>
         {solution.image && (
           <Image
             src={solution.image}
-            alt='Solution'
+            alt="Solution"
             width={0}
             height={0}
-            sizes='100vw'
-            className='w-full h-auto rounded-2xl '
+            sizes="100vw"
+            className="w-full h-auto rounded-2xl "
           />
         )}
         {solution.description && (
-          <p className='text-base md:text-lg font-medium text-green-900 md:leading-8 leading-tighter text-pretty break-keep'>
+          <p className="text-base md:text-lg font-medium text-green-900 md:leading-8 leading-tighter text-pretty break-keep">
             {boldDescription}
           </p>
         )}

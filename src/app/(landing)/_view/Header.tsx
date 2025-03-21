@@ -108,7 +108,7 @@ export default function Header() {
             </div>
             <div className="relative px-4 py-3 rounded-full bg-green-900 text-beige font-title-medium border border-transparent hover:bg-beige hover:text-green-900 hover:border-green-900 transition-all duration-300">
               <Link
-                href={isResume ? '/이력서_최세영.pdf' : '/resume'}
+                href={isResume ? '/최세영_이력서.pdf' : '/resume'}
                 className="block"
                 download={isResume}
                 target="_blank"
@@ -124,7 +124,7 @@ export default function Header() {
       <div className="fixed w-full md:hidden inset-0 top-0 left-0">
         <Link
           href="/"
-          className="group absolute top-4 left-3 hover:scale-110 transition-transform duration-200 ease-in h-14 w-14 bg-[url('/images/icon/main-01.png')] bg-cover bg-center"
+          className="group absolute top-4 left-3 hover:scale-110 transition-transform duration-200 ease-in size-10 sm:size-14 bg-[url('/images/icon/main-01.png')] bg-cover bg-center"
         >
           <Image
             src="/images/icon/main-02.png"
@@ -132,7 +132,7 @@ export default function Header() {
             width={0}
             height={0}
             sizes="100vw"
-            className="w-auto h-14 group-hover:rotate-180 transition-transform duration-300 ease-out"
+            className="w-auto h-10 sm:h-14 group-hover:rotate-180 transition-transform duration-300 ease-out"
             priority
           />
         </Link>

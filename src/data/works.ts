@@ -4,7 +4,6 @@ export const works: Record<string, Work> = {
   veganro: {
     id: 'veganro',
     category: 'Development',
-    logo: '/images/logo/veganro.png',
     title: 'Veganro',
     subtitle: {
       ko: '비건 장소 지도 서비스',
@@ -227,7 +226,6 @@ export const works: Record<string, Work> = {
   'bread-and-butter': {
     id: 'bread-and-butter',
     category: 'Development',
-    logo: '/images/logo/bab.png',
     title: 'Bread & Butter',
     subtitle: {
       ko: '요리 서적 온라인 상점',
@@ -281,8 +279,8 @@ export const works: Record<string, Work> = {
     },
     solution: {
       title: {
-        ko: '**세계 각국의 요리책**을 한 곳에서 만날 수 있는 따뜻한 공간을 만들었습니다',
-        en: "Creating a Warm Space Where the World's Cookbooks Come Together.",
+        ko: '**세계 각국의 요리책**을 한 곳에서 만날 수 있는 따뜻한 공간을 만들었습니다. 🍞',
+        en: "Creating a Warm Space Where the World's Cookbooks Come Together. 🍞",
       },
       description: {
         ko: 'Bread & Butter는 **세계 요리 책을 한 곳에 모아 쉽게 탐색하고 구매할 수 있는 온라인 서점**입니다. 다양한 요리 문화와 레시피를 소개하여, 사용자가 새로운 맛을 발견하고 더 깊이 있는 요리 경험을 할 수 있도록 하였습니다. 편리한 쇼핑을 위해 **비회원 주문 조회, 회원 인증, 장바구니, 주문 관리, 실시간 재고 확인 기능**을 도입하였으며, 판매자가 서적을 효율적으로 관리할 수 있도록 **관리자 대시보드**를 구축하였습니다. ✨',
