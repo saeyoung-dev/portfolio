@@ -347,4 +347,22 @@ export const resumeData: ResumeData = {
       },
     },
   ],
+  comments: {
+    ko: [
+      '여기까지 읽어주셨다니, 감사합니다!',
+      '커피 한 잔 하면서 편하게 봐주세요 ☕',
+    ],
+    en: [
+      'Thanks for reading.',
+      'Hope we can create something amazing together! 🚀',
+    ],
+  },
+  downloadResume: {
+    ko: '이력서 다운로드',
+    en: 'Download Resume',
+  },
+  downloadResumeLink: {
+    ko: '/최세영_이력서.pdf',
+    en: '/Saeyoung_Choi_Resume.pdf',
+  },
 };

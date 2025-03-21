@@ -63,4 +63,7 @@ export interface ResumeData {
   contact: Contact[];
   skills: LocalizedArray;
   certifications: Certification[];
+  comments: LocalizedArray;
+  downloadResume: LocalizedContent;
+  downloadResumeLink: LocalizedContent;
 }

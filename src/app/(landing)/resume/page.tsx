@@ -49,7 +49,7 @@ export default function ResumePage() {
   return (
     <main className="flex w-full flex-col items-center pt-32">
       {/* Hero Section */}
-      <section className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-4 sm:mb-12 md:mb-16">
+      <section className="w-full container px-8 md:px-16 lg:px-32 mb-4 sm:mb-12 md:mb-16">
         <div>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-green-900 mb-1 sm:mb-4">
             {renderText(resumeData.name[language])}
@@ -63,7 +63,7 @@ export default function ResumePage() {
       {/* About Section */}
       <section
         ref={sectionRefs.about}
-        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-8 sm:mb-12 md:mb-16"
+        className="w-full container px-8 md:px-16 lg:px-32 mb-8 sm:mb-12 md:mb-16"
       >
         <div className="shadow p-4 sm:p-8 rounded-2xl break-keep whitespace-pre-line text-sm sm:text-lg flex flex-col gap-1 font-medium text-green-900 leading-relaxed">
           {resumeData.about[language].map((item, index) => (
@@ -77,7 +77,7 @@ export default function ResumePage() {
       {/* Core Values Section */}
       <section
         ref={sectionRefs.coreValues}
-        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-8 sm:mb-12 md:mb-16"
+        className="w-full container px-8 md:px-16 lg:px-32 mb-8 sm:mb-12 md:mb-16"
       >
         <Badge className="mb-2 sm:mb-4 text-sm">CORE VALUES</Badge>
         <div className="whitespace-pre-line text-sm sm:text-base tracking-tight sm:tracking-normal flex flex-col gap-1 font-semibold text-green-900/70 leading-relaxed">
@@ -92,7 +92,7 @@ export default function ResumePage() {
       {/* Experience Section */}
       <section
         ref={sectionRefs.experience}
-        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-8 sm:mb-12 md:mb-16"
+        className="w-full container px-8 md:px-16 lg:px-32 mb-8 sm:mb-12 md:mb-16"
       >
         <Badge className="mb-4 sm:mb-8 text-sm">EXPERIENCE</Badge>
         <div className="flex flex-col gap-4 sm:gap-8">
@@ -127,7 +127,7 @@ export default function ResumePage() {
       {/* Projects Section */}
       <section
         ref={sectionRefs.projects}
-        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
+        className="w-full container px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
       >
         <Badge className="mb-4 sm:mb-8 text-sm">PROJECTS</Badge>
         <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
@@ -174,7 +174,7 @@ export default function ResumePage() {
       {/* Relavent Experience Section */}
       <section
         ref={sectionRefs.relaventExperience}
-        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
+        className="w-full container px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
       >
         <Badge className="mb-4 sm:mb-8 text-sm">RELAVENT EXPERIENCE</Badge>
         <div className="flex flex-col gap-4 sm:gap-8 md:gap-10">
@@ -209,7 +209,7 @@ export default function ResumePage() {
       {/* Education Section */}
       <section
         ref={sectionRefs.education}
-        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
+        className="w-full container px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
       >
         <Badge className="mb-4 sm:mb-8 text-sm">EDUCATION</Badge>
         <div className="flex flex-col gap-4 sm:gap-8">
@@ -242,7 +242,7 @@ export default function ResumePage() {
       {/* Skills Section */}
       <section
         ref={sectionRefs.skills}
-        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
+        className="w-full container px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
       >
         <Badge className="mb-4 sm:mb-8 text-sm">SKILLS</Badge>
         <div className="flex flex-wrap gap-2">
@@ -262,7 +262,7 @@ export default function ResumePage() {
       {/* Certifications Section */}
       <section
         ref={sectionRefs.certifications}
-        className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
+        className="w-full container px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16"
       >
         <Badge className="mb-4 sm:mb-8 text-sm">CERTIFICATIONS</Badge>
         <div className="flex flex-col gap-2 sm:gap-4">
@@ -288,7 +288,7 @@ export default function ResumePage() {
       </section>
 
       {/* Contact Section */}
-      <section className="w-full container px-6 sm:px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16">
+      <section className="w-full container px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16">
         <Badge className="mb-4 sm:mb-8 text-sm">CONTACT</Badge>
         <div className="flex flex-col gap-2 sm:gap-4">
           {resumeData.contact.map((contact, index) => (
@@ -314,6 +314,22 @@ export default function ResumePage() {
           ))}
         </div>
       </section>
+      <div className="w-full container text-green-900/80 mt-4 px-8 md:px-16 lg:px-32 mb-6 sm:mb-12 md:mb-16">
+        {resumeData.comments[language].map((comment, index) => (
+          <p key={index} className="font-medium text-xs sm:text-sm">
+            {renderText(comment)}
+          </p>
+        ))}
+        <a
+          href="/최세영_이력서.pdf"
+          // href={resumeData.downloadResumeLink[language]}
+          target="_blank"
+          className="mt-4 text-sm w-fit sm:text-base font-medium hover:opacity-100 transition-opacity md:border-b-[1px] inline-block md:border-green-900/50"
+          download={true}
+        >
+          {resumeData.downloadResume[language]} 📃
+        </a>
+      </div>
     </main>
   );
 }
